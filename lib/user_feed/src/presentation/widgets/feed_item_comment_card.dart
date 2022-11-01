@@ -1,12 +1,12 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/asset_strings.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/asset_strings.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
 // Package imports:
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
 
 class FeedItemCommentCard extends StatelessWidget {
   const FeedItemCommentCard({

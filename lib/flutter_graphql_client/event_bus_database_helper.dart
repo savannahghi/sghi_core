@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_event_bus_database_helper.dart';
-import 'package:shared_libraries/flutter_graphql_client/sqlite.dart';
+import 'package:sghi_core/flutter_graphql_client/i_event_bus_database_helper.dart';
+import 'package:sghi_core/flutter_graphql_client/sqlite.dart';
 import 'package:sqflite/sqflite.dart';
 
 abstract class EventBusDatabase extends Database {}

@@ -1,10 +1,10 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/user_profile/contact_item.dart';
-import 'package:shared_libraries/user_profile/contact_utils.dart';
-import 'package:shared_libraries/user_profile/contacts.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/user_profile/contact_item.dart';
+import 'package:sghi_core/user_profile/contact_utils.dart';
+import 'package:sghi_core/user_profile/contacts.dart';
 
 const String testPhoneNumber = '+254712345678';
 const String testEmail = 'example@mail.com';

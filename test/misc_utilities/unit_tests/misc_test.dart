@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:shared_libraries/domain_objects/failures/exception.dart';
-import 'package:shared_libraries/misc_utilities/misc.dart';
-import 'package:shared_libraries/misc_utilities/refresh_token_manager.dart';
+import 'package:sghi_core/domain_objects/failures/exception.dart';
+import 'package:sghi_core/misc_utilities/misc.dart';
+import 'package:sghi_core/misc_utilities/refresh_token_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {

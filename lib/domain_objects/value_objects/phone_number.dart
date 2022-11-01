@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:shared_libraries/domain_objects/failures/value_object_failure.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
-import 'package:shared_libraries/domain_objects/value_objects/value_object.dart';
+import 'package:sghi_core/domain_objects/failures/value_object_failure.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/value_objects/value_object.dart';
 
 part 'phone_number.g.dart';
 
@@ -45,8 +45,7 @@ Either<ValueObjectFailure<String>, String> validatePhoneNumber(String input) {
 
   // a valid UK phone number regex
   final RegExp unitedKingdomRegExp = RegExp(
-    r'''^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$''',
-  );
+      r'''^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$''');
 
   // a generic regex for all international phone numbers. In our case this will suffice to validate Belgium phone numbers and in the future,
   // any new country

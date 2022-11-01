@@ -3,7 +3,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
 
 Map<String, Function> mockGetFeedActionCallbacks() => <String, Function>{
       kCompleteIndividualRiderKYC: () {},

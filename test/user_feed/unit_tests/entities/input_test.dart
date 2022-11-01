@@ -1,8 +1,11 @@
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/action.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/item.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/nudge.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/resources/inputs.dart';
+import 'package:sghi_core/user_feed/src/domain/resources/inputs.dart';
 import '../../mock_data.dart';
 
 void main() {
@@ -16,9 +19,9 @@ void main() {
           'uid': '1ns2oCuWbdA67Qv94XNRM3IXejh',
           'isAnonymous': false,
           'flavour': 'PRO',
-          'actions': <Map<String, dynamic>>[mockFeedAction.toJson()],
-          'items': <Map<String, dynamic>>[mockFeedItem.toJson()],
-          'nudges': <Map<String, dynamic>>[mockNudge1.toJson()],
+          'actions': <Action>[],
+          'items': <Item>[],
+          'nudges': <Nudge>[],
         };
 
         final Map<String, dynamic> payload = <String, dynamic>{
@@ -29,8 +32,8 @@ void main() {
             FeedResponsePayload.fromJson(payload);
 
         expect(response, isA<FeedResponsePayload>());
-        expect(response.data.getFeed.nudges!.length, 1);
-        expect(response.data.getFeed.items!.length, 1);
+        expect(response.data.getFeed.nudges!.length, 0);
+        expect(response.data.getFeed.items!.length, 0);
       },
     );
 

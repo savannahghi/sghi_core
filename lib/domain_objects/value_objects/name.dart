@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:intl/intl.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:shared_libraries/domain_objects/failures/value_object_failure.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
-import 'package:shared_libraries/domain_objects/value_objects/value_object.dart';
+import 'package:sghi_core/domain_objects/failures/value_object_failure.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/value_objects/value_object.dart';
 
 part 'name.g.dart';
 

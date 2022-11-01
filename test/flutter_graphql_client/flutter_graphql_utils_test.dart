@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/flutter_graphql_client/flutter_graphql_utils.dart';
+import 'package:sghi_core/flutter_graphql_client/flutter_graphql_utils.dart';
 
 import 'mocks.dart';
 import 'test_utils.dart';

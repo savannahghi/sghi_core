@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/link.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/asset_strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/colors.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/feed_store.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/asset_strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/feed_store.dart';
 
 /// returns a human readable format of the date string
 /// passed to it

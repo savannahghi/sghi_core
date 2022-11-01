@@ -1,10 +1,10 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/entities/location.dart';
-import 'package:shared_libraries/domain_objects/entities/payables_account.dart';
-import 'package:shared_libraries/domain_objects/value_objects/enums.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/location.dart';
+import 'package:sghi_core/domain_objects/entities/payables_account.dart';
+import 'package:sghi_core/domain_objects/value_objects/enums.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 part 'supplier_profile.freezed.dart';
 part 'supplier_profile.g.dart';

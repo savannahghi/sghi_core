@@ -3,7 +3,7 @@ library flutter_graphql_client;
 import 'dart:async';
 
 import 'package:http/http.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
 
 /// [GraphQlClient] the main entry point client creation
 ///

@@ -1,9 +1,9 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation_icon.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation_nested_item.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/navigation_icon.dart';
+import 'package:sghi_core/domain_objects/entities/navigation_nested_item.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 part 'navigation_item.freezed.dart';
 part 'navigation_item.g.dart';

@@ -3,20 +3,20 @@ library sil_feed;
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/feed.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/item.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/nudge.dart';
-import 'package:shared_libraries/user_feed/src/domain/resources/inputs.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/feed_store.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_component.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/nudge_carousel.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/feed.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/item.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/nudge.dart';
+import 'package:sghi_core/user_feed/src/domain/resources/inputs.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/feed_store.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_component.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/nudge_carousel.dart';
 // Package imports:
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
 
 class FeedComponent extends StatefulWidget {
   const FeedComponent({

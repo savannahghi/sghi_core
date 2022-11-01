@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'image.dart';
 
@@ -10,32 +12,11 @@ part of 'image.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Image _$ImageFromJson(Map<String, dynamic> json) {
   return _Image.fromJson(json);
 }
-
-/// @nodoc
-class _$ImageTearOff {
-  const _$ImageTearOff();
-
-  _Image call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'base64') String? base64}) {
-    return _Image(
-      id: id,
-      base64: base64,
-    );
-  }
-
-  Image fromJson(Map<String, Object> json) {
-    return Image.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Image = _$ImageTearOff();
 
 /// @nodoc
 mixin _$Image {
@@ -85,9 +66,9 @@ class _$ImageCopyWithImpl<$Res> implements $ImageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ImageCopyWith<$Res> implements $ImageCopyWith<$Res> {
-  factory _$ImageCopyWith(_Image value, $Res Function(_Image) then) =
-      __$ImageCopyWithImpl<$Res>;
+abstract class _$$_ImageCopyWith<$Res> implements $ImageCopyWith<$Res> {
+  factory _$$_ImageCopyWith(_$_Image value, $Res Function(_$_Image) then) =
+      __$$_ImageCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id') String? id,
@@ -95,20 +76,20 @@ abstract class _$ImageCopyWith<$Res> implements $ImageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ImageCopyWithImpl<$Res> extends _$ImageCopyWithImpl<$Res>
-    implements _$ImageCopyWith<$Res> {
-  __$ImageCopyWithImpl(_Image _value, $Res Function(_Image) _then)
-      : super(_value, (v) => _then(v as _Image));
+class __$$_ImageCopyWithImpl<$Res> extends _$ImageCopyWithImpl<$Res>
+    implements _$$_ImageCopyWith<$Res> {
+  __$$_ImageCopyWithImpl(_$_Image _value, $Res Function(_$_Image) _then)
+      : super(_value, (v) => _then(v as _$_Image));
 
   @override
-  _Image get _value => super._value as _Image;
+  _$_Image get _value => super._value as _$_Image;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? base64 = freezed,
   }) {
-    return _then(_Image(
+    return _then(_$_Image(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -128,7 +109,7 @@ class _$_Image implements _Image {
       {@JsonKey(name: 'id') this.id, @JsonKey(name: 'base64') this.base64});
 
   factory _$_Image.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImageFromJson(json);
+      _$$_ImageFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -145,44 +126,47 @@ class _$_Image implements _Image {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Image &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.base64, base64) ||
-                const DeepCollectionEquality().equals(other.base64, base64)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Image &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.base64, base64));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(base64);
 
   @JsonKey(ignore: true)
   @override
-  _$ImageCopyWith<_Image> get copyWith =>
-      __$ImageCopyWithImpl<_Image>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(base64));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ImageCopyWith<_$_Image> get copyWith =>
+      __$$_ImageCopyWithImpl<_$_Image>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImageToJson(this);
+    return _$$_ImageToJson(
+      this,
+    );
   }
 }
 
 abstract class _Image implements Image {
   factory _Image(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'base64') String? base64}) = _$_Image;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'base64') final String? base64}) = _$_Image;
 
   factory _Image.fromJson(Map<String, dynamic> json) = _$_Image.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'base64')
-  String? get base64 => throw _privateConstructorUsedError;
+  String? get base64;
   @override
   @JsonKey(ignore: true)
-  _$ImageCopyWith<_Image> get copyWith => throw _privateConstructorUsedError;
+  _$$_ImageCopyWith<_$_Image> get copyWith =>
+      throw _privateConstructorUsedError;
 }

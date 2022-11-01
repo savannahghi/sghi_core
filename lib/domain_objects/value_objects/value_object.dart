@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
-import 'package:shared_libraries/domain_objects/failures/value_object_failure.dart';
+import 'package:sghi_core/domain_objects/failures/value_object_failure.dart';
 
 @immutable
 abstract class ValueObject<T> {

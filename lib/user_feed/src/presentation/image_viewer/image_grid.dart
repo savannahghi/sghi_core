@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:shared_libraries/ui_components/src/small_appbar.dart';
+import 'package:sghi_core/ui_components/src/small_appbar.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/link.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
-import 'package:shared_libraries/user_feed/src/presentation/image_viewer/image_viewer.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/presentation/image_viewer/image_viewer.dart';
 
 class FeedItemImageGrid extends StatelessWidget {
   const FeedItemImageGrid({super.key, required this.images});

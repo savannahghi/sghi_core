@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 
 // ASSETS PATHS
-const String closeIconUrl =
-    'packages/shared_libraries/ui_components/assets/close.png';
-const String errorIconUrl =
-    'packages/shared_libraries/ui_components/assets/error.svg';
-const String infoIconUrl =
-    'packages/shared_libraries/ui_components/assets/info.svg';
+const String closeIconUrl = 'packages/sghi_core/ui_components/assets/close.png';
+const String errorIconUrl = 'packages/sghi_core/ui_components/assets/error.svg';
+const String infoIconUrl = 'packages/sghi_core/ui_components/assets/info.svg';
 const String successconUrl =
-    'packages/shared_libraries/ui_components/assets/success.svg';
+    'packages/sghi_core/ui_components/assets/success.svg';
 const String bewellLogoNetworkUrl =
     'https://assets.healthcloud.co.ke/bewell_logo.png';
 const String bewellLogo =
-    'packages/shared_libraries/ui_components/assets/bewell_logo.png';
+    'packages/sghi_core/ui_components/assets/bewell_logo.png';
 
 const String verifyOTPState = 'verifyOTPState';
 

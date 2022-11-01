@@ -4,7 +4,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/feed.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/feed.dart';
 
 part 'inputs.freezed.dart';
 part 'inputs.g.dart';

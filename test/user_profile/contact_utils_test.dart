@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
-import 'package:shared_libraries/user_profile/contact_utils.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
+import 'package:sghi_core/user_profile/contact_utils.dart';
 
 import 'mocks.dart';
 import 'test_utils.dart';

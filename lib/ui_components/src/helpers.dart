@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:shared_libraries/ui_components/src/app_strings.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_libraries/ui_components/src/resend_phone_code.dart';
-import 'package:shared_libraries/ui_components/src/show_info_bottomsheet.dart';
-import 'package:shared_libraries/ui_components/src/type_defs.dart';
-import 'package:shared_libraries/ui_components/src/widget_keys.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/app_strings.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
+import 'package:sghi_core/ui_components/src/resend_phone_code.dart';
+import 'package:sghi_core/ui_components/src/show_info_bottomsheet.dart';
+import 'package:sghi_core/ui_components/src/type_defs.dart';
+import 'package:sghi_core/ui_components/src/widget_keys.dart';
 
 bool alignLabelWithHint(int? maxLines) => maxLines != null && maxLines > 1;
 

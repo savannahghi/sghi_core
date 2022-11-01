@@ -1,3 +1,5 @@
-## 0.0.1
+### Pre - [0.0.1]
 
-* TODO: Describe initial release.
+- Code testing, refactor and upgrading design system for sghi_core
+- Assorted bug fixes and enhancements
+- Migrated open sourced libraries into sghi_core

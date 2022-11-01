@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shared_themes/constants.dart';
-import 'package:shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
 
 class LoadingWrapper extends StatelessWidget {
   const LoadingWrapper({required this.loader});

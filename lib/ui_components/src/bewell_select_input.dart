@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
 
 class BeWellSelectInput extends StatefulWidget {
   const BeWellSelectInput({

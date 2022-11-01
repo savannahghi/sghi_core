@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
 
 void main() {
   group('SILPrimaryButton', () {

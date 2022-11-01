@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_libraries/ui_components/src/snack_bar_action.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
+import 'package:sghi_core/ui_components/src/snack_bar_action.dart';
 
 /// PLEASE DON'T DELETE. A BETTER IMPLEMENTATION WILL BE INTRODUCED BASED ON THIS FILE.
 

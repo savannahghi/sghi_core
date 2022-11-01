@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/misc_utilities/misc.dart';
+import 'package:sghi_core/misc_utilities/misc.dart';
 
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
 
 class SILSmallAppBar extends StatelessWidget implements PreferredSizeWidget {
   const SILSmallAppBar({
@@ -47,8 +47,6 @@ class SILSmallAppBar extends StatelessWidget implements PreferredSizeWidget {
                   } else {
                     Navigator.pushReplacementNamed(context, backRoute!);
                   }
-                } else {
-                  Navigator.of(context).pop();
                 }
               },
             )

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/preloaders/nudge_shimmer.dart';
+import 'package:sghi_core/user_feed/src/presentation/preloaders/nudge_shimmer.dart';
 
 void main() {
   testWidgets('Should show preloaders for consumer',

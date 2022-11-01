@@ -6,8 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_action_buttons.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_nudge.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_action_buttons.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_nudge.dart';
 import '../../../mock_data.dart';
 
 void main() {

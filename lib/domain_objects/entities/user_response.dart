@@ -1,10 +1,12 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/entities/auth_credential_response.dart';
-import 'package:shared_libraries/domain_objects/entities/communication_settings.dart';
-import 'package:shared_libraries/domain_objects/entities/customer.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation.dart';
-import 'package:shared_libraries/domain_objects/entities/supplier_profile.dart';
-import 'package:shared_libraries/domain_objects/entities/user_profile.dart';
+import 'package:sghi_core/domain_objects/entities/auth_credential_response.dart';
+import 'package:sghi_core/domain_objects/entities/communication_settings.dart';
+import 'package:sghi_core/domain_objects/entities/customer.dart';
+import 'package:sghi_core/domain_objects/entities/navigation.dart';
+import 'package:sghi_core/domain_objects/entities/supplier_profile.dart';
+import 'package:sghi_core/domain_objects/entities/user_profile.dart';
 
 part 'user_response.freezed.dart';
 part 'user_response.g.dart';

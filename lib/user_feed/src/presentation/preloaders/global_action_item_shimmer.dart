@@ -1,10 +1,10 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/colors.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
 // Package imports:
-import 'package:shared_themes/spaces.dart';
 import 'package:shimmer/shimmer.dart';
 
 class GlobalActionItemShimmerRow extends StatelessWidget {

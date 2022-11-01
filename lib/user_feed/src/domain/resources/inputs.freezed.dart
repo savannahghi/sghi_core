@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'inputs.dart';
 
@@ -10,30 +12,11 @@ part of 'inputs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FeedResponsePayload _$FeedResponsePayloadFromJson(Map<String, dynamic> json) {
   return _FeedResponsePayload.fromJson(json);
 }
-
-/// @nodoc
-class _$FeedResponsePayloadTearOff {
-  const _$FeedResponsePayloadTearOff();
-
-  _FeedResponsePayload call(
-      {@JsonKey(name: 'data') required GetFeedData data}) {
-    return _FeedResponsePayload(
-      data: data,
-    );
-  }
-
-  FeedResponsePayload fromJson(Map<String, Object> json) {
-    return FeedResponsePayload.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FeedResponsePayload = _$FeedResponsePayloadTearOff();
 
 /// @nodoc
 mixin _$FeedResponsePayload {
@@ -86,11 +69,11 @@ class _$FeedResponsePayloadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FeedResponsePayloadCopyWith<$Res>
+abstract class _$$_FeedResponsePayloadCopyWith<$Res>
     implements $FeedResponsePayloadCopyWith<$Res> {
-  factory _$FeedResponsePayloadCopyWith(_FeedResponsePayload value,
-          $Res Function(_FeedResponsePayload) then) =
-      __$FeedResponsePayloadCopyWithImpl<$Res>;
+  factory _$$_FeedResponsePayloadCopyWith(_$_FeedResponsePayload value,
+          $Res Function(_$_FeedResponsePayload) then) =
+      __$$_FeedResponsePayloadCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'data') GetFeedData data});
 
@@ -99,21 +82,21 @@ abstract class _$FeedResponsePayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FeedResponsePayloadCopyWithImpl<$Res>
+class __$$_FeedResponsePayloadCopyWithImpl<$Res>
     extends _$FeedResponsePayloadCopyWithImpl<$Res>
-    implements _$FeedResponsePayloadCopyWith<$Res> {
-  __$FeedResponsePayloadCopyWithImpl(
-      _FeedResponsePayload _value, $Res Function(_FeedResponsePayload) _then)
-      : super(_value, (v) => _then(v as _FeedResponsePayload));
+    implements _$$_FeedResponsePayloadCopyWith<$Res> {
+  __$$_FeedResponsePayloadCopyWithImpl(_$_FeedResponsePayload _value,
+      $Res Function(_$_FeedResponsePayload) _then)
+      : super(_value, (v) => _then(v as _$_FeedResponsePayload));
 
   @override
-  _FeedResponsePayload get _value => super._value as _FeedResponsePayload;
+  _$_FeedResponsePayload get _value => super._value as _$_FeedResponsePayload;
 
   @override
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(_FeedResponsePayload(
+    return _then(_$_FeedResponsePayload(
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -128,7 +111,7 @@ class _$_FeedResponsePayload implements _FeedResponsePayload {
   _$_FeedResponsePayload({@JsonKey(name: 'data') required this.data});
 
   factory _$_FeedResponsePayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_FeedResponsePayloadFromJson(json);
+      _$$_FeedResponsePayloadFromJson(json);
 
   @override
   @JsonKey(name: 'data')
@@ -142,30 +125,33 @@ class _$_FeedResponsePayload implements _FeedResponsePayload {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FeedResponsePayload &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FeedResponsePayload &&
+            const DeepCollectionEquality().equals(other.data, data));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
   @JsonKey(ignore: true)
   @override
-  _$FeedResponsePayloadCopyWith<_FeedResponsePayload> get copyWith =>
-      __$FeedResponsePayloadCopyWithImpl<_FeedResponsePayload>(
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FeedResponsePayloadCopyWith<_$_FeedResponsePayload> get copyWith =>
+      __$$_FeedResponsePayloadCopyWithImpl<_$_FeedResponsePayload>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FeedResponsePayloadToJson(this);
+    return _$$_FeedResponsePayloadToJson(
+      this,
+    );
   }
 }
 
 abstract class _FeedResponsePayload implements FeedResponsePayload {
   factory _FeedResponsePayload(
-          {@JsonKey(name: 'data') required GetFeedData data}) =
+          {@JsonKey(name: 'data') required final GetFeedData data}) =
       _$_FeedResponsePayload;
 
   factory _FeedResponsePayload.fromJson(Map<String, dynamic> json) =
@@ -173,34 +159,16 @@ abstract class _FeedResponsePayload implements FeedResponsePayload {
 
   @override
   @JsonKey(name: 'data')
-  GetFeedData get data => throw _privateConstructorUsedError;
+  GetFeedData get data;
   @override
   @JsonKey(ignore: true)
-  _$FeedResponsePayloadCopyWith<_FeedResponsePayload> get copyWith =>
+  _$$_FeedResponsePayloadCopyWith<_$_FeedResponsePayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 GetFeedData _$GetFeedDataFromJson(Map<String, dynamic> json) {
   return _GetFeedData.fromJson(json);
 }
-
-/// @nodoc
-class _$GetFeedDataTearOff {
-  const _$GetFeedDataTearOff();
-
-  _GetFeedData call({@JsonKey(name: 'getFeed') required Feed getFeed}) {
-    return _GetFeedData(
-      getFeed: getFeed,
-    );
-  }
-
-  GetFeedData fromJson(Map<String, Object> json) {
-    return GetFeedData.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetFeedData = _$GetFeedDataTearOff();
 
 /// @nodoc
 mixin _$GetFeedData {
@@ -252,11 +220,11 @@ class _$GetFeedDataCopyWithImpl<$Res> implements $GetFeedDataCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetFeedDataCopyWith<$Res>
+abstract class _$$_GetFeedDataCopyWith<$Res>
     implements $GetFeedDataCopyWith<$Res> {
-  factory _$GetFeedDataCopyWith(
-          _GetFeedData value, $Res Function(_GetFeedData) then) =
-      __$GetFeedDataCopyWithImpl<$Res>;
+  factory _$$_GetFeedDataCopyWith(
+          _$_GetFeedData value, $Res Function(_$_GetFeedData) then) =
+      __$$_GetFeedDataCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'getFeed') Feed getFeed});
 
@@ -265,20 +233,20 @@ abstract class _$GetFeedDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetFeedDataCopyWithImpl<$Res> extends _$GetFeedDataCopyWithImpl<$Res>
-    implements _$GetFeedDataCopyWith<$Res> {
-  __$GetFeedDataCopyWithImpl(
-      _GetFeedData _value, $Res Function(_GetFeedData) _then)
-      : super(_value, (v) => _then(v as _GetFeedData));
+class __$$_GetFeedDataCopyWithImpl<$Res> extends _$GetFeedDataCopyWithImpl<$Res>
+    implements _$$_GetFeedDataCopyWith<$Res> {
+  __$$_GetFeedDataCopyWithImpl(
+      _$_GetFeedData _value, $Res Function(_$_GetFeedData) _then)
+      : super(_value, (v) => _then(v as _$_GetFeedData));
 
   @override
-  _GetFeedData get _value => super._value as _GetFeedData;
+  _$_GetFeedData get _value => super._value as _$_GetFeedData;
 
   @override
   $Res call({
     Object? getFeed = freezed,
   }) {
-    return _then(_GetFeedData(
+    return _then(_$_GetFeedData(
       getFeed: getFeed == freezed
           ? _value.getFeed
           : getFeed // ignore: cast_nullable_to_non_nullable
@@ -293,7 +261,7 @@ class _$_GetFeedData implements _GetFeedData {
   _$_GetFeedData({@JsonKey(name: 'getFeed') required this.getFeed});
 
   factory _$_GetFeedData.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetFeedDataFromJson(json);
+      _$$_GetFeedDataFromJson(json);
 
   @override
   @JsonKey(name: 'getFeed')
@@ -307,38 +275,41 @@ class _$_GetFeedData implements _GetFeedData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetFeedData &&
-            (identical(other.getFeed, getFeed) ||
-                const DeepCollectionEquality().equals(other.getFeed, getFeed)));
+        (other.runtimeType == runtimeType &&
+            other is _$_GetFeedData &&
+            const DeepCollectionEquality().equals(other.getFeed, getFeed));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(getFeed);
 
   @JsonKey(ignore: true)
   @override
-  _$GetFeedDataCopyWith<_GetFeedData> get copyWith =>
-      __$GetFeedDataCopyWithImpl<_GetFeedData>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(getFeed));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetFeedDataCopyWith<_$_GetFeedData> get copyWith =>
+      __$$_GetFeedDataCopyWithImpl<_$_GetFeedData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetFeedDataToJson(this);
+    return _$$_GetFeedDataToJson(
+      this,
+    );
   }
 }
 
 abstract class _GetFeedData implements GetFeedData {
-  factory _GetFeedData({@JsonKey(name: 'getFeed') required Feed getFeed}) =
-      _$_GetFeedData;
+  factory _GetFeedData(
+      {@JsonKey(name: 'getFeed') required final Feed getFeed}) = _$_GetFeedData;
 
   factory _GetFeedData.fromJson(Map<String, dynamic> json) =
       _$_GetFeedData.fromJson;
 
   @override
   @JsonKey(name: 'getFeed')
-  Feed get getFeed => throw _privateConstructorUsedError;
+  Feed get getFeed;
   @override
   @JsonKey(ignore: true)
-  _$GetFeedDataCopyWith<_GetFeedData> get copyWith =>
+  _$$_GetFeedDataCopyWith<_$_GetFeedData> get copyWith =>
       throw _privateConstructorUsedError;
 }

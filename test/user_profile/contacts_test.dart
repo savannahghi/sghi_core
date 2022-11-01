@@ -1,16 +1,16 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
-import 'package:shared_libraries/ui_components/src/inputs.dart';
-import 'package:shared_libraries/user_profile/constants.dart';
-import 'package:shared_libraries/user_profile/contact_items_card.dart';
-import 'package:shared_libraries/user_profile/contact_utils.dart';
-import 'package:shared_libraries/user_profile/contacts.dart';
-import 'package:shared_libraries/user_profile/shared/widget_keys.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
+import 'package:sghi_core/ui_components/src/inputs.dart';
+import 'package:sghi_core/user_profile/constants.dart';
+import 'package:sghi_core/user_profile/contact_items_card.dart';
+import 'package:sghi_core/user_profile/contact_utils.dart';
+import 'package:sghi_core/user_profile/contacts.dart';
+import 'package:sghi_core/user_profile/shared/widget_keys.dart';
 
 import 'mocks.dart';
 import 'test_utils.dart';

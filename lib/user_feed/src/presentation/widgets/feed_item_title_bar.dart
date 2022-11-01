@@ -1,11 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-// Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
 // Package imports:
-import 'package:shared_themes/colors.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+// Project imports:
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
 
 /// the top bar of the feed item
 ///

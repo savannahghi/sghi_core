@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/platform_loader.dart';
+import 'package:sghi_core/ui_components/src/platform_loader.dart';
 
 void main() {
   group('sil loader', () {

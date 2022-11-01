@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'feed.dart';
 
@@ -10,52 +12,11 @@ part of 'feed.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Feed _$FeedFromJson(Map<String, dynamic> json) {
   return _Feed.fromJson(json);
 }
-
-/// @nodoc
-class _$FeedTearOff {
-  const _$FeedTearOff();
-
-  _Feed call(
-      {@JsonKey(name: 'id')
-          String? id,
-      @JsonKey(name: 'sequenceNumber')
-          int? sequenceNumber,
-      @JsonKey(name: 'uid')
-          String? uid,
-      @JsonKey(name: 'isAnonymous')
-          bool? isAnonymous,
-      @JsonKey(name: 'flavour', unknownEnumValue: Flavour.UNKNOWN)
-          Flavour? flavour,
-      @JsonKey(name: 'actions')
-          List<Action>? actions,
-      @JsonKey(name: 'nudges')
-          List<Nudge>? nudges,
-      @JsonKey(name: 'items')
-          List<Item>? items}) {
-    return _Feed(
-      id: id,
-      sequenceNumber: sequenceNumber,
-      uid: uid,
-      isAnonymous: isAnonymous,
-      flavour: flavour,
-      actions: actions,
-      nudges: nudges,
-      items: items,
-    );
-  }
-
-  Feed fromJson(Map<String, Object> json) {
-    return Feed.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Feed = _$FeedTearOff();
 
 /// @nodoc
 mixin _$Feed {
@@ -163,9 +124,9 @@ class _$FeedCopyWithImpl<$Res> implements $FeedCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$FeedCopyWith<$Res> implements $FeedCopyWith<$Res> {
-  factory _$FeedCopyWith(_Feed value, $Res Function(_Feed) then) =
-      __$FeedCopyWithImpl<$Res>;
+abstract class _$$_FeedCopyWith<$Res> implements $FeedCopyWith<$Res> {
+  factory _$$_FeedCopyWith(_$_Feed value, $Res Function(_$_Feed) then) =
+      __$$_FeedCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id')
@@ -187,13 +148,13 @@ abstract class _$FeedCopyWith<$Res> implements $FeedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
-    implements _$FeedCopyWith<$Res> {
-  __$FeedCopyWithImpl(_Feed _value, $Res Function(_Feed) _then)
-      : super(_value, (v) => _then(v as _Feed));
+class __$$_FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
+    implements _$$_FeedCopyWith<$Res> {
+  __$$_FeedCopyWithImpl(_$_Feed _value, $Res Function(_$_Feed) _then)
+      : super(_value, (v) => _then(v as _$_Feed));
 
   @override
-  _Feed get _value => super._value as _Feed;
+  _$_Feed get _value => super._value as _$_Feed;
 
   @override
   $Res call({
@@ -206,7 +167,7 @@ class __$FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
     Object? nudges = freezed,
     Object? items = freezed,
   }) {
-    return _then(_Feed(
+    return _then(_$_Feed(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -228,15 +189,15 @@ class __$FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
           : flavour // ignore: cast_nullable_to_non_nullable
               as Flavour?,
       actions: actions == freezed
-          ? _value.actions
+          ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
       nudges: nudges == freezed
-          ? _value.nudges
+          ? _value._nudges
           : nudges // ignore: cast_nullable_to_non_nullable
               as List<Nudge>?,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Item>?,
     ));
@@ -252,12 +213,14 @@ class _$_Feed implements _Feed {
       @JsonKey(name: 'uid') this.uid,
       @JsonKey(name: 'isAnonymous') this.isAnonymous,
       @JsonKey(name: 'flavour', unknownEnumValue: Flavour.UNKNOWN) this.flavour,
-      @JsonKey(name: 'actions') this.actions,
-      @JsonKey(name: 'nudges') this.nudges,
-      @JsonKey(name: 'items') this.items});
+      @JsonKey(name: 'actions') final List<Action>? actions,
+      @JsonKey(name: 'nudges') final List<Nudge>? nudges,
+      @JsonKey(name: 'items') final List<Item>? items})
+      : _actions = actions,
+        _nudges = nudges,
+        _items = items;
 
-  factory _$_Feed.fromJson(Map<String, dynamic> json) =>
-      _$_$_FeedFromJson(json);
+  factory _$_Feed.fromJson(Map<String, dynamic> json) => _$$_FeedFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -268,23 +231,43 @@ class _$_Feed implements _Feed {
   @override
   @JsonKey(name: 'uid')
   final String? uid;
-  @override
 
   /// Note : [isAnonymous] is not removed here since the backend will always return it
+  @override
   @JsonKey(name: 'isAnonymous')
   final bool? isAnonymous;
   @override
   @JsonKey(name: 'flavour', unknownEnumValue: Flavour.UNKNOWN)
   final Flavour? flavour;
+  final List<Action>? _actions;
   @override
   @JsonKey(name: 'actions')
-  final List<Action>? actions;
+  List<Action>? get actions {
+    final value = _actions;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Nudge>? _nudges;
   @override
   @JsonKey(name: 'nudges')
-  final List<Nudge>? nudges;
+  List<Nudge>? get nudges {
+    final value = _nudges;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Item>? _items;
   @override
   @JsonKey(name: 'items')
-  final List<Item>? items;
+  List<Item>? get items {
+    final value = _items;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -294,100 +277,94 @@ class _$_Feed implements _Feed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Feed &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.sequenceNumber, sequenceNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.sequenceNumber, sequenceNumber)) &&
-            (identical(other.uid, uid) ||
-                const DeepCollectionEquality().equals(other.uid, uid)) &&
-            (identical(other.isAnonymous, isAnonymous) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAnonymous, isAnonymous)) &&
-            (identical(other.flavour, flavour) ||
-                const DeepCollectionEquality()
-                    .equals(other.flavour, flavour)) &&
-            (identical(other.actions, actions) ||
-                const DeepCollectionEquality()
-                    .equals(other.actions, actions)) &&
-            (identical(other.nudges, nudges) ||
-                const DeepCollectionEquality().equals(other.nudges, nudges)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Feed &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.sequenceNumber, sequenceNumber) &&
+            const DeepCollectionEquality().equals(other.uid, uid) &&
+            const DeepCollectionEquality()
+                .equals(other.isAnonymous, isAnonymous) &&
+            const DeepCollectionEquality().equals(other.flavour, flavour) &&
+            const DeepCollectionEquality().equals(other._actions, _actions) &&
+            const DeepCollectionEquality().equals(other._nudges, _nudges) &&
+            const DeepCollectionEquality().equals(other._items, _items));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(sequenceNumber) ^
-      const DeepCollectionEquality().hash(uid) ^
-      const DeepCollectionEquality().hash(isAnonymous) ^
-      const DeepCollectionEquality().hash(flavour) ^
-      const DeepCollectionEquality().hash(actions) ^
-      const DeepCollectionEquality().hash(nudges) ^
-      const DeepCollectionEquality().hash(items);
 
   @JsonKey(ignore: true)
   @override
-  _$FeedCopyWith<_Feed> get copyWith =>
-      __$FeedCopyWithImpl<_Feed>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(sequenceNumber),
+      const DeepCollectionEquality().hash(uid),
+      const DeepCollectionEquality().hash(isAnonymous),
+      const DeepCollectionEquality().hash(flavour),
+      const DeepCollectionEquality().hash(_actions),
+      const DeepCollectionEquality().hash(_nudges),
+      const DeepCollectionEquality().hash(_items));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FeedCopyWith<_$_Feed> get copyWith =>
+      __$$_FeedCopyWithImpl<_$_Feed>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FeedToJson(this);
+    return _$$_FeedToJson(
+      this,
+    );
   }
 }
 
 abstract class _Feed implements Feed {
   factory _Feed(
       {@JsonKey(name: 'id')
-          String? id,
+          final String? id,
       @JsonKey(name: 'sequenceNumber')
-          int? sequenceNumber,
+          final int? sequenceNumber,
       @JsonKey(name: 'uid')
-          String? uid,
+          final String? uid,
       @JsonKey(name: 'isAnonymous')
-          bool? isAnonymous,
+          final bool? isAnonymous,
       @JsonKey(name: 'flavour', unknownEnumValue: Flavour.UNKNOWN)
-          Flavour? flavour,
+          final Flavour? flavour,
       @JsonKey(name: 'actions')
-          List<Action>? actions,
+          final List<Action>? actions,
       @JsonKey(name: 'nudges')
-          List<Nudge>? nudges,
+          final List<Nudge>? nudges,
       @JsonKey(name: 'items')
-          List<Item>? items}) = _$_Feed;
+          final List<Item>? items}) = _$_Feed;
 
   factory _Feed.fromJson(Map<String, dynamic> json) = _$_Feed.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'sequenceNumber')
-  int? get sequenceNumber => throw _privateConstructorUsedError;
+  int? get sequenceNumber;
   @override
   @JsonKey(name: 'uid')
-  String? get uid => throw _privateConstructorUsedError;
+  String? get uid;
   @override
 
   /// Note : [isAnonymous] is not removed here since the backend will always return it
   @JsonKey(name: 'isAnonymous')
-  bool? get isAnonymous => throw _privateConstructorUsedError;
+  bool? get isAnonymous;
   @override
   @JsonKey(name: 'flavour', unknownEnumValue: Flavour.UNKNOWN)
-  Flavour? get flavour => throw _privateConstructorUsedError;
+  Flavour? get flavour;
   @override
   @JsonKey(name: 'actions')
-  List<Action>? get actions => throw _privateConstructorUsedError;
+  List<Action>? get actions;
   @override
   @JsonKey(name: 'nudges')
-  List<Nudge>? get nudges => throw _privateConstructorUsedError;
+  List<Nudge>? get nudges;
   @override
   @JsonKey(name: 'items')
-  List<Item>? get items => throw _privateConstructorUsedError;
+  List<Item>? get items;
   @override
   @JsonKey(ignore: true)
-  _$FeedCopyWith<_Feed> get copyWith => throw _privateConstructorUsedError;
+  _$$_FeedCopyWith<_$_Feed> get copyWith => throw _privateConstructorUsedError;
 }

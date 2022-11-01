@@ -6,13 +6,12 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:intl/intl.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_libraries/ui_components/src/country_picker.dart';
-import 'package:shared_libraries/ui_components/src/fancy_loading.dart';
-import 'package:shared_libraries/ui_components/src/inputs.dart';
-import 'package:shared_libraries/ui_components/src/widget_keys.dart';
-
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
+import 'package:sghi_core/ui_components/src/country_picker.dart';
+import 'package:sghi_core/ui_components/src/fancy_loading.dart';
+import 'package:sghi_core/ui_components/src/inputs.dart';
+import 'package:sghi_core/ui_components/src/widget_keys.dart';
 
 void main() {
   final DateTime now = DateTime.now();
@@ -404,7 +403,7 @@ void main() {
     testWidgets('should test SILFormTextField', (WidgetTester tester) async {
       final GlobalKey<FormState> key = GlobalKey<FormState>();
       bool valid = false;
-      bool called = false;
+      bool _called = false;
       await tester.pumpWidget(MaterialApp(
         home: Builder(builder: (BuildContext context) {
           return Material(
@@ -421,7 +420,7 @@ void main() {
                       return null;
                     },
                     onFieldSubmit: (String value) {
-                      called = true;
+                      _called = true;
                     },
                   ),
                 ),
@@ -451,7 +450,7 @@ void main() {
       await tester.showKeyboard(find.byType(TextField));
       await tester.testTextInput.receiveAction(TextInputAction.done);
       await tester.pump();
-      expect(called, true);
+      expect(_called, true);
     });
 
     testWidgets('should render correctly with tap action',
@@ -599,7 +598,7 @@ void main() {
         return T;
       }
 
-      const String selectedGender = 'Male';
+      const String _selectedGender = 'Male';
       const Key formKey = Key('select_option_field');
       final List<String> options = <String>[
         'Male',
@@ -616,7 +615,7 @@ void main() {
                   child: SILSelectOptionField(
                       dropDownInputKey: silSelectOptionField,
                       hintText: 'Select gender',
-                      value: selectedGender,
+                      value: _selectedGender,
                       options: options,
                       onSaved: (dynamic value) {},
                       onChanged: (dynamic val) {})));
@@ -749,7 +748,7 @@ void main() {
     testWidgets('should render ios date picker', (WidgetTester tester) async {
       debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
       final DateFormat formatter = DateFormat('MMMM');
-      final String month = formatter.format(now);
+      final String _month = formatter.format(now);
       const Key materialKey = Key('material_key');
 
       await tester.pumpWidget(MaterialApp(
@@ -771,8 +770,8 @@ void main() {
       expect(find.byType(Container), findsWidgets);
       expect(find.byType(CupertinoDatePicker), findsOneWidget);
 
-      expect(find.text(month), findsOneWidget);
-      await tester.drag(find.text(month), const Offset(0, 70.0));
+      expect(find.text(_month), findsOneWidget);
+      await tester.drag(find.text(_month), const Offset(0, 70.0));
 
       await tester.pumpAndSettle();
 

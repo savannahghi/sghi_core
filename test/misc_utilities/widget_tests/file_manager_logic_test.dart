@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:shared_libraries/misc_utilities/file_manager_logic.dart';
-import 'package:shared_libraries/misc_utilities/string_constant.dart';
-import 'package:shared_themes/constants.dart';
+import 'package:sghi_core/misc_utilities/file_manager_logic.dart';
+import 'package:sghi_core/misc_utilities/string_constant.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
 
 import '../mocks.dart';
 

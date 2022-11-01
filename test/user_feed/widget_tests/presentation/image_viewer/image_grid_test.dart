@@ -8,12 +8,12 @@ import 'package:mocktail_image_network/mocktail_image_network.dart';
 import 'package:photo_view/photo_view.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/link.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
-import 'package:shared_libraries/user_feed/src/presentation/image_viewer/image_grid.dart';
-import 'package:shared_libraries/user_feed/src/presentation/image_viewer/image_viewer.dart';
-import 'package:shared_libraries/user_feed/src/presentation/router/router_generator.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/presentation/image_viewer/image_grid.dart';
+import 'package:sghi_core/user_feed/src/presentation/image_viewer/image_viewer.dart';
+import 'package:sghi_core/user_feed/src/presentation/router/router_generator.dart';
 import '../../../mock_data.dart';
 import '../../../mocks.dart';
 

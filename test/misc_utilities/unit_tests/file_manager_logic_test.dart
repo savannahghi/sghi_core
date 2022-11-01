@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/misc_utilities/file_manager_logic.dart';
+import 'package:sghi_core/misc_utilities/file_manager_logic.dart';
 
 import '../mocks.dart';
 

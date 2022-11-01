@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/country_picker.dart';
+import 'package:sghi_core/ui_components/src/country_picker.dart';
 
 void main() {
   group('SilCountryPicker', () {

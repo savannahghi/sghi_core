@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/failures/value_object_failure.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/failures/value_object_failure.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
 
 void main() {
   final EmailAddress emailA = EmailAddress.withValue('john@gmail.com');

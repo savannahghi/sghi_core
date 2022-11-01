@@ -1,6 +1,6 @@
 library flutter_graphql_client;
 
-import 'package:shared_libraries/flutter_graphql_client/constants.dart';
+import 'package:sghi_core/flutter_graphql_client/constants.dart';
 import 'package:sqflite/sqflite.dart';
 
 abstract class IEventBusDatabaseHelper<T extends DatabaseExecutor> {

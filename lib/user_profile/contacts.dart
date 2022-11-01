@@ -1,14 +1,14 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
-import 'package:shared_libraries/domain_objects/value_objects/value_object.dart';
-import 'package:shared_libraries/user_profile/add_contact.dart';
-import 'package:shared_libraries/user_profile/constants.dart';
-import 'package:shared_libraries/user_profile/contact_items_card.dart';
-import 'package:shared_libraries/user_profile/contact_type.dart';
-import 'package:shared_libraries/user_profile/contact_utils.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/value_objects/value_object.dart';
+import 'package:sghi_core/user_profile/add_contact.dart';
+import 'package:sghi_core/user_profile/constants.dart';
+import 'package:sghi_core/user_profile/contact_items_card.dart';
+import 'package:sghi_core/user_profile/contact_type.dart';
+import 'package:sghi_core/user_profile/contact_utils.dart';
 
 /// Renders [ContactItemsCard] card and supplies the relevant [data] and [type]
 class ContactDetails extends StatelessWidget {

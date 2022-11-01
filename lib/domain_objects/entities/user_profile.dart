@@ -1,12 +1,14 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/entities/address.dart';
-import 'package:shared_libraries/domain_objects/entities/bio_data.dart';
-import 'package:shared_libraries/domain_objects/entities/cover.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
-import 'package:shared_libraries/domain_objects/value_objects/enums.dart';
-import 'package:shared_libraries/domain_objects/value_objects/name.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/address.dart';
+import 'package:sghi_core/domain_objects/entities/bio_data.dart';
+import 'package:sghi_core/domain_objects/entities/cover.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/value_objects/enums.dart';
+import 'package:sghi_core/domain_objects/value_objects/name.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 part 'user_profile.freezed.dart';
 part 'user_profile.g.dart';

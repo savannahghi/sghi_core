@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:gql/ast.dart' as ast;
 import 'package:gql/language.dart' as lang;
 import 'package:http/http.dart';
-import 'package:shared_libraries/flutter_graphql_client/constants.dart';
+import 'package:sghi_core/flutter_graphql_client/constants.dart';
 import 'package:source_span/source_span.dart';
 
 enum ContentType { json, form }

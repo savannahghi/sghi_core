@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:shared_libraries/app_wrapper/base_context.dart';
-import 'package:shared_libraries/app_wrapper/device_capabilities.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/app_wrapper/base_context.dart';
+import 'package:sghi_core/app_wrapper/device_capabilities.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
 
 /// [AppWrapperBase] is a top level base class used to efficiently propagate information down the tree.
 ///

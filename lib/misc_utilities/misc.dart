@@ -6,15 +6,15 @@ import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/domain_objects/failures/exception.dart';
-import 'package:shared_libraries/flutter_graphql_client/constants.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
-import 'package:shared_libraries/misc_utilities/bottom_sheet_builder.dart';
-import 'package:shared_libraries/misc_utilities/enums.dart';
-import 'package:shared_libraries/misc_utilities/mutations.dart';
-import 'package:shared_libraries/misc_utilities/string_constant.dart';
-import 'package:shared_themes/constants.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/domain_objects/failures/exception.dart';
+import 'package:sghi_core/flutter_graphql_client/constants.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/misc_utilities/bottom_sheet_builder.dart';
+import 'package:sghi_core/misc_utilities/enums.dart';
+import 'package:sghi_core/misc_utilities/mutations.dart';
+import 'package:sghi_core/misc_utilities/string_constant.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
 
 enum UserInactivityStatus { okay, requiresLogin, requiresPin }
 

@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart';
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
-import 'package:shared_libraries/ui_components/src/communication_setting_widget.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/ui_components/src/communication_setting_widget.dart';
 
-import 'package:shared_libraries/user_profile/mutations.dart';
+import 'package:sghi_core/user_profile/mutations.dart';
 
 ///[Change Communication Settings]
 Future<bool> changeCommunicationSetting(

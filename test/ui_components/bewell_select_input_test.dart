@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/bewell_select_input.dart';
-import 'package:shared_libraries/ui_components/src/widget_keys.dart';
+import 'package:sghi_core/ui_components/src/bewell_select_input.dart';
+import 'package:sghi_core/ui_components/src/widget_keys.dart';
 
 void main() {
   testWidgets('should render correctly', (WidgetTester tester) async {
@@ -9,7 +9,7 @@ void main() {
       return T;
     }
 
-    const Key formKey = Key('bewell_select_input');
+    const Key _formKey = Key('bewell_select_input');
 
     const List<String> routeOptions = <String>[
       'Capsules',
@@ -24,7 +24,7 @@ void main() {
     await tester.pumpWidget(const MaterialApp(
       home: Scaffold(
         body: Form(
-          key: formKey,
+          key: _formKey,
           child: BeWellSelectInput(
             onChanged: increment,
             options: routeOptions,
