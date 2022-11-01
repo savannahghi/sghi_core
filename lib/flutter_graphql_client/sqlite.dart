@@ -1,0 +1,23 @@
+import 'dart:io';
+
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_libraries/flutter_graphql_client/constants.dart';
+import 'package:sqflite/sqflite.dart';
+
+Future<T> initDatabase<T extends DatabaseExecutor>() async {
+  final Directory documentsDirectory = await getApplicationDocumentsDirectory();
+  final String path = join(documentsDirectory.path, kDatabaseName);
+  return openDatabase(path, version: kDatabaseVersion, onCreate: onCreate) as T;
+}
+
+// SQL code to create the database table
+Future<void> onCreate(Database db, int version) async {
+  await db.execute('''
+          CREATE TABLE $kTable (
+            $kColumnId INTEGER PRIMARY KEY,
+            $kColumnName TEXT NOT NULL,
+            $kPayload TEXT NOT NULL
+          )
+          ''');
+}
