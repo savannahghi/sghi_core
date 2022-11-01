@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 import '../../../test_helpers.dart';
 
 void main() {

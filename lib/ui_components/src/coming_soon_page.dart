@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shared_libraries/misc_utilities/number_constants.dart';
-import 'package:shared_libraries/misc_utilities/responsive_widget.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/misc_utilities/number_constants.dart';
+import 'package:sghi_core/misc_utilities/responsive_widget.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
 
 class SILComingSoonPage extends StatelessWidget {
   SILComingSoonPage(

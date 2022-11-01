@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
-import 'package:shared_libraries/app_wrapper/endpoints.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
+import 'package:sghi_core/app_wrapper/endpoints.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
 
 /// [EndpointContext] returns the correct server endpoint depending on the context
 /// that the app is running on

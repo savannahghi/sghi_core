@@ -6,9 +6,9 @@ import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:shared_libraries/app_wrapper/device_capabilities.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
-import 'package:shared_libraries/user_profile/constants.dart';
+import 'package:sghi_core/app_wrapper/device_capabilities.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/user_profile/constants.dart';
 
 class MockDeviceCapabilities extends IDeviceCapabilities {}
 

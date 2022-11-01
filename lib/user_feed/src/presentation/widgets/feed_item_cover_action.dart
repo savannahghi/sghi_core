@@ -1,16 +1,16 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
-// Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/asset_strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/colors.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/feed_store.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
 // Package imports:
-import 'package:shared_themes/colors.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
+// Project imports:
+import 'package:sghi_core/user_feed/src/domain/value_objects/asset_strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/feed_store.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
 
 class FeedItemCoverCallToAction extends StatelessWidget {
   @override

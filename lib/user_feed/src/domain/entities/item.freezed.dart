@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'item.dart';
 
@@ -10,91 +12,11 @@ part of 'item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Item _$ItemFromJson(Map<String, dynamic> json) {
   return _Item.fromJson(json);
 }
-
-/// @nodoc
-class _$ItemTearOff {
-  const _$ItemTearOff();
-
-  _Item call(
-      {@JsonKey(name: 'featureImage')
-          String? featureImage,
-      @JsonKey(name: 'id')
-          String? id,
-      @JsonKey(name: 'sequenceNumber')
-          int? sequenceNumber,
-      @JsonKey(name: 'persistent')
-          bool? persistent,
-      @JsonKey(name: 'icon')
-          Link? icon,
-      @JsonKey(name: 'author')
-          String? author,
-      @JsonKey(name: 'tagline')
-          String? tagline,
-      @JsonKey(name: 'timestamp')
-          String? timestamp,
-      @JsonKey(name: 'expiry')
-          String? expiry,
-      @JsonKey(name: 'label')
-          String? label,
-      @JsonKey(name: 'summary')
-          String? summary,
-      @JsonKey(name: 'visibility')
-          Visibility? visibility,
-      @JsonKey(name: 'status')
-          Status? status,
-      @JsonKey(name: 'actions')
-          List<Action>? actions,
-      @JsonKey(name: 'text')
-          String? text,
-      @JsonKey(name: 'textType')
-          TextType? textType,
-      @JsonKey(name: 'links')
-          List<Link?>? links,
-      @JsonKey(name: 'conversations')
-          List<Message?>? conversations,
-      @JsonKey(name: 'groups')
-          List<String?>? groups,
-      @JsonKey(name: 'users')
-          List<String?>? users,
-      @JsonKey(name: 'notificationChannels')
-          List<Channel?>? notificationChannels}) {
-    return _Item(
-      featureImage: featureImage,
-      id: id,
-      sequenceNumber: sequenceNumber,
-      persistent: persistent,
-      icon: icon,
-      author: author,
-      tagline: tagline,
-      timestamp: timestamp,
-      expiry: expiry,
-      label: label,
-      summary: summary,
-      visibility: visibility,
-      status: status,
-      actions: actions,
-      text: text,
-      textType: textType,
-      links: links,
-      conversations: conversations,
-      groups: groups,
-      users: users,
-      notificationChannels: notificationChannels,
-    );
-  }
-
-  Item fromJson(Map<String, Object> json) {
-    return Item.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Item = _$ItemTearOff();
 
 /// @nodoc
 mixin _$Item {
@@ -331,9 +253,9 @@ class _$ItemCopyWithImpl<$Res> implements $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
-  factory _$ItemCopyWith(_Item value, $Res Function(_Item) then) =
-      __$ItemCopyWithImpl<$Res>;
+abstract class _$$_ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
+  factory _$$_ItemCopyWith(_$_Item value, $Res Function(_$_Item) then) =
+      __$$_ItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'featureImage')
@@ -384,13 +306,13 @@ abstract class _$ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
-    implements _$ItemCopyWith<$Res> {
-  __$ItemCopyWithImpl(_Item _value, $Res Function(_Item) _then)
-      : super(_value, (v) => _then(v as _Item));
+class __$$_ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
+    implements _$$_ItemCopyWith<$Res> {
+  __$$_ItemCopyWithImpl(_$_Item _value, $Res Function(_$_Item) _then)
+      : super(_value, (v) => _then(v as _$_Item));
 
   @override
-  _Item get _value => super._value as _Item;
+  _$_Item get _value => super._value as _$_Item;
 
   @override
   $Res call({
@@ -416,7 +338,7 @@ class __$ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
     Object? users = freezed,
     Object? notificationChannels = freezed,
   }) {
-    return _then(_Item(
+    return _then(_$_Item(
       featureImage: featureImage == freezed
           ? _value.featureImage
           : featureImage // ignore: cast_nullable_to_non_nullable
@@ -470,7 +392,7 @@ class __$ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
           : status // ignore: cast_nullable_to_non_nullable
               as Status?,
       actions: actions == freezed
-          ? _value.actions
+          ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
       text: text == freezed
@@ -482,23 +404,23 @@ class __$ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
           : textType // ignore: cast_nullable_to_non_nullable
               as TextType?,
       links: links == freezed
-          ? _value.links
+          ? _value._links
           : links // ignore: cast_nullable_to_non_nullable
               as List<Link?>?,
       conversations: conversations == freezed
-          ? _value.conversations
+          ? _value._conversations
           : conversations // ignore: cast_nullable_to_non_nullable
               as List<Message?>?,
       groups: groups == freezed
-          ? _value.groups
+          ? _value._groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
       users: users == freezed
-          ? _value.users
+          ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
       notificationChannels: notificationChannels == freezed
-          ? _value.notificationChannels
+          ? _value._notificationChannels
           : notificationChannels // ignore: cast_nullable_to_non_nullable
               as List<Channel?>?,
     ));
@@ -509,30 +431,56 @@ class __$ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Item implements _Item {
   _$_Item(
-      {@JsonKey(name: 'featureImage') this.featureImage,
-      @JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'sequenceNumber') this.sequenceNumber,
-      @JsonKey(name: 'persistent') this.persistent,
-      @JsonKey(name: 'icon') this.icon,
-      @JsonKey(name: 'author') this.author,
-      @JsonKey(name: 'tagline') this.tagline,
-      @JsonKey(name: 'timestamp') this.timestamp,
-      @JsonKey(name: 'expiry') this.expiry,
-      @JsonKey(name: 'label') this.label,
-      @JsonKey(name: 'summary') this.summary,
-      @JsonKey(name: 'visibility') this.visibility,
-      @JsonKey(name: 'status') this.status,
-      @JsonKey(name: 'actions') this.actions,
-      @JsonKey(name: 'text') this.text,
-      @JsonKey(name: 'textType') this.textType,
-      @JsonKey(name: 'links') this.links,
-      @JsonKey(name: 'conversations') this.conversations,
-      @JsonKey(name: 'groups') this.groups,
-      @JsonKey(name: 'users') this.users,
-      @JsonKey(name: 'notificationChannels') this.notificationChannels});
+      {@JsonKey(name: 'featureImage')
+          this.featureImage,
+      @JsonKey(name: 'id')
+          this.id,
+      @JsonKey(name: 'sequenceNumber')
+          this.sequenceNumber,
+      @JsonKey(name: 'persistent')
+          this.persistent,
+      @JsonKey(name: 'icon')
+          this.icon,
+      @JsonKey(name: 'author')
+          this.author,
+      @JsonKey(name: 'tagline')
+          this.tagline,
+      @JsonKey(name: 'timestamp')
+          this.timestamp,
+      @JsonKey(name: 'expiry')
+          this.expiry,
+      @JsonKey(name: 'label')
+          this.label,
+      @JsonKey(name: 'summary')
+          this.summary,
+      @JsonKey(name: 'visibility')
+          this.visibility,
+      @JsonKey(name: 'status')
+          this.status,
+      @JsonKey(name: 'actions')
+          final List<Action>? actions,
+      @JsonKey(name: 'text')
+          this.text,
+      @JsonKey(name: 'textType')
+          this.textType,
+      @JsonKey(name: 'links')
+          final List<Link?>? links,
+      @JsonKey(name: 'conversations')
+          final List<Message?>? conversations,
+      @JsonKey(name: 'groups')
+          final List<String?>? groups,
+      @JsonKey(name: 'users')
+          final List<String?>? users,
+      @JsonKey(name: 'notificationChannels')
+          final List<Channel?>? notificationChannels})
+      : _actions = actions,
+        _links = links,
+        _conversations = conversations,
+        _groups = groups,
+        _users = users,
+        _notificationChannels = notificationChannels;
 
-  factory _$_Item.fromJson(Map<String, dynamic> json) =>
-      _$_$_ItemFromJson(json);
+  factory _$_Item.fromJson(Map<String, dynamic> json) => _$$_ItemFromJson(json);
 
   @override
   @JsonKey(name: 'featureImage')
@@ -573,30 +521,71 @@ class _$_Item implements _Item {
   @override
   @JsonKey(name: 'status')
   final Status? status;
+  final List<Action>? _actions;
   @override
   @JsonKey(name: 'actions')
-  final List<Action>? actions;
+  List<Action>? get actions {
+    final value = _actions;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'text')
   final String? text;
   @override
   @JsonKey(name: 'textType')
   final TextType? textType;
+  final List<Link?>? _links;
   @override
   @JsonKey(name: 'links')
-  final List<Link?>? links;
+  List<Link?>? get links {
+    final value = _links;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Message?>? _conversations;
   @override
   @JsonKey(name: 'conversations')
-  final List<Message?>? conversations;
+  List<Message?>? get conversations {
+    final value = _conversations;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String?>? _groups;
   @override
   @JsonKey(name: 'groups')
-  final List<String?>? groups;
+  List<String?>? get groups {
+    final value = _groups;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String?>? _users;
   @override
   @JsonKey(name: 'users')
-  final List<String?>? users;
+  List<String?>? get users {
+    final value = _users;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Channel?>? _notificationChannels;
   @override
   @JsonKey(name: 'notificationChannels')
-  final List<Channel?>? notificationChannels;
+  List<Channel?>? get notificationChannels {
+    final value = _notificationChannels;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -606,210 +595,188 @@ class _$_Item implements _Item {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Item &&
-            (identical(other.featureImage, featureImage) ||
-                const DeepCollectionEquality()
-                    .equals(other.featureImage, featureImage)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.sequenceNumber, sequenceNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.sequenceNumber, sequenceNumber)) &&
-            (identical(other.persistent, persistent) ||
-                const DeepCollectionEquality()
-                    .equals(other.persistent, persistent)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.author, author) ||
-                const DeepCollectionEquality().equals(other.author, author)) &&
-            (identical(other.tagline, tagline) ||
-                const DeepCollectionEquality()
-                    .equals(other.tagline, tagline)) &&
-            (identical(other.timestamp, timestamp) ||
-                const DeepCollectionEquality()
-                    .equals(other.timestamp, timestamp)) &&
-            (identical(other.expiry, expiry) ||
-                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
-            (identical(other.label, label) ||
-                const DeepCollectionEquality().equals(other.label, label)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.visibility, visibility) ||
-                const DeepCollectionEquality()
-                    .equals(other.visibility, visibility)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.actions, actions) ||
-                const DeepCollectionEquality()
-                    .equals(other.actions, actions)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.textType, textType) ||
-                const DeepCollectionEquality()
-                    .equals(other.textType, textType)) &&
-            (identical(other.links, links) ||
-                const DeepCollectionEquality().equals(other.links, links)) &&
-            (identical(other.conversations, conversations) ||
-                const DeepCollectionEquality()
-                    .equals(other.conversations, conversations)) &&
-            (identical(other.groups, groups) ||
-                const DeepCollectionEquality().equals(other.groups, groups)) &&
-            (identical(other.users, users) ||
-                const DeepCollectionEquality().equals(other.users, users)) &&
-            (identical(other.notificationChannels, notificationChannels) ||
-                const DeepCollectionEquality()
-                    .equals(other.notificationChannels, notificationChannels)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Item &&
+            const DeepCollectionEquality()
+                .equals(other.featureImage, featureImage) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.sequenceNumber, sequenceNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.persistent, persistent) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.tagline, tagline) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
+            const DeepCollectionEquality().equals(other.expiry, expiry) &&
+            const DeepCollectionEquality().equals(other.label, label) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality()
+                .equals(other.visibility, visibility) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality().equals(other._actions, _actions) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.textType, textType) &&
+            const DeepCollectionEquality().equals(other._links, _links) &&
+            const DeepCollectionEquality()
+                .equals(other._conversations, _conversations) &&
+            const DeepCollectionEquality().equals(other._groups, _groups) &&
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            const DeepCollectionEquality()
+                .equals(other._notificationChannels, _notificationChannels));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(featureImage) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(sequenceNumber) ^
-      const DeepCollectionEquality().hash(persistent) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(author) ^
-      const DeepCollectionEquality().hash(tagline) ^
-      const DeepCollectionEquality().hash(timestamp) ^
-      const DeepCollectionEquality().hash(expiry) ^
-      const DeepCollectionEquality().hash(label) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(visibility) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(actions) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(textType) ^
-      const DeepCollectionEquality().hash(links) ^
-      const DeepCollectionEquality().hash(conversations) ^
-      const DeepCollectionEquality().hash(groups) ^
-      const DeepCollectionEquality().hash(users) ^
-      const DeepCollectionEquality().hash(notificationChannels);
 
   @JsonKey(ignore: true)
   @override
-  _$ItemCopyWith<_Item> get copyWith =>
-      __$ItemCopyWithImpl<_Item>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(featureImage),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(sequenceNumber),
+        const DeepCollectionEquality().hash(persistent),
+        const DeepCollectionEquality().hash(icon),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(tagline),
+        const DeepCollectionEquality().hash(timestamp),
+        const DeepCollectionEquality().hash(expiry),
+        const DeepCollectionEquality().hash(label),
+        const DeepCollectionEquality().hash(summary),
+        const DeepCollectionEquality().hash(visibility),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(_actions),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(textType),
+        const DeepCollectionEquality().hash(_links),
+        const DeepCollectionEquality().hash(_conversations),
+        const DeepCollectionEquality().hash(_groups),
+        const DeepCollectionEquality().hash(_users),
+        const DeepCollectionEquality().hash(_notificationChannels)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ItemCopyWith<_$_Item> get copyWith =>
+      __$$_ItemCopyWithImpl<_$_Item>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ItemToJson(this);
+    return _$$_ItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _Item implements Item {
   factory _Item(
       {@JsonKey(name: 'featureImage')
-          String? featureImage,
+          final String? featureImage,
       @JsonKey(name: 'id')
-          String? id,
+          final String? id,
       @JsonKey(name: 'sequenceNumber')
-          int? sequenceNumber,
+          final int? sequenceNumber,
       @JsonKey(name: 'persistent')
-          bool? persistent,
+          final bool? persistent,
       @JsonKey(name: 'icon')
-          Link? icon,
+          final Link? icon,
       @JsonKey(name: 'author')
-          String? author,
+          final String? author,
       @JsonKey(name: 'tagline')
-          String? tagline,
+          final String? tagline,
       @JsonKey(name: 'timestamp')
-          String? timestamp,
+          final String? timestamp,
       @JsonKey(name: 'expiry')
-          String? expiry,
+          final String? expiry,
       @JsonKey(name: 'label')
-          String? label,
+          final String? label,
       @JsonKey(name: 'summary')
-          String? summary,
+          final String? summary,
       @JsonKey(name: 'visibility')
-          Visibility? visibility,
+          final Visibility? visibility,
       @JsonKey(name: 'status')
-          Status? status,
+          final Status? status,
       @JsonKey(name: 'actions')
-          List<Action>? actions,
+          final List<Action>? actions,
       @JsonKey(name: 'text')
-          String? text,
+          final String? text,
       @JsonKey(name: 'textType')
-          TextType? textType,
+          final TextType? textType,
       @JsonKey(name: 'links')
-          List<Link?>? links,
+          final List<Link?>? links,
       @JsonKey(name: 'conversations')
-          List<Message?>? conversations,
+          final List<Message?>? conversations,
       @JsonKey(name: 'groups')
-          List<String?>? groups,
+          final List<String?>? groups,
       @JsonKey(name: 'users')
-          List<String?>? users,
+          final List<String?>? users,
       @JsonKey(name: 'notificationChannels')
-          List<Channel?>? notificationChannels}) = _$_Item;
+          final List<Channel?>? notificationChannels}) = _$_Item;
 
   factory _Item.fromJson(Map<String, dynamic> json) = _$_Item.fromJson;
 
   @override
   @JsonKey(name: 'featureImage')
-  String? get featureImage => throw _privateConstructorUsedError;
+  String? get featureImage;
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'sequenceNumber')
-  int? get sequenceNumber => throw _privateConstructorUsedError;
+  int? get sequenceNumber;
   @override
   @JsonKey(name: 'persistent')
-  bool? get persistent => throw _privateConstructorUsedError;
+  bool? get persistent;
   @override
   @JsonKey(name: 'icon')
-  Link? get icon => throw _privateConstructorUsedError;
+  Link? get icon;
   @override
   @JsonKey(name: 'author')
-  String? get author => throw _privateConstructorUsedError;
+  String? get author;
   @override
   @JsonKey(name: 'tagline')
-  String? get tagline => throw _privateConstructorUsedError;
+  String? get tagline;
   @override
   @JsonKey(name: 'timestamp')
-  String? get timestamp => throw _privateConstructorUsedError;
+  String? get timestamp;
   @override
   @JsonKey(name: 'expiry')
-  String? get expiry => throw _privateConstructorUsedError;
+  String? get expiry;
   @override
   @JsonKey(name: 'label')
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: 'summary')
-  String? get summary => throw _privateConstructorUsedError;
+  String? get summary;
   @override
   @JsonKey(name: 'visibility')
-  Visibility? get visibility => throw _privateConstructorUsedError;
+  Visibility? get visibility;
   @override
   @JsonKey(name: 'status')
-  Status? get status => throw _privateConstructorUsedError;
+  Status? get status;
   @override
   @JsonKey(name: 'actions')
-  List<Action>? get actions => throw _privateConstructorUsedError;
+  List<Action>? get actions;
   @override
   @JsonKey(name: 'text')
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
   @JsonKey(name: 'textType')
-  TextType? get textType => throw _privateConstructorUsedError;
+  TextType? get textType;
   @override
   @JsonKey(name: 'links')
-  List<Link?>? get links => throw _privateConstructorUsedError;
+  List<Link?>? get links;
   @override
   @JsonKey(name: 'conversations')
-  List<Message?>? get conversations => throw _privateConstructorUsedError;
+  List<Message?>? get conversations;
   @override
   @JsonKey(name: 'groups')
-  List<String?>? get groups => throw _privateConstructorUsedError;
+  List<String?>? get groups;
   @override
   @JsonKey(name: 'users')
-  List<String?>? get users => throw _privateConstructorUsedError;
+  List<String?>? get users;
   @override
   @JsonKey(name: 'notificationChannels')
-  List<Channel?>? get notificationChannels =>
-      throw _privateConstructorUsedError;
+  List<Channel?>? get notificationChannels;
   @override
   @JsonKey(ignore: true)
-  _$ItemCopyWith<_Item> get copyWith => throw _privateConstructorUsedError;
+  _$$_ItemCopyWith<_$_Item> get copyWith => throw _privateConstructorUsedError;
 }

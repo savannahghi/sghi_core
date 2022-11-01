@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:photo_view/photo_view.dart';
-import 'package:shared_libraries/ui_components/src/small_appbar.dart';
+import 'package:sghi_core/ui_components/src/small_appbar.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
 
 class FeedImageViewer extends StatelessWidget {
   const FeedImageViewer({super.key, this.imageUrl});

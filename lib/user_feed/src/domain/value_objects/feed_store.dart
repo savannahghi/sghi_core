@@ -2,7 +2,7 @@
 import 'package:rxdart/rxdart.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 
 class FeedStore {
   factory FeedStore() => _singleton;

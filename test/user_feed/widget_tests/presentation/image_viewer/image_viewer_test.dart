@@ -8,8 +8,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:photo_view/photo_view.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/presentation/image_viewer/image_viewer.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/presentation/image_viewer/image_viewer.dart';
 
 import '../../../mock_utils.dart';
 

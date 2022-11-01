@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_comment_card.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_comment_card.dart';
 
 void main() {
   group('FeedItemCommentCard', () {

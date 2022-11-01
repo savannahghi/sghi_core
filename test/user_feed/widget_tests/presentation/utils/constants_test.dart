@@ -2,7 +2,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
 
 void main() {
   group('Constants', () {

@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:local_auth/local_auth.dart';
-import 'package:shared_libraries/app_wrapper/camera_wrapper.dart';
+import 'package:sghi_core/app_wrapper/camera_wrapper.dart';
 
 class DeviceLocalAuthentication extends LocalAuthentication {}
 

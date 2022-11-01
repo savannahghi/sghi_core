@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_libraries/user_profile/constants.dart';
-import 'package:shared_libraries/user_profile/contacts.dart';
-import 'package:shared_themes/colors.dart';
-import 'package:shared_themes/constants.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
+import 'package:sghi_core/user_profile/constants.dart';
+import 'package:sghi_core/user_profile/contacts.dart';
 
 enum StateContactType {
   primaryEmail,

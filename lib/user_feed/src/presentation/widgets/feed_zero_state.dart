@@ -1,10 +1,10 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/asset_strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/asset_strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
 // Package imports:
-import 'package:shared_themes/colors.dart';
 
 class FeedZeroState extends StatelessWidget {
   const FeedZeroState({super.key, required this.subtitle});

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'link.dart';
 
@@ -10,46 +12,11 @@ part of 'link.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Link _$LinkFromJson(Map<String, dynamic> json) {
   return _Link.fromJson(json);
 }
-
-/// @nodoc
-class _$LinkTearOff {
-  const _$LinkTearOff();
-
-  _Link call(
-      {@JsonKey(name: 'id')
-          String? id,
-      @JsonKey(name: 'url')
-          String? url,
-      @JsonKey(name: 'linkType', unknownEnumValue: LinkType.UNKNOWN)
-          LinkType? linkType,
-      @JsonKey(name: 'title')
-          String? title,
-      @JsonKey(name: 'description')
-          String? description,
-      @JsonKey(name: 'thumbnail')
-          String? thumbnail}) {
-    return _Link(
-      id: id,
-      url: url,
-      linkType: linkType,
-      title: title,
-      description: description,
-      thumbnail: thumbnail,
-    );
-  }
-
-  Link fromJson(Map<String, Object> json) {
-    return Link.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Link = _$LinkTearOff();
 
 /// @nodoc
 mixin _$Link {
@@ -137,9 +104,9 @@ class _$LinkCopyWithImpl<$Res> implements $LinkCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LinkCopyWith<$Res> implements $LinkCopyWith<$Res> {
-  factory _$LinkCopyWith(_Link value, $Res Function(_Link) then) =
-      __$LinkCopyWithImpl<$Res>;
+abstract class _$$_LinkCopyWith<$Res> implements $LinkCopyWith<$Res> {
+  factory _$$_LinkCopyWith(_$_Link value, $Res Function(_$_Link) then) =
+      __$$_LinkCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id')
@@ -157,13 +124,13 @@ abstract class _$LinkCopyWith<$Res> implements $LinkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
-    implements _$LinkCopyWith<$Res> {
-  __$LinkCopyWithImpl(_Link _value, $Res Function(_Link) _then)
-      : super(_value, (v) => _then(v as _Link));
+class __$$_LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
+    implements _$$_LinkCopyWith<$Res> {
+  __$$_LinkCopyWithImpl(_$_Link _value, $Res Function(_$_Link) _then)
+      : super(_value, (v) => _then(v as _$_Link));
 
   @override
-  _Link get _value => super._value as _Link;
+  _$_Link get _value => super._value as _$_Link;
 
   @override
   $Res call({
@@ -174,7 +141,7 @@ class __$LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
     Object? description = freezed,
     Object? thumbnail = freezed,
   }) {
-    return _then(_Link(
+    return _then(_$_Link(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -220,8 +187,7 @@ class _$_Link implements _Link {
       @JsonKey(name: 'thumbnail')
           this.thumbnail});
 
-  factory _$_Link.fromJson(Map<String, dynamic> json) =>
-      _$_$_LinkFromJson(json);
+  factory _$_Link.fromJson(Map<String, dynamic> json) => _$$_LinkFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -250,81 +216,77 @@ class _$_Link implements _Link {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Link &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.linkType, linkType) ||
-                const DeepCollectionEquality()
-                    .equals(other.linkType, linkType)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.thumbnail, thumbnail) ||
-                const DeepCollectionEquality()
-                    .equals(other.thumbnail, thumbnail)));
+        (other.runtimeType == runtimeType &&
+            other is _$_Link &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality().equals(other.linkType, linkType) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(linkType) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(thumbnail);
 
   @JsonKey(ignore: true)
   @override
-  _$LinkCopyWith<_Link> get copyWith =>
-      __$LinkCopyWithImpl<_Link>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(linkType),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(thumbnail));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_LinkCopyWith<_$_Link> get copyWith =>
+      __$$_LinkCopyWithImpl<_$_Link>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LinkToJson(this);
+    return _$$_LinkToJson(
+      this,
+    );
   }
 }
 
 abstract class _Link implements Link {
   factory _Link(
       {@JsonKey(name: 'id')
-          String? id,
+          final String? id,
       @JsonKey(name: 'url')
-          String? url,
+          final String? url,
       @JsonKey(name: 'linkType', unknownEnumValue: LinkType.UNKNOWN)
-          LinkType? linkType,
+          final LinkType? linkType,
       @JsonKey(name: 'title')
-          String? title,
+          final String? title,
       @JsonKey(name: 'description')
-          String? description,
+          final String? description,
       @JsonKey(name: 'thumbnail')
-          String? thumbnail}) = _$_Link;
+          final String? thumbnail}) = _$_Link;
 
   factory _Link.fromJson(Map<String, dynamic> json) = _$_Link.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'url')
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: 'linkType', unknownEnumValue: LinkType.UNKNOWN)
-  LinkType? get linkType => throw _privateConstructorUsedError;
+  LinkType? get linkType;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: 'description')
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: 'thumbnail')
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String? get thumbnail;
   @override
   @JsonKey(ignore: true)
-  _$LinkCopyWith<_Link> get copyWith => throw _privateConstructorUsedError;
+  _$$_LinkCopyWith<_$_Link> get copyWith => throw _privateConstructorUsedError;
 }

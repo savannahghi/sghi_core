@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/platform_loader.dart';
-import 'package:shared_libraries/ui_components/src/small_appbar.dart';
+import 'package:sghi_core/ui_components/src/platform_loader.dart';
+import 'package:sghi_core/ui_components/src/small_appbar.dart';
 
-import 'package:shared_libraries/user_profile/constants.dart';
-import 'package:shared_libraries/user_profile/shared/widget_keys.dart';
-import 'package:shared_libraries/user_profile/term_and_conditions.dart';
+import 'package:sghi_core/user_profile/constants.dart';
+import 'package:sghi_core/user_profile/shared/widget_keys.dart';
+import 'package:sghi_core/user_profile/term_and_conditions.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {

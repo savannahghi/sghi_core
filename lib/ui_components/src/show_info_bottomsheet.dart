@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shared_libraries/ui_components/src/app_strings.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/app_strings.dart';
 
 Future<dynamic> showFeedbackBottomSheet({
   required BuildContext context,

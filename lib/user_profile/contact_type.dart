@@ -1,4 +1,4 @@
-import 'package:shared_libraries/domain_objects/value_objects/value_object.dart';
+import 'package:sghi_core/domain_objects/value_objects/value_object.dart';
 
 class ContactType<T extends ValueObject<String>> {
   ContactType(this.contactItemValueObject, {this.isSecondary = false});

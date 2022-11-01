@@ -1,39 +1,59 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+[![Release](https://img.shields.io/badge/PreRelease-^0.1.0-success.svg?style=for-the-badge)](https://shields.io/)
+[![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+# sghi_core
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+`sghi_core` is an open source project &mdash; it's one among many other shared libraries that make up the wider ecosystem of software made and open sourced by `Savannah Informatics Limited`.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Shared library for `BeWell-Consumer` and `SladeAdvantage` that is a wrapper for various shared helper methods and functions
 
-## Features
+## Installation Instructions
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Use this package as a library by depending on it
 
-## Getting started
+Run this command:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- With Flutter:
+
+```dart
+$ flutter pub add sghi_core
+```
+
+This will add a line like this to your package's pubspec.yaml (and run an implicit dart pub get):
+
+```dart
+dependencies:
+  sghi_core: ^0.1.0
+```
+
+Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
+Lastly:
+
+Import it like so:
+
+```dart
+import 'package:sghi_core/app_wrapper/app_wrapper.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Check the [example](https://github.com/savannahghi/sghi_core/blob/main/example/readme.md) provided for how to use this package.
 
-```dart
-const like = 'sample';
-```
+## Dart & Flutter Version
 
-## Additional information
+- Dart 2: >= 2.14
+- Flutter: >=2.0.0
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Developing & Contributing
+
+First off, thanks for taking the time to contribute!
+
+Be sure to check out detailed instructions on how to contribute to this project [here](https://github.com/savannahghi/sghi_core/blob/main/CONTRIBUTING.md) and go through out [Code of Conduct](https://github.com/savannahghi/sghi_core/blob/main/CODE_OF_CONDUCT.md).
+
+GPG Signing: 
+As a contributor, you need to sign your commits. For more details check [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits)
+
+## License
+
+This library is distributed under the MIT license found in the [LICENSE](https://github.com/savannahghi/sghi_core/blob/main/LICENSE) file.

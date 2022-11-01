@@ -1,16 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/entities/address.dart';
-import 'package:shared_libraries/domain_objects/entities/auth_credential_response.dart';
-import 'package:shared_libraries/domain_objects/entities/communication_settings.dart';
-import 'package:shared_libraries/domain_objects/entities/cover.dart';
-import 'package:shared_libraries/domain_objects/entities/customer.dart';
-import 'package:shared_libraries/domain_objects/entities/location.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation_item.dart';
-import 'package:shared_libraries/domain_objects/entities/otp_response.dart';
-import 'package:shared_libraries/domain_objects/entities/supplier_profile.dart';
-import 'package:shared_libraries/domain_objects/entities/user_profile.dart';
-import 'package:shared_libraries/domain_objects/entities/user_response.dart';
+import 'package:sghi_core/domain_objects/entities/address.dart';
+import 'package:sghi_core/domain_objects/entities/auth_credential_response.dart';
+import 'package:sghi_core/domain_objects/entities/communication_settings.dart';
+import 'package:sghi_core/domain_objects/entities/cover.dart';
+import 'package:sghi_core/domain_objects/entities/customer.dart';
+import 'package:sghi_core/domain_objects/entities/location.dart';
+import 'package:sghi_core/domain_objects/entities/navigation.dart';
+import 'package:sghi_core/domain_objects/entities/navigation_item.dart';
+import 'package:sghi_core/domain_objects/entities/otp_response.dart';
+import 'package:sghi_core/domain_objects/entities/supplier_profile.dart';
+import 'package:sghi_core/domain_objects/entities/user_profile.dart';
+import 'package:sghi_core/domain_objects/entities/user_response.dart';
 
 void main() {
   group('UserProfile ', () {

@@ -61,37 +61,37 @@ Map<String, Map<String, String>> supportedCountries =
     'code': '+254',
     'initial': 'KE',
     'name': 'Kenya',
-    'flag': 'packages/shared_libraries/ui_components/assets/ken.png',
+    'flag': 'packages/sghi_core/ui_components/assets/ken.png',
   },
   'uganda': <String, String>{
     'code': '+255',
     'initial': 'UG',
     'name': 'Uganda',
-    'flag': 'packages/shared_libraries/ui_components/assets/uga.png',
+    'flag': 'packages/sghi_core/ui_components/assets/uga.png',
   },
   'tanzania': <String, String>{
     'code': '+256',
     'initial': 'TZ',
     'name': 'Tanzania',
-    'flag': 'packages/shared_libraries/ui_components/assets/tza.png',
+    'flag': 'packages/sghi_core/ui_components/assets/tza.png',
   },
   'usa': <String, String>{
     'code': '+1',
     'initial': 'USA',
     'name': 'United States',
-    'flag': 'packages/shared_libraries/ui_components/assets/usa.png',
+    'flag': 'packages/sghi_core/ui_components/assets/usa.png',
   },
   'uk': <String, String>{
     'code': '+44',
     'initial': 'UK',
     'name': 'United Kingdom',
-    'flag': 'packages/shared_libraries/ui_components/assets/gbr.png',
+    'flag': 'packages/sghi_core/ui_components/assets/gbr.png',
   },
   'belgium': <String, String>{
     'code': '+32',
     'initial': 'BEL',
     'name': 'Belgium',
-    'flag': 'packages/shared_libraries/ui_components/assets/bel.png',
+    'flag': 'packages/sghi_core/ui_components/assets/bel.png',
   },
 };
 

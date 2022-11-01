@@ -1,14 +1,14 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/domain_objects/value_objects/value_object.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
-import 'package:shared_libraries/user_profile/contact_item.dart';
-import 'package:shared_libraries/user_profile/contact_type.dart';
-import 'package:shared_libraries/user_profile/contact_utils.dart';
-import 'package:shared_themes/app_theme.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/domain_objects/value_objects/value_object.dart';
+import 'package:sghi_core/shared_themes/app_theme.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
+import 'package:sghi_core/user_profile/contact_item.dart';
+import 'package:sghi_core/user_profile/contact_type.dart';
+import 'package:sghi_core/user_profile/contact_utils.dart';
 
 /// renders [ContactItem]s based on data supplied [primary] or [secondary] contacts
 /// the data supplied is either a [string] or an [list] of contacts

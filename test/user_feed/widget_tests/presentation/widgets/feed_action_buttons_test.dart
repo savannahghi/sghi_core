@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_action_buttons.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_action_buttons.dart';
 import '../../../mock_data.dart';
 import '../../../test_helpers.dart';
 

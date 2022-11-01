@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/entities/payables_account.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/payables_account.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 void main() {
   test('expects to convert payablesAccount from json', () {

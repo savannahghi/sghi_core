@@ -28,7 +28,7 @@ const String nothingToSee = 'Oops!! Nothing to see here';
 const String noDocumentFound =
     'Could not find the document you were looking for';
 
-const String packageName = 'shared_libraries';
+const String packageName = 'sghi_core';
 
 const String UNKNOWN = 'UNKNOWN';
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/ui_components/src/app_strings.dart';
-import 'package:shared_libraries/ui_components/src/inputs.dart';
-import 'package:shared_libraries/ui_components/src/resend_phone_code.dart';
-import 'package:shared_libraries/ui_components/src/verify_phone_otp.dart';
-import 'package:shared_libraries/ui_components/src/widget_keys.dart';
+import 'package:sghi_core/ui_components/src/app_strings.dart';
+import 'package:sghi_core/ui_components/src/inputs.dart';
+import 'package:sghi_core/ui_components/src/resend_phone_code.dart';
+import 'package:sghi_core/ui_components/src/verify_phone_otp.dart';
+import 'package:sghi_core/ui_components/src/widget_keys.dart';
 
 import 'mocks.dart';
 

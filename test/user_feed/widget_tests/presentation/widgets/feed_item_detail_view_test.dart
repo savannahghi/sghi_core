@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:html/dom.dart' as dom;
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_detail_view.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_detail_view.dart';
 
 import '../../../mock_data.dart';
 import '../../../mocks.dart';

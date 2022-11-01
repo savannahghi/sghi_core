@@ -4,8 +4,8 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
-import 'package:shared_libraries/flutter_graphql_client/constants.dart';
-import 'package:shared_libraries/flutter_graphql_client/flutter_graphql_client.dart';
+import 'package:sghi_core/flutter_graphql_client/constants.dart';
+import 'package:sghi_core/flutter_graphql_client/flutter_graphql_client.dart';
 
 import 'mocks.dart';
 import 'test_utils.dart';

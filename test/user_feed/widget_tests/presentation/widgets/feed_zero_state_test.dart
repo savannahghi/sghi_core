@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_zero_state.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_zero_state.dart';
 
 void main() {
   group('Feed Zero State', () {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/misc_utilities/enums.dart';
-import 'package:shared_libraries/misc_utilities/misc.dart';
-import 'package:shared_libraries/misc_utilities/number_constants.dart';
-import 'package:shared_libraries/misc_utilities/responsive_widget.dart';
+import 'package:sghi_core/misc_utilities/enums.dart';
+import 'package:sghi_core/misc_utilities/misc.dart';
+import 'package:sghi_core/misc_utilities/number_constants.dart';
+import 'package:sghi_core/misc_utilities/responsive_widget.dart';
 
 import '../test_utils.dart';
 

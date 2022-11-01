@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/entities/location.dart';
-import 'package:shared_libraries/domain_objects/entities/payables_account.dart';
-import 'package:shared_libraries/domain_objects/entities/supplier_profile.dart';
-import 'package:shared_libraries/domain_objects/value_objects/enums.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/location.dart';
+import 'package:sghi_core/domain_objects/entities/payables_account.dart';
+import 'package:sghi_core/domain_objects/entities/supplier_profile.dart';
+import 'package:sghi_core/domain_objects/value_objects/enums.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 void main() {
   group('SupplierProfile tests', () {

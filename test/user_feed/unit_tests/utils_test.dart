@@ -6,13 +6,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/link.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/asset_strings.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/presentation/router/router_generator.dart';
-import 'package:shared_libraries/user_feed/src/presentation/router/routes.dart';
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/asset_strings.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/presentation/router/router_generator.dart';
+import 'package:sghi_core/user_feed/src/presentation/router/routes.dart';
 import '../mock_data.dart';
 
 void main() {

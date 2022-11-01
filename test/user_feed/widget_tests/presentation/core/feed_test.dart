@@ -6,10 +6,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/resources/inputs.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/strings.dart';
-import 'package:shared_libraries/user_feed/src/presentation/core/feed.dart';
+import 'package:sghi_core/user_feed/src/domain/resources/inputs.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/strings.dart';
+import 'package:sghi_core/user_feed/src/presentation/core/feed.dart';
 import '../../../mock_data.dart';
 import '../../../mock_utils.dart';
 import '../../../test_helpers.dart';

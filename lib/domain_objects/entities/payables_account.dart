@@ -1,7 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 part 'payables_account.freezed.dart';
 part 'payables_account.g.dart';

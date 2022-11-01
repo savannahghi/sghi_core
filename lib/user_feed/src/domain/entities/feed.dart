@@ -4,10 +4,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/action.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/item.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/nudge.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/action.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/item.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/nudge.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 
 part 'feed.freezed.dart';
 part 'feed.g.dart';

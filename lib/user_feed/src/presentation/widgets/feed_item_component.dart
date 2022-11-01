@@ -1,17 +1,17 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/item.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/link.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/colors.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_body.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_detail_view.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/feed_item_title_bar.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/item.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_body.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_detail_view.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/feed_item_title_bar.dart';
 // Package imports:
-import 'package:shared_themes/spaces.dart';
 
 class FeedItemComponent extends StatelessWidget {
   const FeedItemComponent({required this.feedItem});

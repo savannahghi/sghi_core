@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
-import 'package:shared_libraries/flutter_graphql_client/event_bus_database_helper.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_event_bus_database_helper.dart';
-import 'package:shared_libraries/flutter_graphql_client/i_flutter_graphql_client.dart';
+import 'package:sghi_core/flutter_graphql_client/event_bus_database_helper.dart';
+import 'package:sghi_core/flutter_graphql_client/i_event_bus_database_helper.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
 import 'package:sqflite/sqflite.dart';
 
 class MockBuildContext extends Mock implements BuildContext {}

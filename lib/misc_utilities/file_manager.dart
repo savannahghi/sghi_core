@@ -4,14 +4,15 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:shared_libraries/misc_utilities/file_manager_logic.dart';
-import 'package:shared_libraries/misc_utilities/loading_wrapper.dart';
-import 'package:shared_libraries/misc_utilities/string_constant.dart';
-import 'package:shared_libraries/misc_utilities/types.dart';
-import 'package:shared_libraries/misc_utilities/widget_keys.dart';
-import 'package:shared_themes/constants.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/misc_utilities/asset_strings.dart';
+import 'package:sghi_core/misc_utilities/file_manager_logic.dart';
+import 'package:sghi_core/misc_utilities/loading_wrapper.dart';
+import 'package:sghi_core/misc_utilities/string_constant.dart';
+import 'package:sghi_core/misc_utilities/types.dart';
+import 'package:sghi_core/misc_utilities/widget_keys.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
 
 /// A Widget used to select and upload files from the gallery or the camera
 ///
@@ -122,7 +123,7 @@ class _FileManagerState extends State<FileManager> {
                                 child: Column(
                                   children: <Widget>[
                                     SvgPicture.asset(
-                                      'assets/images/folder.svg',
+                                      folderImage,
                                       width: 40,
                                       height: 40,
                                     ),

@@ -4,8 +4,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/context.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/payload.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/context.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/payload.dart';
 
 part 'event.freezed.dart';
 part 'event.g.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/flutter_graphql_client/event_bus_database_helper.dart';
+import 'package:sghi_core/flutter_graphql_client/event_bus_database_helper.dart';
 import 'package:sqflite/sqflite.dart';
 
 import 'test_utils.dart';

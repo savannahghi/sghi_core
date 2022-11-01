@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/entities/nudge.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/feed_store.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/widget_keys.dart';
-import 'package:shared_libraries/user_feed/src/presentation/widgets/nudge_carousel.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/nudge.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/feed_store.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/widget_keys.dart';
+import 'package:sghi_core/user_feed/src/presentation/widgets/nudge_carousel.dart';
 
 import '../../../mock_data.dart';
 import '../../../mocks.dart';

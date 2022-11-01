@@ -1,0 +1,1 @@
+library sghi_core;

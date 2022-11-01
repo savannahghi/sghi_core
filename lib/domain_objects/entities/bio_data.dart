@@ -1,7 +1,9 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_libraries/domain_objects/value_objects/enums.dart';
-import 'package:shared_libraries/domain_objects/value_objects/name.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/value_objects/enums.dart';
+import 'package:sghi_core/domain_objects/value_objects/name.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 part 'bio_data.freezed.dart';
 part 'bio_data.g.dart';

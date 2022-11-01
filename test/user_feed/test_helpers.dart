@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/constants.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/constants.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/domain/value_objects/feed_store.dart';
-import 'package:shared_libraries/user_feed/src/presentation/router/router_generator.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/feed_store.dart';
+import 'package:sghi_core/user_feed/src/presentation/router/router_generator.dart';
 
 Future<void> buildTestWidget({
   required WidgetTester tester,

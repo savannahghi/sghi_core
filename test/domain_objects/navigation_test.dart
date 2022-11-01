@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation.dart';
-import 'package:shared_libraries/domain_objects/entities/navigation_item.dart';
+import 'package:sghi_core/domain_objects/entities/navigation.dart';
+import 'package:sghi_core/domain_objects/entities/navigation_item.dart';
 
 void main() {
   group('Navigation Tests', () {

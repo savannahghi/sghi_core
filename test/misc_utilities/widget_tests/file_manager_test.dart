@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/app_wrapper/device_capabilities.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
-import 'package:shared_libraries/misc_utilities/file_manager.dart';
-import 'package:shared_libraries/misc_utilities/file_manager_logic.dart';
-import 'package:shared_libraries/misc_utilities/widget_keys.dart';
-import 'package:shared_themes/constants.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/app_wrapper/device_capabilities.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
+import 'package:sghi_core/misc_utilities/file_manager.dart';
+import 'package:sghi_core/misc_utilities/file_manager_logic.dart';
+import 'package:sghi_core/misc_utilities/widget_keys.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
 
 import '../mocks.dart';
 

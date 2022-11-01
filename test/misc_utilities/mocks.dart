@@ -4,8 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:shared_libraries/app_wrapper/device_capabilities.dart';
-import 'package:shared_libraries/flutter_graphql_client/flutter_graphql_client.dart';
+import 'package:sghi_core/app_wrapper/device_capabilities.dart';
+import 'package:sghi_core/flutter_graphql_client/flutter_graphql_client.dart';
+import 'package:sghi_core/flutter_graphql_client/i_flutter_graphql_client.dart';
 
 class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 

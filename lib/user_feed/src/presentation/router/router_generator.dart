@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:shared_libraries/user_feed/src/presentation/router/routes.dart';
+import 'package:sghi_core/user_feed/src/presentation/router/routes.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {

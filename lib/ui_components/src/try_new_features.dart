@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shared_libraries/misc_utilities/enums.dart';
-import 'package:shared_libraries/misc_utilities/number_constants.dart';
-import 'package:shared_libraries/misc_utilities/responsive_widget.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_libraries/ui_components/src/fancy_loading.dart';
-import 'package:shared_libraries/ui_components/src/type_defs.dart';
-import 'package:shared_themes/colors.dart';
-import 'package:shared_themes/spaces.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/misc_utilities/enums.dart';
+import 'package:sghi_core/misc_utilities/number_constants.dart';
+import 'package:sghi_core/misc_utilities/responsive_widget.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
+import 'package:sghi_core/ui_components/src/fancy_loading.dart';
+import 'package:sghi_core/ui_components/src/type_defs.dart';
 
 class SILTryNewFeaturesWidget extends StatefulWidget {
   const SILTryNewFeaturesWidget(

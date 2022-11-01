@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
-import 'package:shared_libraries/misc_utilities/misc.dart';
-import 'package:shared_libraries/ui_components/src/constants.dart';
-import 'package:shared_libraries/ui_components/src/country_picker.dart';
-import 'package:shared_libraries/ui_components/src/helpers.dart';
-import 'package:shared_libraries/ui_components/src/type_defs.dart';
-import 'package:shared_libraries/ui_components/src/widget_keys.dart';
-import 'package:shared_themes/colors.dart';
-import 'package:shared_themes/text_themes.dart';
+import 'package:sghi_core/misc_utilities/misc.dart';
+import 'package:sghi_core/shared_themes/colors.dart';
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/ui_components/src/constants.dart';
+import 'package:sghi_core/ui_components/src/country_picker.dart';
+import 'package:sghi_core/ui_components/src/helpers.dart';
+import 'package:sghi_core/ui_components/src/type_defs.dart';
+import 'package:sghi_core/ui_components/src/widget_keys.dart';
 
 /// SILPhoneInput generic phone number input field
 ///

@@ -2,15 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
-import 'package:shared_libraries/misc_utilities/bottom_sheet_builder.dart';
-import 'package:shared_libraries/misc_utilities/enums.dart';
-import 'package:shared_libraries/misc_utilities/misc.dart';
-import 'package:shared_libraries/misc_utilities/mutations.dart';
-import 'package:shared_libraries/misc_utilities/refresh_token_manager.dart';
-import 'package:shared_themes/constants.dart';
-import 'package:shared_themes/spaces.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
+import 'package:sghi_core/misc_utilities/bottom_sheet_builder.dart';
+import 'package:sghi_core/misc_utilities/enums.dart';
+import 'package:sghi_core/misc_utilities/misc.dart';
+import 'package:sghi_core/misc_utilities/mutations.dart';
+import 'package:sghi_core/misc_utilities/refresh_token_manager.dart';
+import 'package:sghi_core/shared_themes/constants.dart';
+import 'package:sghi_core/shared_themes/spaces.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../mocks.dart';
@@ -244,8 +244,10 @@ void main() {
 
         await tester.pumpAndSettle();
         expect(
-          tester.widget(find.byType(Container)),
-          isA<Container>().having((Container t) => t.decoration, 'decoration',
+          tester.widget(find.byType(DecoratedBox)),
+          isA<DecoratedBox>().having(
+              (DecoratedBox t) => t.decoration,
+              'decoration',
               customRoundedPinBoxDecoration(Colors.black, Colors.black)),
         );
       });

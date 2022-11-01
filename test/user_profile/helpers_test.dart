@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/app_wrapper/app_wrapper_base.dart';
-import 'package:shared_libraries/app_wrapper/enums.dart';
-import 'package:shared_libraries/ui_components/src/buttons.dart';
-import 'package:shared_libraries/ui_components/src/communication_setting_widget.dart';
-import 'package:shared_libraries/user_profile/helpers.dart';
+import 'package:sghi_core/app_wrapper/app_wrapper_base.dart';
+import 'package:sghi_core/app_wrapper/enums.dart';
+import 'package:sghi_core/ui_components/src/buttons.dart';
+import 'package:sghi_core/ui_components/src/communication_setting_widget.dart';
+import 'package:sghi_core/user_profile/helpers.dart';
 
 import 'mocks.dart';
 

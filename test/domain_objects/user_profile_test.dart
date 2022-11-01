@@ -1,16 +1,16 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_libraries/domain_objects/entities/address.dart';
-import 'package:shared_libraries/domain_objects/entities/bio_data.dart';
-import 'package:shared_libraries/domain_objects/entities/cover.dart';
-import 'package:shared_libraries/domain_objects/entities/user_profile.dart';
-import 'package:shared_libraries/domain_objects/failures/value_object_failure.dart';
-import 'package:shared_libraries/domain_objects/value_objects/app_string_const.dart';
-import 'package:shared_libraries/domain_objects/value_objects/email_address.dart';
-import 'package:shared_libraries/domain_objects/value_objects/enums.dart';
-import 'package:shared_libraries/domain_objects/value_objects/name.dart';
-import 'package:shared_libraries/domain_objects/value_objects/phone_number.dart';
-import 'package:shared_libraries/domain_objects/value_objects/unknown.dart';
+import 'package:sghi_core/domain_objects/entities/address.dart';
+import 'package:sghi_core/domain_objects/entities/bio_data.dart';
+import 'package:sghi_core/domain_objects/entities/cover.dart';
+import 'package:sghi_core/domain_objects/entities/user_profile.dart';
+import 'package:sghi_core/domain_objects/failures/value_object_failure.dart';
+import 'package:sghi_core/domain_objects/value_objects/app_string_const.dart';
+import 'package:sghi_core/domain_objects/value_objects/email_address.dart';
+import 'package:sghi_core/domain_objects/value_objects/enums.dart';
+import 'package:sghi_core/domain_objects/value_objects/name.dart';
+import 'package:sghi_core/domain_objects/value_objects/phone_number.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 void main() {
   const String validPhone = '+254712345678';

@@ -1,13 +1,13 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
-import 'package:shared_libraries/user_feed/src/application/helpers/utils.dart';
-import 'package:shared_libraries/user_feed/src/domain/entities/action.dart'
+import 'package:sghi_core/shared_themes/text_themes.dart';
+import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
+import 'package:sghi_core/user_feed/src/domain/entities/action.dart'
     as feed_action;
-import 'package:shared_libraries/user_feed/src/domain/value_objects/colors.dart';
-import 'package:shared_libraries/user_feed/src/domain/value_objects/enums.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/colors.dart';
+import 'package:sghi_core/user_feed/src/domain/value_objects/enums.dart';
 // Package imports:
-import 'package:shared_themes/text_themes.dart';
 
 class FeedPrimaryButton extends StatelessWidget {
   const FeedPrimaryButton(
