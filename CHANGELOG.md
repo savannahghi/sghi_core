@@ -1,3 +1,7 @@
+## 0.1.1
+
+- chore: upgrade packages
+
 ### Pre - [0.0.1]
 
 - Code testing, refactor and upgrading design system for sghi_core
