@@ -1,11 +1,13 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+
 // Package imports:
 import 'package:flutter_html/flutter_html.dart';
 import 'package:html/dom.dart' as dom;
+
+// Project imports:
 import 'package:sghi_core/shared_themes/spaces.dart';
 import 'package:sghi_core/shared_themes/text_themes.dart';
-// Project imports:
 import 'package:sghi_core/user_feed/src/application/helpers/utils.dart';
 import 'package:sghi_core/user_feed/src/domain/entities/item.dart';
 import 'package:sghi_core/user_feed/src/domain/entities/link.dart';
@@ -63,7 +65,7 @@ class FeedItemContentViewState extends State<FeedItemContentView> {
             lineHeight: LineHeight.em(1.5),
             fontWeight: FontWeight.bold,
             color: greyColor,
-            listStylePosition: ListStylePosition.inside,
+            listStylePosition: ListStylePosition.INSIDE,
           ),
           'a': Style(
             textDecoration: TextDecoration.none,

@@ -1,3 +1,7 @@
+## 0.1.2
+
+- fix: downgrade flutter_html package to fix breaking change
+
 ## 0.1.1
 
 - chore: upgrade packages
