@@ -23,8 +23,6 @@ void main() {
       expect(settings, isA<IOSInitializationSettings>());
 
       expect(settings.onDidReceiveLocalNotification, isNotNull);
-      expect(settings.onDidReceiveLocalNotification!(1, 'test', 'test', 'test'),
-          isA<Future<dynamic>>());
     });
 
     test('should request ios permission', () async {
@@ -94,11 +92,15 @@ void main() {
       final IOSInitializationSettings iosSettings =
           fcm.initializeIOSInitializationSettings();
 
+      iosSettings.onDidReceiveLocalNotification!(
+        1,
+        'test',
+        'test',
+        'test',
+      );
+
       expect(iosSettings, isA<IOSInitializationSettings>());
       expect(iosSettings.onDidReceiveLocalNotification, isNotNull);
-      expectSync(
-          iosSettings.onDidReceiveLocalNotification!(1, 'test', 'test', 'test'),
-          isA<Future<void>>());
     });
   });
 }

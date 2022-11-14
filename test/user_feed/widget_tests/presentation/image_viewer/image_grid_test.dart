@@ -49,7 +49,8 @@ void main() {
         find.byKey(const Key(
             'https://assets.healthcloud.co.ke/nudges/verify_email.png')),
       );
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 10));
 
       expect(find.byType(FeedImageViewer), findsOneWidget);
       expect(find.byType(InteractiveViewer), findsOneWidget);

@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/PreRelease-^0.1.2-success.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/PreRelease-^0.1.3-success.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
 # sghi_core
@@ -23,7 +23,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```dart
 dependencies:
-  sghi_core: ^0.1.2
+  sghi_core: ^0.1.3
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.

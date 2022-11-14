@@ -1,3 +1,7 @@
+## 0.1.3
+
+- fix: upgrade photo_view package for compatibility with mycarehub
+
 ## 0.1.2
 
 - fix: downgrade flutter_html package to fix breaking change

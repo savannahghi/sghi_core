@@ -47,6 +47,7 @@ class MockFirebaseMessaging extends Mock implements FirebaseMessaging {
         showPreviews: AppleShowPreviewSetting.never,
         sound: AppleNotificationSetting.enabled,
         timeSensitive: AppleNotificationSetting.disabled,
+        criticalAlert: AppleNotificationSetting.enabled,
       );
 }
 
