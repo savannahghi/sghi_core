@@ -81,7 +81,8 @@ void setupOnMessage(
           android: AndroidNotificationDetails(
             androidChannel.id,
             androidChannel.name,
-            channelDescription: androidChannel.description,
+            channelDescription:
+            androidChannel.description,
             icon: android?.smallIcon,
             importance: Importance.max,
             priority: Priority.high,
