@@ -4,7 +4,8 @@ import 'package:rxdart/rxdart.dart';
 const AndroidNotificationChannel androidChannel = AndroidNotificationChannel(
   'high_importance_channel', // id
   'High Importance Notifications', // title
-  'This channel is used for important notifications.', // description
+  description:
+      'This channel is used for important notifications.', // description
   importance: Importance.max,
 );
 
