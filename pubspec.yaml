@@ -1,6 +1,6 @@
 name: sghi_core
 description: Collection of shared utility methods, functions and widgets
-version: 0.1.3
+version: 0.1.4
 homepage: https://github.com/savannahghi/sghi_core
 repository: https://github.com/savannahghi/sghi_core
 issue_tracker: https://github.com/savannahghi/sghi_core/issues
