@@ -2,7 +2,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_local_notifications/src/platform_specifics/ios/initialization_settings.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sghi_core/dart_fcm/fcm.dart';
 
@@ -18,9 +17,9 @@ void main() {
       final MockFirebaseMessaging fbm = MockFirebaseMessaging();
       final SILFCM fcm = SILFCM(firebaseMessagingObj: fbm);
       expect(fcm, isA<SILFCM>());
-      final IOSInitializationSettings settings =
+      final DarwinInitializationSettings settings =
           fcm.initializeIOSInitializationSettings();
-      expect(settings, isA<IOSInitializationSettings>());
+      expect(settings, isA<DarwinInitializationSettings>());
 
       expect(settings.onDidReceiveLocalNotification, isNotNull);
     });
@@ -89,7 +88,7 @@ void main() {
           firebaseMessagingObj: fbm,
           localNotifications: mockFlutterNotificationsPlugin);
 
-      final IOSInitializationSettings iosSettings =
+      final DarwinInitializationSettings iosSettings =
           fcm.initializeIOSInitializationSettings();
 
       iosSettings.onDidReceiveLocalNotification!(
@@ -99,7 +98,7 @@ void main() {
         'test',
       );
 
-      expect(iosSettings, isA<IOSInitializationSettings>());
+      expect(iosSettings, isA<DarwinInitializationSettings>());
       expect(iosSettings.onDidReceiveLocalNotification, isNotNull);
     });
   });

@@ -6,11 +6,9 @@ part of 'email_address.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-EmailAddress _$EmailAddressFromJson(Map<String, dynamic> json) {
-  return EmailAddress(
-    const _EmailAddressConverter().fromJson(json['value'] as String),
-  );
-}
+EmailAddress _$EmailAddressFromJson(Map<String, dynamic> json) => EmailAddress(
+      const _EmailAddressConverter().fromJson(json['value'] as String),
+    );
 
 Map<String, dynamic> _$EmailAddressToJson(EmailAddress instance) =>
     <String, dynamic>{

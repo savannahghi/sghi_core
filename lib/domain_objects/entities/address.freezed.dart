@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'address.dart';
 
@@ -10,40 +12,11 @@ part of 'address.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Address _$AddressFromJson(Map<String, dynamic> json) {
   return _Address.fromJson(json);
 }
-
-/// @nodoc
-class _$AddressTearOff {
-  const _$AddressTearOff();
-
-  _Address call(
-      {@JsonKey(name: 'latitude') String? latitude,
-      @JsonKey(name: 'longitude') String? longitude,
-      @JsonKey(name: 'locality') String? locality,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'placeID') String? placeID,
-      @JsonKey(name: 'formattedAddress') String? formattedAddress}) {
-    return _Address(
-      latitude: latitude,
-      longitude: longitude,
-      locality: locality,
-      name: name,
-      placeID: placeID,
-      formattedAddress: formattedAddress,
-    );
-  }
-
-  Address fromJson(Map<String, Object> json) {
-    return Address.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Address = _$AddressTearOff();
 
 /// @nodoc
 mixin _$Address {
@@ -68,7 +41,8 @@ mixin _$Address {
 /// @nodoc
 abstract class $AddressCopyWith<$Res> {
   factory $AddressCopyWith(Address value, $Res Function(Address) then) =
-      _$AddressCopyWithImpl<$Res>;
+      _$AddressCopyWithImpl<$Res, Address>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'latitude') String? latitude,
       @JsonKey(name: 'longitude') String? longitude,
@@ -79,13 +53,16 @@ abstract class $AddressCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
+class _$AddressCopyWithImpl<$Res, $Val extends Address>
+    implements $AddressCopyWith<$Res> {
   _$AddressCopyWithImpl(this._value, this._then);
 
-  final Address _value;
   // ignore: unused_field
-  final $Res Function(Address) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? latitude = freezed,
@@ -96,39 +73,41 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
     Object? formattedAddress = freezed,
   }) {
     return _then(_value.copyWith(
-      latitude: latitude == freezed
+      latitude: freezed == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      longitude: longitude == freezed
+      longitude: freezed == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      locality: locality == freezed
+      locality: freezed == locality
           ? _value.locality
           : locality // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      placeID: placeID == freezed
+      placeID: freezed == placeID
           ? _value.placeID
           : placeID // ignore: cast_nullable_to_non_nullable
               as String?,
-      formattedAddress: formattedAddress == freezed
+      formattedAddress: freezed == formattedAddress
           ? _value.formattedAddress
           : formattedAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
-  factory _$AddressCopyWith(_Address value, $Res Function(_Address) then) =
-      __$AddressCopyWithImpl<$Res>;
+abstract class _$$_AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
+  factory _$$_AddressCopyWith(
+          _$_Address value, $Res Function(_$_Address) then) =
+      __$$_AddressCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'latitude') String? latitude,
       @JsonKey(name: 'longitude') String? longitude,
@@ -139,14 +118,13 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
-    implements _$AddressCopyWith<$Res> {
-  __$AddressCopyWithImpl(_Address _value, $Res Function(_Address) _then)
-      : super(_value, (v) => _then(v as _Address));
+class __$$_AddressCopyWithImpl<$Res>
+    extends _$AddressCopyWithImpl<$Res, _$_Address>
+    implements _$$_AddressCopyWith<$Res> {
+  __$$_AddressCopyWithImpl(_$_Address _value, $Res Function(_$_Address) _then)
+      : super(_value, _then);
 
-  @override
-  _Address get _value => super._value as _Address;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? latitude = freezed,
@@ -156,28 +134,28 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
     Object? placeID = freezed,
     Object? formattedAddress = freezed,
   }) {
-    return _then(_Address(
-      latitude: latitude == freezed
+    return _then(_$_Address(
+      latitude: freezed == latitude
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      longitude: longitude == freezed
+      longitude: freezed == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      locality: locality == freezed
+      locality: freezed == locality
           ? _value.locality
           : locality // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      placeID: placeID == freezed
+      placeID: freezed == placeID
           ? _value.placeID
           : placeID // ignore: cast_nullable_to_non_nullable
               as String?,
-      formattedAddress: formattedAddress == freezed
+      formattedAddress: freezed == formattedAddress
           ? _value.formattedAddress
           : formattedAddress // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -197,7 +175,7 @@ class _$_Address implements _Address {
       @JsonKey(name: 'formattedAddress') this.formattedAddress});
 
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
-      _$_$_AddressFromJson(json);
+      _$$_AddressFromJson(json);
 
   @override
   @JsonKey(name: 'latitude')
@@ -226,79 +204,71 @@ class _$_Address implements _Address {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Address &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Address &&
             (identical(other.latitude, latitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.latitude, latitude)) &&
+                other.latitude == latitude) &&
             (identical(other.longitude, longitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.longitude, longitude)) &&
+                other.longitude == longitude) &&
             (identical(other.locality, locality) ||
-                const DeepCollectionEquality()
-                    .equals(other.locality, locality)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.placeID, placeID) ||
-                const DeepCollectionEquality()
-                    .equals(other.placeID, placeID)) &&
+                other.locality == locality) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.placeID, placeID) || other.placeID == placeID) &&
             (identical(other.formattedAddress, formattedAddress) ||
-                const DeepCollectionEquality()
-                    .equals(other.formattedAddress, formattedAddress)));
+                other.formattedAddress == formattedAddress));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(longitude) ^
-      const DeepCollectionEquality().hash(locality) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(placeID) ^
-      const DeepCollectionEquality().hash(formattedAddress);
 
   @JsonKey(ignore: true)
   @override
-  _$AddressCopyWith<_Address> get copyWith =>
-      __$AddressCopyWithImpl<_Address>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, latitude, longitude, locality,
+      name, placeID, formattedAddress);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AddressCopyWith<_$_Address> get copyWith =>
+      __$$_AddressCopyWithImpl<_$_Address>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AddressToJson(this);
+    return _$$_AddressToJson(
+      this,
+    );
   }
 }
 
 abstract class _Address implements Address {
   factory _Address(
-          {@JsonKey(name: 'latitude') String? latitude,
-          @JsonKey(name: 'longitude') String? longitude,
-          @JsonKey(name: 'locality') String? locality,
-          @JsonKey(name: 'name') String? name,
-          @JsonKey(name: 'placeID') String? placeID,
-          @JsonKey(name: 'formattedAddress') String? formattedAddress}) =
+          {@JsonKey(name: 'latitude') final String? latitude,
+          @JsonKey(name: 'longitude') final String? longitude,
+          @JsonKey(name: 'locality') final String? locality,
+          @JsonKey(name: 'name') final String? name,
+          @JsonKey(name: 'placeID') final String? placeID,
+          @JsonKey(name: 'formattedAddress') final String? formattedAddress}) =
       _$_Address;
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 
   @override
   @JsonKey(name: 'latitude')
-  String? get latitude => throw _privateConstructorUsedError;
+  String? get latitude;
   @override
   @JsonKey(name: 'longitude')
-  String? get longitude => throw _privateConstructorUsedError;
+  String? get longitude;
   @override
   @JsonKey(name: 'locality')
-  String? get locality => throw _privateConstructorUsedError;
+  String? get locality;
   @override
   @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: 'placeID')
-  String? get placeID => throw _privateConstructorUsedError;
+  String? get placeID;
   @override
   @JsonKey(name: 'formattedAddress')
-  String? get formattedAddress => throw _privateConstructorUsedError;
+  String? get formattedAddress;
   @override
   @JsonKey(ignore: true)
-  _$AddressCopyWith<_Address> get copyWith =>
+  _$$_AddressCopyWith<_$_Address> get copyWith =>
       throw _privateConstructorUsedError;
 }

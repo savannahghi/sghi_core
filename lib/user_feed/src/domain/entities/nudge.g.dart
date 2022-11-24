@@ -45,7 +45,7 @@ Map<String, dynamic> _$$_NudgeToJson(_$_Nudge instance) => <String, dynamic>{
       'groups': instance.groups,
       'users': instance.users,
       'notificationChannels': instance.notificationChannels
-          ?.map((e) => _$ChannelEnumMap[e])
+          ?.map((e) => _$ChannelEnumMap[e]!)
           .toList(),
     };
 

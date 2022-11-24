@@ -6,23 +6,22 @@ part of 'navigation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Navigation _$_$_NavigationFromJson(Map<String, dynamic> json) {
-  return _$_Navigation(
-    primaryActions: (json['primary'] as List<dynamic>?)
-        ?.map((e) => NavigationItem.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    secondaryActions: (json['secondary'] as List<dynamic>?)
-        ?.map((e) => NavigationItem.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    drawerSelectedIndex: json['drawerSelectedIndex'] as int? ?? -1,
-    bottomBarSelectedIndex: json['bottomBarSelectedIndex'] as int? ?? 0,
-  );
-}
+_$_Navigation _$$_NavigationFromJson(Map<String, dynamic> json) =>
+    _$_Navigation(
+      primaryActions: (json['primary'] as List<dynamic>?)
+          ?.map((e) => NavigationItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      secondaryActions: (json['secondary'] as List<dynamic>?)
+          ?.map((e) => NavigationItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      drawerSelectedIndex: json['drawerSelectedIndex'] as int? ?? -1,
+      bottomBarSelectedIndex: json['bottomBarSelectedIndex'] as int? ?? 0,
+    );
 
-Map<String, dynamic> _$_$_NavigationToJson(_$_Navigation instance) =>
+Map<String, dynamic> _$$_NavigationToJson(_$_Navigation instance) =>
     <String, dynamic>{
-      'primary': instance.primaryActions?.map((e) => e.toJson()).toList(),
-      'secondary': instance.secondaryActions?.map((e) => e.toJson()).toList(),
+      'primary': instance.primaryActions,
+      'secondary': instance.secondaryActions,
       'drawerSelectedIndex': instance.drawerSelectedIndex,
       'bottomBarSelectedIndex': instance.bottomBarSelectedIndex,
     };

@@ -1,18 +1,26 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sghi_core/domain_objects/entities/navigation.dart';
+import 'package:sghi_core/domain_objects/entities/navigation_icon.dart';
 import 'package:sghi_core/domain_objects/entities/navigation_item.dart';
+import 'package:sghi_core/domain_objects/value_objects/unknown.dart';
 
 void main() {
   group('Navigation Tests', () {
     test('expects to convert Navigation from json', () {
-      final List<dynamic> primaryActions = <dynamic>[
-        NavigationItem.initial().toJson(),
-        NavigationItem.initial().toJson()
-      ];
-      final List<dynamic> secondaryActions = <dynamic>[
-        NavigationItem.initial().toJson(),
-        NavigationItem.initial().toJson()
-      ];
+      final Map<String, dynamic> iconMap = NavigationIcon.initial().toJson();
+      final Map<String, dynamic> actionsMap = <String, dynamic>{
+        'id': UNKNOWN,
+        'title': UNKNOWN,
+        'onTapRoute': UNKNOWN,
+        'icon': iconMap,
+        'favourite': false,
+        'nested': <dynamic>[
+          <String, dynamic>{'route': UNKNOWN, 'title': UNKNOWN}
+        ]
+      };
+      final List<dynamic> primaryActions = <dynamic>[actionsMap, actionsMap];
+
+      final List<dynamic> secondaryActions = <dynamic>[actionsMap, actionsMap];
 
       final Map<String, dynamic> navigationAsJson = <String, dynamic>{
         'primary': primaryActions,

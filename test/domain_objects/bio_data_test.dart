@@ -40,8 +40,8 @@ void main() {
 
       final Map<String, dynamic> json = bioData.toJson();
       expect(json, isA<Map<String, dynamic>>());
-      expect(json['firstName'], testFirstName);
-      expect(json['lastName'], testLastName);
+      expect(json['firstName'], Name.withValue(testFirstName));
+      expect(json['lastName'], Name.withValue(testLastName));
     });
 
     test('expects a valid BioData instance should convert from json', () {

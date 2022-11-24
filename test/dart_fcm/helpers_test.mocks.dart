@@ -13,8 +13,6 @@ import 'package:flutter_local_notifications/src/notification_details.dart'
     as _i6;
 import 'package:flutter_local_notifications/src/platform_flutter_local_notifications.dart'
     as _i10;
-import 'package:flutter_local_notifications/src/platform_specifics/android/active_notification.dart'
-    as _i16;
 import 'package:flutter_local_notifications/src/platform_specifics/android/enums.dart'
     as _i13;
 import 'package:flutter_local_notifications/src/platform_specifics/android/initialization_settings.dart'
@@ -26,13 +24,13 @@ import 'package:flutter_local_notifications/src/platform_specifics/android/notif
 import 'package:flutter_local_notifications/src/platform_specifics/android/notification_details.dart'
     as _i12;
 import 'package:flutter_local_notifications/src/platform_specifics/android/styles/messaging_style_information.dart'
+    as _i16;
+import 'package:flutter_local_notifications/src/platform_specifics/darwin/initialization_settings.dart'
     as _i17;
+import 'package:flutter_local_notifications/src/platform_specifics/darwin/notification_details.dart'
+    as _i18;
 import 'package:flutter_local_notifications/src/platform_specifics/ios/enums.dart'
     as _i8;
-import 'package:flutter_local_notifications/src/platform_specifics/ios/initialization_settings.dart'
-    as _i18;
-import 'package:flutter_local_notifications/src/platform_specifics/ios/notification_details.dart'
-    as _i19;
 import 'package:flutter_local_notifications/src/types.dart' as _i9;
 import 'package:flutter_local_notifications_platform_interface/flutter_local_notifications_platform_interface.dart'
     as _i5;
@@ -62,13 +60,20 @@ class MockFlutterLocalNotificationsPlugin extends _i1.Mock
   @override
   _i3.Future<bool?> initialize(
     _i4.InitializationSettings? initializationSettings, {
-    _i5.SelectNotificationCallback? onSelectNotification,
+    _i5.DidReceiveNotificationResponseCallback?
+        onDidReceiveNotificationResponse,
+    _i5.DidReceiveBackgroundNotificationResponseCallback?
+        onDidReceiveBackgroundNotificationResponse,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
           #initialize,
           [initializationSettings],
-          {#onSelectNotification: onSelectNotification},
+          {
+            #onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
+            #onDidReceiveBackgroundNotificationResponse:
+                onDidReceiveBackgroundNotificationResponse,
+          },
         ),
         returnValue: _i3.Future<bool?>.value(),
       ) as _i3.Future<bool?>);
@@ -276,6 +281,16 @@ class MockFlutterLocalNotificationsPlugin extends _i1.Mock
             returnValue: _i3.Future<List<_i5.PendingNotificationRequest>>.value(
                 <_i5.PendingNotificationRequest>[]),
           ) as _i3.Future<List<_i5.PendingNotificationRequest>>);
+  @override
+  _i3.Future<List<_i5.ActiveNotification>> getActiveNotifications() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getActiveNotifications,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i5.ActiveNotification>>.value(
+            <_i5.ActiveNotification>[]),
+      ) as _i3.Future<List<_i5.ActiveNotification>>);
 }
 
 /// A class which mocks [AndroidFlutterLocalNotificationsPlugin].
@@ -288,18 +303,25 @@ class MockAndroidFlutterLocalNotificationsPlugin extends _i1.Mock
   }
 
   @override
-  _i3.Future<bool?> initialize(
+  _i3.Future<bool> initialize(
     _i11.AndroidInitializationSettings? initializationSettings, {
-    _i5.SelectNotificationCallback? onSelectNotification,
+    _i5.DidReceiveNotificationResponseCallback?
+        onDidReceiveNotificationResponse,
+    _i5.DidReceiveBackgroundNotificationResponseCallback?
+        onDidReceiveBackgroundNotificationResponse,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
           #initialize,
           [initializationSettings],
-          {#onSelectNotification: onSelectNotification},
+          {
+            #onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
+            #onDidReceiveBackgroundNotificationResponse:
+                onDidReceiveBackgroundNotificationResponse,
+          },
         ),
-        returnValue: _i3.Future<bool?>.value(),
-      ) as _i3.Future<bool?>);
+        returnValue: _i3.Future<bool>.value(false),
+      ) as _i3.Future<bool>);
   @override
   _i3.Future<bool?> requestPermission() => (super.noSuchMethod(
         Invocation.method(
@@ -563,16 +585,7 @@ class MockAndroidFlutterLocalNotificationsPlugin extends _i1.Mock
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
   @override
-  _i3.Future<List<_i16.ActiveNotification>?> getActiveNotifications() =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #getActiveNotifications,
-          [],
-        ),
-        returnValue: _i3.Future<List<_i16.ActiveNotification>?>.value(),
-      ) as _i3.Future<List<_i16.ActiveNotification>?>);
-  @override
-  _i3.Future<_i17.MessagingStyleInformation?>
+  _i3.Future<_i16.MessagingStyleInformation?>
       getActiveNotificationMessagingStyle(
     int? id, {
     String? tag,
@@ -583,8 +596,8 @@ class MockAndroidFlutterLocalNotificationsPlugin extends _i1.Mock
               [id],
               {#tag: tag},
             ),
-            returnValue: _i3.Future<_i17.MessagingStyleInformation?>.value(),
-          ) as _i3.Future<_i17.MessagingStyleInformation?>);
+            returnValue: _i3.Future<_i16.MessagingStyleInformation?>.value(),
+          ) as _i3.Future<_i16.MessagingStyleInformation?>);
   @override
   _i3.Future<List<_i15.AndroidNotificationChannel>?>
       getNotificationChannels() => (super.noSuchMethod(
@@ -631,6 +644,16 @@ class MockAndroidFlutterLocalNotificationsPlugin extends _i1.Mock
             returnValue: _i3.Future<List<_i5.PendingNotificationRequest>>.value(
                 <_i5.PendingNotificationRequest>[]),
           ) as _i3.Future<List<_i5.PendingNotificationRequest>>);
+  @override
+  _i3.Future<List<_i5.ActiveNotification>> getActiveNotifications() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getActiveNotifications,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i5.ActiveNotification>>.value(
+            <_i5.ActiveNotification>[]),
+      ) as _i3.Future<List<_i5.ActiveNotification>>);
 }
 
 /// A class which mocks [IOSFlutterLocalNotificationsPlugin].
@@ -644,14 +667,21 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
 
   @override
   _i3.Future<bool?> initialize(
-    _i18.IOSInitializationSettings? initializationSettings, {
-    _i5.SelectNotificationCallback? onSelectNotification,
+    _i17.DarwinInitializationSettings? initializationSettings, {
+    _i5.DidReceiveNotificationResponseCallback?
+        onDidReceiveNotificationResponse,
+    _i5.DidReceiveBackgroundNotificationResponseCallback?
+        onDidReceiveBackgroundNotificationResponse,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
           #initialize,
           [initializationSettings],
-          {#onSelectNotification: onSelectNotification},
+          {
+            #onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
+            #onDidReceiveBackgroundNotificationResponse:
+                onDidReceiveBackgroundNotificationResponse,
+          },
         ),
         returnValue: _i3.Future<bool?>.value(),
       ) as _i3.Future<bool?>);
@@ -660,6 +690,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     bool? sound = false,
     bool? alert = false,
     bool? badge = false,
+    bool? critical = false,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -669,6 +700,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
             #sound: sound,
             #alert: alert,
             #badge: badge,
+            #critical: critical,
           },
         ),
         returnValue: _i3.Future<bool?>.value(),
@@ -679,7 +711,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     String? title,
     String? body,
     DateTime? scheduledDate,
-    _i19.IOSNotificationDetails? notificationDetails, {
+    _i18.DarwinNotificationDetails? notificationDetails, {
     String? payload,
   }) =>
       (super.noSuchMethod(
@@ -703,7 +735,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     String? title,
     String? body,
     _i7.TZDateTime? scheduledDate,
-    _i19.IOSNotificationDetails? notificationDetails, {
+    _i18.DarwinNotificationDetails? notificationDetails, {
     required _i8.UILocalNotificationDateInterpretation?
         uiLocalNotificationDateInterpretation,
     String? payload,
@@ -735,7 +767,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     String? title,
     String? body,
     _i9.Time? notificationTime,
-    _i19.IOSNotificationDetails? notificationDetails, {
+    _i18.DarwinNotificationDetails? notificationDetails, {
     String? payload,
   }) =>
       (super.noSuchMethod(
@@ -760,7 +792,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     String? body,
     _i9.Day? day,
     _i9.Time? notificationTime,
-    _i19.IOSNotificationDetails? notificationDetails, {
+    _i18.DarwinNotificationDetails? notificationDetails, {
     String? payload,
   }) =>
       (super.noSuchMethod(
@@ -784,7 +816,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     int? id,
     String? title,
     String? body, {
-    _i19.IOSNotificationDetails? notificationDetails,
+    _i18.DarwinNotificationDetails? notificationDetails,
     String? payload,
   }) =>
       (super.noSuchMethod(
@@ -809,7 +841,7 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
     String? title,
     String? body,
     _i5.RepeatInterval? repeatInterval, {
-    _i19.IOSNotificationDetails? notificationDetails,
+    _i18.DarwinNotificationDetails? notificationDetails,
     String? payload,
   }) =>
       (super.noSuchMethod(
@@ -866,4 +898,14 @@ class MockIOSFlutterLocalNotificationsPlugin extends _i1.Mock
             returnValue: _i3.Future<List<_i5.PendingNotificationRequest>>.value(
                 <_i5.PendingNotificationRequest>[]),
           ) as _i3.Future<List<_i5.PendingNotificationRequest>>);
+  @override
+  _i3.Future<List<_i5.ActiveNotification>> getActiveNotifications() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getActiveNotifications,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i5.ActiveNotification>>.value(
+            <_i5.ActiveNotification>[]),
+      ) as _i3.Future<List<_i5.ActiveNotification>>);
 }

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'navigation_icon.dart';
 
@@ -10,36 +12,11 @@ part of 'navigation_icon.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 NavigationIcon _$NavigationIconFromJson(Map<String, dynamic> json) {
   return _NavigationIcon.fromJson(json);
 }
-
-/// @nodoc
-class _$NavigationIconTearOff {
-  const _$NavigationIconTearOff();
-
-  _NavigationIcon call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'url') String? iconUrl,
-      @JsonKey(name: 'title') String? iconTitle,
-      @JsonKey(name: 'description') String? iconDescription}) {
-    return _NavigationIcon(
-      id: id,
-      iconUrl: iconUrl,
-      iconTitle: iconTitle,
-      iconDescription: iconDescription,
-    );
-  }
-
-  NavigationIcon fromJson(Map<String, Object> json) {
-    return NavigationIcon.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NavigationIcon = _$NavigationIconTearOff();
 
 /// @nodoc
 mixin _$NavigationIcon {
@@ -62,7 +39,8 @@ mixin _$NavigationIcon {
 abstract class $NavigationIconCopyWith<$Res> {
   factory $NavigationIconCopyWith(
           NavigationIcon value, $Res Function(NavigationIcon) then) =
-      _$NavigationIconCopyWithImpl<$Res>;
+      _$NavigationIconCopyWithImpl<$Res, NavigationIcon>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'url') String? iconUrl,
@@ -71,14 +49,16 @@ abstract class $NavigationIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NavigationIconCopyWithImpl<$Res>
+class _$NavigationIconCopyWithImpl<$Res, $Val extends NavigationIcon>
     implements $NavigationIconCopyWith<$Res> {
   _$NavigationIconCopyWithImpl(this._value, this._then);
 
-  final NavigationIcon _value;
   // ignore: unused_field
-  final $Res Function(NavigationIcon) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -87,33 +67,34 @@ class _$NavigationIconCopyWithImpl<$Res>
     Object? iconDescription = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconUrl: iconUrl == freezed
+      iconUrl: freezed == iconUrl
           ? _value.iconUrl
           : iconUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconTitle: iconTitle == freezed
+      iconTitle: freezed == iconTitle
           ? _value.iconTitle
           : iconTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconDescription: iconDescription == freezed
+      iconDescription: freezed == iconDescription
           ? _value.iconDescription
           : iconDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$NavigationIconCopyWith<$Res>
+abstract class _$$_NavigationIconCopyWith<$Res>
     implements $NavigationIconCopyWith<$Res> {
-  factory _$NavigationIconCopyWith(
-          _NavigationIcon value, $Res Function(_NavigationIcon) then) =
-      __$NavigationIconCopyWithImpl<$Res>;
+  factory _$$_NavigationIconCopyWith(
+          _$_NavigationIcon value, $Res Function(_$_NavigationIcon) then) =
+      __$$_NavigationIconCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'url') String? iconUrl,
@@ -122,16 +103,14 @@ abstract class _$NavigationIconCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NavigationIconCopyWithImpl<$Res>
-    extends _$NavigationIconCopyWithImpl<$Res>
-    implements _$NavigationIconCopyWith<$Res> {
-  __$NavigationIconCopyWithImpl(
-      _NavigationIcon _value, $Res Function(_NavigationIcon) _then)
-      : super(_value, (v) => _then(v as _NavigationIcon));
+class __$$_NavigationIconCopyWithImpl<$Res>
+    extends _$NavigationIconCopyWithImpl<$Res, _$_NavigationIcon>
+    implements _$$_NavigationIconCopyWith<$Res> {
+  __$$_NavigationIconCopyWithImpl(
+      _$_NavigationIcon _value, $Res Function(_$_NavigationIcon) _then)
+      : super(_value, _then);
 
-  @override
-  _NavigationIcon get _value => super._value as _NavigationIcon;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -139,20 +118,20 @@ class __$NavigationIconCopyWithImpl<$Res>
     Object? iconTitle = freezed,
     Object? iconDescription = freezed,
   }) {
-    return _then(_NavigationIcon(
-      id: id == freezed
+    return _then(_$_NavigationIcon(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconUrl: iconUrl == freezed
+      iconUrl: freezed == iconUrl
           ? _value.iconUrl
           : iconUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconTitle: iconTitle == freezed
+      iconTitle: freezed == iconTitle
           ? _value.iconTitle
           : iconTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconDescription: iconDescription == freezed
+      iconDescription: freezed == iconDescription
           ? _value.iconDescription
           : iconDescription // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -170,7 +149,7 @@ class _$_NavigationIcon implements _NavigationIcon {
       @JsonKey(name: 'description') this.iconDescription});
 
   factory _$_NavigationIcon.fromJson(Map<String, dynamic> json) =>
-      _$_$_NavigationIconFromJson(json);
+      _$$_NavigationIconFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -193,45 +172,41 @@ class _$_NavigationIcon implements _NavigationIcon {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _NavigationIcon &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.iconUrl, iconUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconUrl, iconUrl)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_NavigationIcon &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl) &&
             (identical(other.iconTitle, iconTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconTitle, iconTitle)) &&
+                other.iconTitle == iconTitle) &&
             (identical(other.iconDescription, iconDescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconDescription, iconDescription)));
+                other.iconDescription == iconDescription));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(iconUrl) ^
-      const DeepCollectionEquality().hash(iconTitle) ^
-      const DeepCollectionEquality().hash(iconDescription);
 
   @JsonKey(ignore: true)
   @override
-  _$NavigationIconCopyWith<_NavigationIcon> get copyWith =>
-      __$NavigationIconCopyWithImpl<_NavigationIcon>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, id, iconUrl, iconTitle, iconDescription);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_NavigationIconCopyWith<_$_NavigationIcon> get copyWith =>
+      __$$_NavigationIconCopyWithImpl<_$_NavigationIcon>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NavigationIconToJson(this);
+    return _$$_NavigationIconToJson(
+      this,
+    );
   }
 }
 
 abstract class _NavigationIcon implements NavigationIcon {
   factory _NavigationIcon(
-          {@JsonKey(name: 'id') String? id,
-          @JsonKey(name: 'url') String? iconUrl,
-          @JsonKey(name: 'title') String? iconTitle,
-          @JsonKey(name: 'description') String? iconDescription}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'url') final String? iconUrl,
+          @JsonKey(name: 'title') final String? iconTitle,
+          @JsonKey(name: 'description') final String? iconDescription}) =
       _$_NavigationIcon;
 
   factory _NavigationIcon.fromJson(Map<String, dynamic> json) =
@@ -239,18 +214,18 @@ abstract class _NavigationIcon implements NavigationIcon {
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'url')
-  String? get iconUrl => throw _privateConstructorUsedError;
+  String? get iconUrl;
   @override
   @JsonKey(name: 'title')
-  String? get iconTitle => throw _privateConstructorUsedError;
+  String? get iconTitle;
   @override
   @JsonKey(name: 'description')
-  String? get iconDescription => throw _privateConstructorUsedError;
+  String? get iconDescription;
   @override
   @JsonKey(ignore: true)
-  _$NavigationIconCopyWith<_NavigationIcon> get copyWith =>
+  _$$_NavigationIconCopyWith<_$_NavigationIcon> get copyWith =>
       throw _privateConstructorUsedError;
 }

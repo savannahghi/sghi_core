@@ -204,8 +204,6 @@ void bottomSheet({
 }) {
   showModalBottomSheet<List<dynamic>>(
     context: context,
-    enableDrag: true,
-    isDismissible: true,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(20.0),

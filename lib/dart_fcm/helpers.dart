@@ -26,7 +26,6 @@ Future<void> initializeIOS(
     required Future<bool> Function(String?)? onSelect}) async {
   await localNotificationsPlugin.initialize(
     initializationSettings,
-    onSelectNotification: onSelect,
   );
 }
 

@@ -91,7 +91,7 @@ class SILSecondaryButton extends StatelessWidget {
       key: buttonKey,
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        primary: Colors.transparent,
+        backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
             side: BorderSide(color: borderColor ?? healthcloudAccentColor),
             borderRadius: BorderRadius.circular(customRadius ?? 25)),

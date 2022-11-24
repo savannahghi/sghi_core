@@ -116,5 +116,17 @@ void main() {
         (String right) => expect(right, validKenyanPhone),
       );
     });
+
+    test('expects valid name to json to be returned', () {
+      final PhoneNumber name = PhoneNumber.withValue(validKenyanPhone);
+      final String jsonVal = name.toJson();
+      final PhoneNumber fromJsonPhoneNumber = PhoneNumber.fromJson(jsonVal);
+
+      expect(jsonVal, isA<String>());
+      fromJsonPhoneNumber.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (String right) => expect(right, validKenyanPhone),
+      );
+    });
   });
 }

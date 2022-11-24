@@ -67,8 +67,6 @@ void main() {
       final Map<String, dynamic> json = profile.toJson();
       expect(json, isA<Map<String, dynamic>>());
       expect(json['id'], 'id');
-      expect(json['userName'], 'username');
-      expect(json['primaryPhone'], '+254712345678');
       expect(json['assistant'], describeEnum(Assistant.bowi).toUpperCase());
     });
 

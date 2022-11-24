@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'navigation_item.dart';
 
@@ -10,40 +12,11 @@ part of 'navigation_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 NavigationItem _$NavigationItemFromJson(Map<String, dynamic> json) {
   return _NavigationItem.fromJson(json);
 }
-
-/// @nodoc
-class _$NavigationItemTearOff {
-  const _$NavigationItemTearOff();
-
-  _NavigationItem call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'onTapRoute') String? route,
-      @JsonKey(name: 'icon') NavigationIcon? icon,
-      @JsonKey(name: 'favourite') bool? isFavourite,
-      @JsonKey(name: 'nested') List<NavigationNestedItem>? nestedItems}) {
-    return _NavigationItem(
-      id: id,
-      title: title,
-      route: route,
-      icon: icon,
-      isFavourite: isFavourite,
-      nestedItems: nestedItems,
-    );
-  }
-
-  NavigationItem fromJson(Map<String, Object> json) {
-    return NavigationItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NavigationItem = _$NavigationItemTearOff();
 
 /// @nodoc
 mixin _$NavigationItem {
@@ -71,7 +44,8 @@ mixin _$NavigationItem {
 abstract class $NavigationItemCopyWith<$Res> {
   factory $NavigationItemCopyWith(
           NavigationItem value, $Res Function(NavigationItem) then) =
-      _$NavigationItemCopyWithImpl<$Res>;
+      _$NavigationItemCopyWithImpl<$Res, NavigationItem>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'title') String? title,
@@ -84,14 +58,16 @@ abstract class $NavigationItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NavigationItemCopyWithImpl<$Res>
+class _$NavigationItemCopyWithImpl<$Res, $Val extends NavigationItem>
     implements $NavigationItemCopyWith<$Res> {
   _$NavigationItemCopyWithImpl(this._value, this._then);
 
-  final NavigationItem _value;
   // ignore: unused_field
-  final $Res Function(NavigationItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -102,52 +78,54 @@ class _$NavigationItemCopyWithImpl<$Res>
     Object? nestedItems = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: route == freezed
+      route: freezed == route
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as NavigationIcon?,
-      isFavourite: isFavourite == freezed
+      isFavourite: freezed == isFavourite
           ? _value.isFavourite
           : isFavourite // ignore: cast_nullable_to_non_nullable
               as bool?,
-      nestedItems: nestedItems == freezed
+      nestedItems: freezed == nestedItems
           ? _value.nestedItems
           : nestedItems // ignore: cast_nullable_to_non_nullable
               as List<NavigationNestedItem>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NavigationIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
     }
 
     return $NavigationIconCopyWith<$Res>(_value.icon!, (value) {
-      return _then(_value.copyWith(icon: value));
+      return _then(_value.copyWith(icon: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$NavigationItemCopyWith<$Res>
+abstract class _$$_NavigationItemCopyWith<$Res>
     implements $NavigationItemCopyWith<$Res> {
-  factory _$NavigationItemCopyWith(
-          _NavigationItem value, $Res Function(_NavigationItem) then) =
-      __$NavigationItemCopyWithImpl<$Res>;
+  factory _$$_NavigationItemCopyWith(
+          _$_NavigationItem value, $Res Function(_$_NavigationItem) then) =
+      __$$_NavigationItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'title') String? title,
@@ -161,16 +139,14 @@ abstract class _$NavigationItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NavigationItemCopyWithImpl<$Res>
-    extends _$NavigationItemCopyWithImpl<$Res>
-    implements _$NavigationItemCopyWith<$Res> {
-  __$NavigationItemCopyWithImpl(
-      _NavigationItem _value, $Res Function(_NavigationItem) _then)
-      : super(_value, (v) => _then(v as _NavigationItem));
+class __$$_NavigationItemCopyWithImpl<$Res>
+    extends _$NavigationItemCopyWithImpl<$Res, _$_NavigationItem>
+    implements _$$_NavigationItemCopyWith<$Res> {
+  __$$_NavigationItemCopyWithImpl(
+      _$_NavigationItem _value, $Res Function(_$_NavigationItem) _then)
+      : super(_value, _then);
 
-  @override
-  _NavigationItem get _value => super._value as _NavigationItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -180,29 +156,29 @@ class __$NavigationItemCopyWithImpl<$Res>
     Object? isFavourite = freezed,
     Object? nestedItems = freezed,
   }) {
-    return _then(_NavigationItem(
-      id: id == freezed
+    return _then(_$_NavigationItem(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: route == freezed
+      route: freezed == route
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as NavigationIcon?,
-      isFavourite: isFavourite == freezed
+      isFavourite: freezed == isFavourite
           ? _value.isFavourite
           : isFavourite // ignore: cast_nullable_to_non_nullable
               as bool?,
-      nestedItems: nestedItems == freezed
-          ? _value.nestedItems
+      nestedItems: freezed == nestedItems
+          ? _value._nestedItems
           : nestedItems // ignore: cast_nullable_to_non_nullable
               as List<NavigationNestedItem>?,
     ));
@@ -218,10 +194,11 @@ class _$_NavigationItem implements _NavigationItem {
       @JsonKey(name: 'onTapRoute') this.route,
       @JsonKey(name: 'icon') this.icon,
       @JsonKey(name: 'favourite') this.isFavourite,
-      @JsonKey(name: 'nested') this.nestedItems});
+      @JsonKey(name: 'nested') final List<NavigationNestedItem>? nestedItems})
+      : _nestedItems = nestedItems;
 
   factory _$_NavigationItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_NavigationItemFromJson(json);
+      _$$_NavigationItemFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -238,9 +215,15 @@ class _$_NavigationItem implements _NavigationItem {
   @override
   @JsonKey(name: 'favourite')
   final bool? isFavourite;
+  final List<NavigationNestedItem>? _nestedItems;
   @override
   @JsonKey(name: 'nested')
-  final List<NavigationNestedItem>? nestedItems;
+  List<NavigationNestedItem>? get nestedItems {
+    final value = _nestedItems;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -250,78 +233,75 @@ class _$_NavigationItem implements _NavigationItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _NavigationItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.route, route) ||
-                const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_NavigationItem &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.route, route) || other.route == route) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.isFavourite, isFavourite) ||
-                const DeepCollectionEquality()
-                    .equals(other.isFavourite, isFavourite)) &&
-            (identical(other.nestedItems, nestedItems) ||
-                const DeepCollectionEquality()
-                    .equals(other.nestedItems, nestedItems)));
+                other.isFavourite == isFavourite) &&
+            const DeepCollectionEquality()
+                .equals(other._nestedItems, _nestedItems));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(isFavourite) ^
-      const DeepCollectionEquality().hash(nestedItems);
 
   @JsonKey(ignore: true)
   @override
-  _$NavigationItemCopyWith<_NavigationItem> get copyWith =>
-      __$NavigationItemCopyWithImpl<_NavigationItem>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, title, route, icon,
+      isFavourite, const DeepCollectionEquality().hash(_nestedItems));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_NavigationItemCopyWith<_$_NavigationItem> get copyWith =>
+      __$$_NavigationItemCopyWithImpl<_$_NavigationItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NavigationItemToJson(this);
+    return _$$_NavigationItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _NavigationItem implements NavigationItem {
   factory _NavigationItem(
-          {@JsonKey(name: 'id') String? id,
-          @JsonKey(name: 'title') String? title,
-          @JsonKey(name: 'onTapRoute') String? route,
-          @JsonKey(name: 'icon') NavigationIcon? icon,
-          @JsonKey(name: 'favourite') bool? isFavourite,
-          @JsonKey(name: 'nested') List<NavigationNestedItem>? nestedItems}) =
-      _$_NavigationItem;
+      {@JsonKey(name: 'id')
+          final String? id,
+      @JsonKey(name: 'title')
+          final String? title,
+      @JsonKey(name: 'onTapRoute')
+          final String? route,
+      @JsonKey(name: 'icon')
+          final NavigationIcon? icon,
+      @JsonKey(name: 'favourite')
+          final bool? isFavourite,
+      @JsonKey(name: 'nested')
+          final List<NavigationNestedItem>? nestedItems}) = _$_NavigationItem;
 
   factory _NavigationItem.fromJson(Map<String, dynamic> json) =
       _$_NavigationItem.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: 'onTapRoute')
-  String? get route => throw _privateConstructorUsedError;
+  String? get route;
   @override
   @JsonKey(name: 'icon')
-  NavigationIcon? get icon => throw _privateConstructorUsedError;
+  NavigationIcon? get icon;
   @override
   @JsonKey(name: 'favourite')
-  bool? get isFavourite => throw _privateConstructorUsedError;
+  bool? get isFavourite;
   @override
   @JsonKey(name: 'nested')
-  List<NavigationNestedItem>? get nestedItems =>
-      throw _privateConstructorUsedError;
+  List<NavigationNestedItem>? get nestedItems;
   @override
   @JsonKey(ignore: true)
-  _$NavigationItemCopyWith<_NavigationItem> get copyWith =>
+  _$$_NavigationItemCopyWith<_$_NavigationItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
