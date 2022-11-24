@@ -1,3 +1,6 @@
+## 0.2.1
+
+- chore: add afya moja package
 ## 0.2.0
 
 - chore: update packages and flutter version to 3.3.8
