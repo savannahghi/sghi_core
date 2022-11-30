@@ -41,7 +41,8 @@ mixin _$Link {
 /// @nodoc
 abstract class $LinkCopyWith<$Res> {
   factory $LinkCopyWith(Link value, $Res Function(Link) then) =
-      _$LinkCopyWithImpl<$Res>;
+      _$LinkCopyWithImpl<$Res, Link>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -58,13 +59,16 @@ abstract class $LinkCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LinkCopyWithImpl<$Res> implements $LinkCopyWith<$Res> {
+class _$LinkCopyWithImpl<$Res, $Val extends Link>
+    implements $LinkCopyWith<$Res> {
   _$LinkCopyWithImpl(this._value, this._then);
 
-  final Link _value;
   // ignore: unused_field
-  final $Res Function(Link) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -75,31 +79,31 @@ class _$LinkCopyWithImpl<$Res> implements $LinkCopyWith<$Res> {
     Object? thumbnail = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      linkType: linkType == freezed
+      linkType: freezed == linkType
           ? _value.linkType
           : linkType // ignore: cast_nullable_to_non_nullable
               as LinkType?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnail: thumbnail == freezed
+      thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -108,6 +112,7 @@ abstract class _$$_LinkCopyWith<$Res> implements $LinkCopyWith<$Res> {
   factory _$$_LinkCopyWith(_$_Link value, $Res Function(_$_Link) then) =
       __$$_LinkCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -124,14 +129,12 @@ abstract class _$$_LinkCopyWith<$Res> implements $LinkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
+class __$$_LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res, _$_Link>
     implements _$$_LinkCopyWith<$Res> {
   __$$_LinkCopyWithImpl(_$_Link _value, $Res Function(_$_Link) _then)
-      : super(_value, (v) => _then(v as _$_Link));
+      : super(_value, _then);
 
-  @override
-  _$_Link get _value => super._value as _$_Link;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -142,27 +145,27 @@ class __$$_LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
     Object? thumbnail = freezed,
   }) {
     return _then(_$_Link(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      linkType: linkType == freezed
+      linkType: freezed == linkType
           ? _value.linkType
           : linkType // ignore: cast_nullable_to_non_nullable
               as LinkType?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnail: thumbnail == freezed
+      thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -218,28 +221,25 @@ class _$_Link implements _Link {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Link &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.linkType, linkType) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.linkType, linkType) ||
+                other.linkType == linkType) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(linkType),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(thumbnail));
+      runtimeType, id, url, linkType, title, description, thumbnail);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LinkCopyWith<_$_Link> get copyWith =>
       __$$_LinkCopyWithImpl<_$_Link>(this, _$identity);
 

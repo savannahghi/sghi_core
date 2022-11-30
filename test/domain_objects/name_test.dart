@@ -44,5 +44,17 @@ void main() {
         (String right) => expect(right, nameExample),
       );
     });
+
+    test('expects valid name to json to be returned', () {
+      final Name name = Name.withValue(nameExample);
+      final String jsonVal = name.toJson();
+      final Name fromJsonName = Name.fromJson(jsonVal);
+
+      expect(jsonVal, isA<String>());
+      fromJsonName.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (String right) => expect(right, nameExample),
+      );
+    });
   });
 }

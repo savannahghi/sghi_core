@@ -47,7 +47,8 @@ mixin _$Feed {
 /// @nodoc
 abstract class $FeedCopyWith<$Res> {
   factory $FeedCopyWith(Feed value, $Res Function(Feed) then) =
-      _$FeedCopyWithImpl<$Res>;
+      _$FeedCopyWithImpl<$Res, Feed>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -68,13 +69,16 @@ abstract class $FeedCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FeedCopyWithImpl<$Res> implements $FeedCopyWith<$Res> {
+class _$FeedCopyWithImpl<$Res, $Val extends Feed>
+    implements $FeedCopyWith<$Res> {
   _$FeedCopyWithImpl(this._value, this._then);
 
-  final Feed _value;
   // ignore: unused_field
-  final $Res Function(Feed) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -87,39 +91,39 @@ class _$FeedCopyWithImpl<$Res> implements $FeedCopyWith<$Res> {
     Object? items = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: sequenceNumber == freezed
+      sequenceNumber: freezed == sequenceNumber
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      uid: uid == freezed
+      uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAnonymous: isAnonymous == freezed
+      isAnonymous: freezed == isAnonymous
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      flavour: flavour == freezed
+      flavour: freezed == flavour
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as Flavour?,
-      actions: actions == freezed
+      actions: freezed == actions
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      nudges: nudges == freezed
+      nudges: freezed == nudges
           ? _value.nudges
           : nudges // ignore: cast_nullable_to_non_nullable
               as List<Nudge>?,
-      items: items == freezed
+      items: freezed == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Item>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -128,6 +132,7 @@ abstract class _$$_FeedCopyWith<$Res> implements $FeedCopyWith<$Res> {
   factory _$$_FeedCopyWith(_$_Feed value, $Res Function(_$_Feed) then) =
       __$$_FeedCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -148,14 +153,12 @@ abstract class _$$_FeedCopyWith<$Res> implements $FeedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
+class __$$_FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res, _$_Feed>
     implements _$$_FeedCopyWith<$Res> {
   __$$_FeedCopyWithImpl(_$_Feed _value, $Res Function(_$_Feed) _then)
-      : super(_value, (v) => _then(v as _$_Feed));
+      : super(_value, _then);
 
-  @override
-  _$_Feed get _value => super._value as _$_Feed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -168,35 +171,35 @@ class __$$_FeedCopyWithImpl<$Res> extends _$FeedCopyWithImpl<$Res>
     Object? items = freezed,
   }) {
     return _then(_$_Feed(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: sequenceNumber == freezed
+      sequenceNumber: freezed == sequenceNumber
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      uid: uid == freezed
+      uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAnonymous: isAnonymous == freezed
+      isAnonymous: freezed == isAnonymous
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      flavour: flavour == freezed
+      flavour: freezed == flavour
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as Flavour?,
-      actions: actions == freezed
+      actions: freezed == actions
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      nudges: nudges == freezed
+      nudges: freezed == nudges
           ? _value._nudges
           : nudges // ignore: cast_nullable_to_non_nullable
               as List<Nudge>?,
-      items: items == freezed
+      items: freezed == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Item>?,
@@ -279,13 +282,13 @@ class _$_Feed implements _Feed {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Feed &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.sequenceNumber, sequenceNumber) &&
-            const DeepCollectionEquality().equals(other.uid, uid) &&
-            const DeepCollectionEquality()
-                .equals(other.isAnonymous, isAnonymous) &&
-            const DeepCollectionEquality().equals(other.flavour, flavour) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.sequenceNumber, sequenceNumber) ||
+                other.sequenceNumber == sequenceNumber) &&
+            (identical(other.uid, uid) || other.uid == uid) &&
+            (identical(other.isAnonymous, isAnonymous) ||
+                other.isAnonymous == isAnonymous) &&
+            (identical(other.flavour, flavour) || other.flavour == flavour) &&
             const DeepCollectionEquality().equals(other._actions, _actions) &&
             const DeepCollectionEquality().equals(other._nudges, _nudges) &&
             const DeepCollectionEquality().equals(other._items, _items));
@@ -295,17 +298,18 @@ class _$_Feed implements _Feed {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(sequenceNumber),
-      const DeepCollectionEquality().hash(uid),
-      const DeepCollectionEquality().hash(isAnonymous),
-      const DeepCollectionEquality().hash(flavour),
+      id,
+      sequenceNumber,
+      uid,
+      isAnonymous,
+      flavour,
       const DeepCollectionEquality().hash(_actions),
       const DeepCollectionEquality().hash(_nudges),
       const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FeedCopyWith<_$_Feed> get copyWith =>
       __$$_FeedCopyWithImpl<_$_Feed>(this, _$identity);
 

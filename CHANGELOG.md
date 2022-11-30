@@ -1,3 +1,6 @@
+## 0.2.0
+
+- chore: update packages and flutter version to 3.3.8
 ## 0.1.4
 
 - chore: update packages to fix breaking changes

@@ -34,35 +34,39 @@ mixin _$Document {
 /// @nodoc
 abstract class $DocumentCopyWith<$Res> {
   factory $DocumentCopyWith(Document value, $Res Function(Document) then) =
-      _$DocumentCopyWithImpl<$Res>;
+      _$DocumentCopyWithImpl<$Res, Document>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'base64') String? base64});
 }
 
 /// @nodoc
-class _$DocumentCopyWithImpl<$Res> implements $DocumentCopyWith<$Res> {
+class _$DocumentCopyWithImpl<$Res, $Val extends Document>
+    implements $DocumentCopyWith<$Res> {
   _$DocumentCopyWithImpl(this._value, this._then);
 
-  final Document _value;
   // ignore: unused_field
-  final $Res Function(Document) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? base64 = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      base64: base64 == freezed
+      base64: freezed == base64
           ? _value.base64
           : base64 // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -72,32 +76,32 @@ abstract class _$$_DocumentCopyWith<$Res> implements $DocumentCopyWith<$Res> {
           _$_Document value, $Res Function(_$_Document) then) =
       __$$_DocumentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'base64') String? base64});
 }
 
 /// @nodoc
-class __$$_DocumentCopyWithImpl<$Res> extends _$DocumentCopyWithImpl<$Res>
+class __$$_DocumentCopyWithImpl<$Res>
+    extends _$DocumentCopyWithImpl<$Res, _$_Document>
     implements _$$_DocumentCopyWith<$Res> {
   __$$_DocumentCopyWithImpl(
       _$_Document _value, $Res Function(_$_Document) _then)
-      : super(_value, (v) => _then(v as _$_Document));
+      : super(_value, _then);
 
-  @override
-  _$_Document get _value => super._value as _$_Document;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? base64 = freezed,
   }) {
     return _then(_$_Document(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      base64: base64 == freezed
+      base64: freezed == base64
           ? _value.base64
           : base64 // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -131,19 +135,17 @@ class _$_Document implements _Document {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Document &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.base64, base64));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.base64, base64) || other.base64 == base64));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(base64));
+  int get hashCode => Object.hash(runtimeType, id, base64);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DocumentCopyWith<_$_Document> get copyWith =>
       __$$_DocumentCopyWithImpl<_$_Document>(this, _$identity);
 

@@ -17,9 +17,9 @@ void main() {
       final MockFirebaseMessaging fbm = MockFirebaseMessaging();
       final SILFCM fcm = SILFCM(firebaseMessagingObj: fbm);
       expect(fcm, isA<SILFCM>());
-      final MacOSInitializationSettings settings =
+      final DarwinInitializationSettings settings =
           fcm.initializeMacOSInitializationSettings();
-      expect(settings, isA<MacOSInitializationSettings>());
+      expect(settings, isA<DarwinInitializationSettings>());
     });
 
     test('should request macOS permission', () async {
@@ -79,10 +79,10 @@ void main() {
           firebaseMessagingObj: fbm,
           localNotifications: mockFlutterNotificationsPlugin);
 
-      final MacOSInitializationSettings macOSSettings =
+      final DarwinInitializationSettings macOSSettings =
           fcm.initializeMacOSInitializationSettings();
 
-      expect(macOSSettings, isA<MacOSInitializationSettings>());
+      expect(macOSSettings, isA<DarwinInitializationSettings>());
     });
 
     test('should initializeMacOSInitializationSettings', () {
@@ -93,19 +93,19 @@ void main() {
           firebaseMessagingObj: fbm,
           localNotifications: mockFlutterNotificationsPlugin);
 
-      final MacOSInitializationSettings macOSSettings =
+      final DarwinInitializationSettings macOSSettings =
           fcm.initializeMacOSInitializationSettings();
 
-      expect(macOSSettings, isA<MacOSInitializationSettings>());
+      expect(macOSSettings, isA<DarwinInitializationSettings>());
     });
 
     test('should call initializeMacOSInitializationSettings', () {
       final MockFirebaseMessaging fbm = MockFirebaseMessaging();
       final SILFCM fcm = SILFCM(firebaseMessagingObj: fbm);
       expect(fcm, isA<SILFCM>());
-      final MacOSInitializationSettings settings =
+      final DarwinInitializationSettings settings =
           fcm.initializeMacOSInitializationSettings();
-      expect(settings, isA<MacOSInitializationSettings>());
+      expect(settings, isA<DarwinInitializationSettings>());
     });
 
     test('should request macOS permission', () async {

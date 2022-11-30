@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'bio_data.dart';
 
@@ -10,40 +12,11 @@ part of 'bio_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 BioData _$BioDataFromJson(Map<String, dynamic> json) {
   return _BioData.fromJson(json);
 }
-
-/// @nodoc
-class _$BioDataTearOff {
-  const _$BioDataTearOff();
-
-  _BioData call(
-      {@JsonKey(name: 'firstName')
-          Name? firstName,
-      @JsonKey(name: 'lastName')
-          Name? lastName,
-      @JsonKey(name: 'dateOfBirth')
-          String? dateOfBirth,
-      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
-          Gender? gender}) {
-    return _BioData(
-      firstName: firstName,
-      lastName: lastName,
-      dateOfBirth: dateOfBirth,
-      gender: gender,
-    );
-  }
-
-  BioData fromJson(Map<String, Object> json) {
-    return BioData.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BioData = _$BioDataTearOff();
 
 /// @nodoc
 mixin _$BioData {
@@ -64,7 +37,8 @@ mixin _$BioData {
 /// @nodoc
 abstract class $BioDataCopyWith<$Res> {
   factory $BioDataCopyWith(BioData value, $Res Function(BioData) then) =
-      _$BioDataCopyWithImpl<$Res>;
+      _$BioDataCopyWithImpl<$Res, BioData>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'firstName')
           Name? firstName,
@@ -77,13 +51,16 @@ abstract class $BioDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BioDataCopyWithImpl<$Res> implements $BioDataCopyWith<$Res> {
+class _$BioDataCopyWithImpl<$Res, $Val extends BioData>
+    implements $BioDataCopyWith<$Res> {
   _$BioDataCopyWithImpl(this._value, this._then);
 
-  final BioData _value;
   // ignore: unused_field
-  final $Res Function(BioData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? firstName = freezed,
@@ -92,31 +69,33 @@ class _$BioDataCopyWithImpl<$Res> implements $BioDataCopyWith<$Res> {
     Object? gender = freezed,
   }) {
     return _then(_value.copyWith(
-      firstName: firstName == freezed
+      firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      lastName: lastName == freezed
+      lastName: freezed == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      dateOfBirth: dateOfBirth == freezed
+      dateOfBirth: freezed == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
-  factory _$BioDataCopyWith(_BioData value, $Res Function(_BioData) then) =
-      __$BioDataCopyWithImpl<$Res>;
+abstract class _$$_BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
+  factory _$$_BioDataCopyWith(
+          _$_BioData value, $Res Function(_$_BioData) then) =
+      __$$_BioDataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'firstName')
           Name? firstName,
@@ -129,14 +108,13 @@ abstract class _$BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BioDataCopyWithImpl<$Res> extends _$BioDataCopyWithImpl<$Res>
-    implements _$BioDataCopyWith<$Res> {
-  __$BioDataCopyWithImpl(_BioData _value, $Res Function(_BioData) _then)
-      : super(_value, (v) => _then(v as _BioData));
+class __$$_BioDataCopyWithImpl<$Res>
+    extends _$BioDataCopyWithImpl<$Res, _$_BioData>
+    implements _$$_BioDataCopyWith<$Res> {
+  __$$_BioDataCopyWithImpl(_$_BioData _value, $Res Function(_$_BioData) _then)
+      : super(_value, _then);
 
-  @override
-  _BioData get _value => super._value as _BioData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? firstName = freezed,
@@ -144,20 +122,20 @@ class __$BioDataCopyWithImpl<$Res> extends _$BioDataCopyWithImpl<$Res>
     Object? dateOfBirth = freezed,
     Object? gender = freezed,
   }) {
-    return _then(_BioData(
-      firstName: firstName == freezed
+    return _then(_$_BioData(
+      firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      lastName: lastName == freezed
+      lastName: freezed == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      dateOfBirth: dateOfBirth == freezed
+      dateOfBirth: freezed == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: gender == freezed
+      gender: freezed == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
@@ -175,7 +153,7 @@ class _$_BioData implements _BioData {
       @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown) this.gender});
 
   factory _$_BioData.fromJson(Map<String, dynamic> json) =>
-      _$_$_BioDataFromJson(json);
+      _$$_BioDataFromJson(json);
 
   @override
   @JsonKey(name: 'firstName')
@@ -198,66 +176,63 @@ class _$_BioData implements _BioData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BioData &&
+        (other.runtimeType == runtimeType &&
+            other is _$_BioData &&
             (identical(other.firstName, firstName) ||
-                const DeepCollectionEquality()
-                    .equals(other.firstName, firstName)) &&
+                other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastName, lastName)) &&
+                other.lastName == lastName) &&
             (identical(other.dateOfBirth, dateOfBirth) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateOfBirth, dateOfBirth)) &&
-            (identical(other.gender, gender) ||
-                const DeepCollectionEquality().equals(other.gender, gender)));
+                other.dateOfBirth == dateOfBirth) &&
+            (identical(other.gender, gender) || other.gender == gender));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(firstName) ^
-      const DeepCollectionEquality().hash(lastName) ^
-      const DeepCollectionEquality().hash(dateOfBirth) ^
-      const DeepCollectionEquality().hash(gender);
 
   @JsonKey(ignore: true)
   @override
-  _$BioDataCopyWith<_BioData> get copyWith =>
-      __$BioDataCopyWithImpl<_BioData>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, firstName, lastName, dateOfBirth, gender);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_BioDataCopyWith<_$_BioData> get copyWith =>
+      __$$_BioDataCopyWithImpl<_$_BioData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BioDataToJson(this);
+    return _$$_BioDataToJson(
+      this,
+    );
   }
 }
 
 abstract class _BioData implements BioData {
   factory _BioData(
       {@JsonKey(name: 'firstName')
-          Name? firstName,
+          final Name? firstName,
       @JsonKey(name: 'lastName')
-          Name? lastName,
+          final Name? lastName,
       @JsonKey(name: 'dateOfBirth')
-          String? dateOfBirth,
+          final String? dateOfBirth,
       @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
-          Gender? gender}) = _$_BioData;
+          final Gender? gender}) = _$_BioData;
 
   factory _BioData.fromJson(Map<String, dynamic> json) = _$_BioData.fromJson;
 
   @override
   @JsonKey(name: 'firstName')
-  Name? get firstName => throw _privateConstructorUsedError;
+  Name? get firstName;
   @override
   @JsonKey(name: 'lastName')
-  Name? get lastName => throw _privateConstructorUsedError;
+  Name? get lastName;
   @override
   @JsonKey(name: 'dateOfBirth')
-  String? get dateOfBirth => throw _privateConstructorUsedError;
+  String? get dateOfBirth;
   @override
   @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
-  Gender? get gender => throw _privateConstructorUsedError;
+  Gender? get gender;
   @override
   @JsonKey(ignore: true)
-  _$BioDataCopyWith<_BioData> get copyWith =>
+  _$$_BioDataCopyWith<_$_BioData> get copyWith =>
       throw _privateConstructorUsedError;
 }

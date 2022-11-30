@@ -6,24 +6,22 @@ part of 'customer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Customer _$_$_CustomerFromJson(Map<String, dynamic> json) {
-  return _$_Customer(
-    id: json['customerID'] as String?,
-    profileID: json['profileID'] as String?,
-    customerID: json['id'] as String?,
-    receivablesAccount: json['receivables_account'] == null
-        ? null
-        : ReceivablesAccount.fromJson(
-            json['receivables_account'] as Map<String, dynamic>),
-    active: json['active '] as bool?,
-  );
-}
+_$_Customer _$$_CustomerFromJson(Map<String, dynamic> json) => _$_Customer(
+      id: json['customerID'] as String?,
+      profileID: json['profileID'] as String?,
+      customerID: json['id'] as String?,
+      receivablesAccount: json['receivables_account'] == null
+          ? null
+          : ReceivablesAccount.fromJson(
+              json['receivables_account'] as Map<String, dynamic>),
+      active: json['active '] as bool?,
+    );
 
-Map<String, dynamic> _$_$_CustomerToJson(_$_Customer instance) =>
+Map<String, dynamic> _$$_CustomerToJson(_$_Customer instance) =>
     <String, dynamic>{
       'customerID': instance.id,
       'profileID': instance.profileID,
       'id': instance.customerID,
-      'receivables_account': instance.receivablesAccount?.toJson(),
+      'receivables_account': instance.receivablesAccount,
       'active ': instance.active,
     };

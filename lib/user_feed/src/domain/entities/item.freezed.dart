@@ -72,7 +72,8 @@ mixin _$Item {
 /// @nodoc
 abstract class $ItemCopyWith<$Res> {
   factory $ItemCopyWith(Item value, $Res Function(Item) then) =
-      _$ItemCopyWithImpl<$Res>;
+      _$ItemCopyWithImpl<$Res, Item>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'featureImage')
           String? featureImage,
@@ -121,13 +122,16 @@ abstract class $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ItemCopyWithImpl<$Res> implements $ItemCopyWith<$Res> {
+class _$ItemCopyWithImpl<$Res, $Val extends Item>
+    implements $ItemCopyWith<$Res> {
   _$ItemCopyWithImpl(this._value, this._then);
 
-  final Item _value;
   // ignore: unused_field
-  final $Res Function(Item) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? featureImage = freezed,
@@ -153,101 +157,102 @@ class _$ItemCopyWithImpl<$Res> implements $ItemCopyWith<$Res> {
     Object? notificationChannels = freezed,
   }) {
     return _then(_value.copyWith(
-      featureImage: featureImage == freezed
+      featureImage: freezed == featureImage
           ? _value.featureImage
           : featureImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: sequenceNumber == freezed
+      sequenceNumber: freezed == sequenceNumber
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      persistent: persistent == freezed
+      persistent: freezed == persistent
           ? _value.persistent
           : persistent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Link?,
-      author: author == freezed
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      tagline: tagline == freezed
+      tagline: freezed == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: timestamp == freezed
+      timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiry: expiry == freezed
+      expiry: freezed == expiry
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as String?,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: freezed == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      visibility: visibility == freezed
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as Visibility?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status?,
-      actions: actions == freezed
+      actions: freezed == actions
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      textType: textType == freezed
+      textType: freezed == textType
           ? _value.textType
           : textType // ignore: cast_nullable_to_non_nullable
               as TextType?,
-      links: links == freezed
+      links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
               as List<Link?>?,
-      conversations: conversations == freezed
+      conversations: freezed == conversations
           ? _value.conversations
           : conversations // ignore: cast_nullable_to_non_nullable
               as List<Message?>?,
-      groups: groups == freezed
+      groups: freezed == groups
           ? _value.groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      users: users == freezed
+      users: freezed == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      notificationChannels: notificationChannels == freezed
+      notificationChannels: freezed == notificationChannels
           ? _value.notificationChannels
           : notificationChannels // ignore: cast_nullable_to_non_nullable
               as List<Channel?>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $LinkCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
     }
 
     return $LinkCopyWith<$Res>(_value.icon!, (value) {
-      return _then(_value.copyWith(icon: value));
+      return _then(_value.copyWith(icon: value) as $Val);
     });
   }
 }
@@ -257,6 +262,7 @@ abstract class _$$_ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
   factory _$$_ItemCopyWith(_$_Item value, $Res Function(_$_Item) then) =
       __$$_ItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'featureImage')
           String? featureImage,
@@ -306,14 +312,12 @@ abstract class _$$_ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
+class __$$_ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res, _$_Item>
     implements _$$_ItemCopyWith<$Res> {
   __$$_ItemCopyWithImpl(_$_Item _value, $Res Function(_$_Item) _then)
-      : super(_value, (v) => _then(v as _$_Item));
+      : super(_value, _then);
 
-  @override
-  _$_Item get _value => super._value as _$_Item;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? featureImage = freezed,
@@ -339,87 +343,87 @@ class __$$_ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res>
     Object? notificationChannels = freezed,
   }) {
     return _then(_$_Item(
-      featureImage: featureImage == freezed
+      featureImage: freezed == featureImage
           ? _value.featureImage
           : featureImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: sequenceNumber == freezed
+      sequenceNumber: freezed == sequenceNumber
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      persistent: persistent == freezed
+      persistent: freezed == persistent
           ? _value.persistent
           : persistent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Link?,
-      author: author == freezed
+      author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      tagline: tagline == freezed
+      tagline: freezed == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: timestamp == freezed
+      timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiry: expiry == freezed
+      expiry: freezed == expiry
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as String?,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: freezed == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      visibility: visibility == freezed
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as Visibility?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status?,
-      actions: actions == freezed
+      actions: freezed == actions
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      textType: textType == freezed
+      textType: freezed == textType
           ? _value.textType
           : textType // ignore: cast_nullable_to_non_nullable
               as TextType?,
-      links: links == freezed
+      links: freezed == links
           ? _value._links
           : links // ignore: cast_nullable_to_non_nullable
               as List<Link?>?,
-      conversations: conversations == freezed
+      conversations: freezed == conversations
           ? _value._conversations
           : conversations // ignore: cast_nullable_to_non_nullable
               as List<Message?>?,
-      groups: groups == freezed
+      groups: freezed == groups
           ? _value._groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      users: users == freezed
+      users: freezed == users
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      notificationChannels: notificationChannels == freezed
+      notificationChannels: freezed == notificationChannels
           ? _value._notificationChannels
           : notificationChannels // ignore: cast_nullable_to_non_nullable
               as List<Channel?>?,
@@ -597,26 +601,28 @@ class _$_Item implements _Item {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Item &&
-            const DeepCollectionEquality()
-                .equals(other.featureImage, featureImage) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.sequenceNumber, sequenceNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.persistent, persistent) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
-            const DeepCollectionEquality().equals(other.tagline, tagline) &&
-            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
-            const DeepCollectionEquality().equals(other.expiry, expiry) &&
-            const DeepCollectionEquality().equals(other.label, label) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality()
-                .equals(other.visibility, visibility) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
+            (identical(other.featureImage, featureImage) ||
+                other.featureImage == featureImage) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.sequenceNumber, sequenceNumber) ||
+                other.sequenceNumber == sequenceNumber) &&
+            (identical(other.persistent, persistent) ||
+                other.persistent == persistent) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.author, author) || other.author == author) &&
+            (identical(other.tagline, tagline) || other.tagline == tagline) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.expiry, expiry) || other.expiry == expiry) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility) &&
+            (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality().equals(other._actions, _actions) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.textType, textType) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.textType, textType) ||
+                other.textType == textType) &&
             const DeepCollectionEquality().equals(other._links, _links) &&
             const DeepCollectionEquality()
                 .equals(other._conversations, _conversations) &&
@@ -630,22 +636,22 @@ class _$_Item implements _Item {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(featureImage),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(sequenceNumber),
-        const DeepCollectionEquality().hash(persistent),
-        const DeepCollectionEquality().hash(icon),
-        const DeepCollectionEquality().hash(author),
-        const DeepCollectionEquality().hash(tagline),
-        const DeepCollectionEquality().hash(timestamp),
-        const DeepCollectionEquality().hash(expiry),
-        const DeepCollectionEquality().hash(label),
-        const DeepCollectionEquality().hash(summary),
-        const DeepCollectionEquality().hash(visibility),
-        const DeepCollectionEquality().hash(status),
+        featureImage,
+        id,
+        sequenceNumber,
+        persistent,
+        icon,
+        author,
+        tagline,
+        timestamp,
+        expiry,
+        label,
+        summary,
+        visibility,
+        status,
         const DeepCollectionEquality().hash(_actions),
-        const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(textType),
+        text,
+        textType,
         const DeepCollectionEquality().hash(_links),
         const DeepCollectionEquality().hash(_conversations),
         const DeepCollectionEquality().hash(_groups),
@@ -655,6 +661,7 @@ class _$_Item implements _Item {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ItemCopyWith<_$_Item> get copyWith =>
       __$$_ItemCopyWithImpl<_$_Item>(this, _$identity);
 

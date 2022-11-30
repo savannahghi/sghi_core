@@ -37,7 +37,8 @@ mixin _$Event {
 /// @nodoc
 abstract class $EventCopyWith<$Res> {
   factory $EventCopyWith(Event value, $Res Function(Event) then) =
-      _$EventCopyWithImpl<$Res>;
+      _$EventCopyWithImpl<$Res, Event>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
@@ -49,13 +50,16 @@ abstract class $EventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EventCopyWithImpl<$Res> implements $EventCopyWith<$Res> {
+class _$EventCopyWithImpl<$Res, $Val extends Event>
+    implements $EventCopyWith<$Res> {
   _$EventCopyWithImpl(this._value, this._then);
 
-  final Event _value;
   // ignore: unused_field
-  final $Res Function(Event) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -64,44 +68,46 @@ class _$EventCopyWithImpl<$Res> implements $EventCopyWith<$Res> {
     Object? payload = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Context?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as Payload?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ContextCopyWith<$Res>? get context {
     if (_value.context == null) {
       return null;
     }
 
     return $ContextCopyWith<$Res>(_value.context!, (value) {
-      return _then(_value.copyWith(context: value));
+      return _then(_value.copyWith(context: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PayloadCopyWith<$Res>? get payload {
     if (_value.payload == null) {
       return null;
     }
 
     return $PayloadCopyWith<$Res>(_value.payload!, (value) {
-      return _then(_value.copyWith(payload: value));
+      return _then(_value.copyWith(payload: value) as $Val);
     });
   }
 }
@@ -111,6 +117,7 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
   factory _$$_EventCopyWith(_$_Event value, $Res Function(_$_Event) then) =
       __$$_EventCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
@@ -124,14 +131,12 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res>
+class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
     implements _$$_EventCopyWith<$Res> {
   __$$_EventCopyWithImpl(_$_Event _value, $Res Function(_$_Event) _then)
-      : super(_value, (v) => _then(v as _$_Event));
+      : super(_value, _then);
 
-  @override
-  _$_Event get _value => super._value as _$_Event;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -140,19 +145,19 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res>
     Object? payload = freezed,
   }) {
     return _then(_$_Event(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Context?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as Payload?,
@@ -195,23 +200,19 @@ class _$_Event implements _Event {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Event &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.context, context) &&
-            const DeepCollectionEquality().equals(other.payload, payload));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.context, context) || other.context == context) &&
+            (identical(other.payload, payload) || other.payload == payload));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(context),
-      const DeepCollectionEquality().hash(payload));
+  int get hashCode => Object.hash(runtimeType, id, name, context, payload);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EventCopyWith<_$_Event> get copyWith =>
       __$$_EventCopyWithImpl<_$_Event>(this, _$identity);
 

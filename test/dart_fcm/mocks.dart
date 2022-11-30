@@ -56,7 +56,9 @@ class MockFlutterLocalNotificationsPlugin extends Mock
   @override
   Future<bool?> initialize(
     InitializationSettings initializationSettings, {
-    SelectNotificationCallback? onSelectNotification,
+    DidReceiveNotificationResponseCallback? onDidReceiveNotificationResponse,
+    DidReceiveBackgroundNotificationResponseCallback?
+        onDidReceiveBackgroundNotificationResponse,
   }) async =>
       true;
 }

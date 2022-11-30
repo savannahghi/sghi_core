@@ -93,10 +93,10 @@ class SILFCM {
     const AndroidInitializationSettings androidSettings =
         AndroidInitializationSettings('app_icon');
 
-    final IOSInitializationSettings iOSSettings =
+    final DarwinInitializationSettings iOSSettings =
         this.initializeIOSInitializationSettings();
 
-    final MacOSInitializationSettings macOSSettings =
+    final DarwinInitializationSettings macOSSettings =
         this.initializeMacOSInitializationSettings();
 
     final InitializationSettings initializationSettings =
@@ -122,8 +122,8 @@ class SILFCM {
     return true;
   }
 
-  IOSInitializationSettings initializeIOSInitializationSettings() {
-    return IOSInitializationSettings(
+  DarwinInitializationSettings initializeIOSInitializationSettings() {
+    return DarwinInitializationSettings(
       requestAlertPermission: false,
       requestBadgePermission: false,
       requestSoundPermission: false,
@@ -135,8 +135,8 @@ class SILFCM {
     );
   }
 
-  MacOSInitializationSettings initializeMacOSInitializationSettings() {
-    return const MacOSInitializationSettings(
+  DarwinInitializationSettings initializeMacOSInitializationSettings() {
+    return const DarwinInitializationSettings(
       requestAlertPermission: false,
       requestBadgePermission: false,
       requestSoundPermission: false,

@@ -33,34 +33,38 @@ mixin _$Video {
 /// @nodoc
 abstract class $VideoCopyWith<$Res> {
   factory $VideoCopyWith(Video value, $Res Function(Video) then) =
-      _$VideoCopyWithImpl<$Res>;
+      _$VideoCopyWithImpl<$Res, Video>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
-class _$VideoCopyWithImpl<$Res> implements $VideoCopyWith<$Res> {
+class _$VideoCopyWithImpl<$Res, $Val extends Video>
+    implements $VideoCopyWith<$Res> {
   _$VideoCopyWithImpl(this._value, this._then);
 
-  final Video _value;
   // ignore: unused_field
-  final $Res Function(Video) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -69,30 +73,29 @@ abstract class _$$_VideoCopyWith<$Res> implements $VideoCopyWith<$Res> {
   factory _$$_VideoCopyWith(_$_Video value, $Res Function(_$_Video) then) =
       __$$_VideoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
-class __$$_VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res>
+class __$$_VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res, _$_Video>
     implements _$$_VideoCopyWith<$Res> {
   __$$_VideoCopyWithImpl(_$_Video _value, $Res Function(_$_Video) _then)
-      : super(_value, (v) => _then(v as _$_Video));
+      : super(_value, _then);
 
-  @override
-  _$_Video get _value => super._value as _$_Video;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_Video(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -125,19 +128,17 @@ class _$_Video implements _Video {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Video &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(url));
+  int get hashCode => Object.hash(runtimeType, id, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_VideoCopyWith<_$_Video> get copyWith =>
       __$$_VideoCopyWithImpl<_$_Video>(this, _$identity);
 

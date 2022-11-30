@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'auth_credential_response.dart';
 
@@ -10,47 +12,12 @@ part of 'auth_credential_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AuthCredentialResponse _$AuthCredentialResponseFromJson(
     Map<String, dynamic> json) {
   return _AuthCredentialResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$AuthCredentialResponseTearOff {
-  const _$AuthCredentialResponseTearOff();
-
-  _AuthCredentialResponse call(
-      {@JsonKey(name: 'customToken') String? customToken,
-      @JsonKey(name: 'id_token') String? idToken,
-      @JsonKey(name: 'expires_in') String? expiresIn,
-      @JsonKey(name: 'refresh_token') String? refreshToken,
-      @JsonKey(name: 'uid') String? uid,
-      @JsonKey(name: 'is_admin') bool? isAdmin,
-      @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-      @JsonKey(name: 'can_experiment') bool? canExperiment,
-      @JsonKey(name: 'change_pin') bool? isChangePin}) {
-    return _AuthCredentialResponse(
-      customToken: customToken,
-      idToken: idToken,
-      expiresIn: expiresIn,
-      refreshToken: refreshToken,
-      uid: uid,
-      isAdmin: isAdmin,
-      isAnonymous: isAnonymous,
-      canExperiment: canExperiment,
-      isChangePin: isChangePin,
-    );
-  }
-
-  AuthCredentialResponse fromJson(Map<String, Object> json) {
-    return AuthCredentialResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AuthCredentialResponse = _$AuthCredentialResponseTearOff();
 
 /// @nodoc
 mixin _$AuthCredentialResponse {
@@ -83,7 +50,8 @@ mixin _$AuthCredentialResponse {
 abstract class $AuthCredentialResponseCopyWith<$Res> {
   factory $AuthCredentialResponseCopyWith(AuthCredentialResponse value,
           $Res Function(AuthCredentialResponse) then) =
-      _$AuthCredentialResponseCopyWithImpl<$Res>;
+      _$AuthCredentialResponseCopyWithImpl<$Res, AuthCredentialResponse>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'customToken') String? customToken,
       @JsonKey(name: 'id_token') String? idToken,
@@ -97,14 +65,17 @@ abstract class $AuthCredentialResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthCredentialResponseCopyWithImpl<$Res>
+class _$AuthCredentialResponseCopyWithImpl<$Res,
+        $Val extends AuthCredentialResponse>
     implements $AuthCredentialResponseCopyWith<$Res> {
   _$AuthCredentialResponseCopyWithImpl(this._value, this._then);
 
-  final AuthCredentialResponse _value;
   // ignore: unused_field
-  final $Res Function(AuthCredentialResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? customToken = freezed,
@@ -118,53 +89,54 @@ class _$AuthCredentialResponseCopyWithImpl<$Res>
     Object? isChangePin = freezed,
   }) {
     return _then(_value.copyWith(
-      customToken: customToken == freezed
+      customToken: freezed == customToken
           ? _value.customToken
           : customToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      idToken: idToken == freezed
+      idToken: freezed == idToken
           ? _value.idToken
           : idToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiresIn: expiresIn == freezed
+      expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as String?,
-      refreshToken: refreshToken == freezed
+      refreshToken: freezed == refreshToken
           ? _value.refreshToken
           : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      uid: uid == freezed
+      uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAdmin: isAdmin == freezed
+      isAdmin: freezed == isAdmin
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isAnonymous: isAnonymous == freezed
+      isAnonymous: freezed == isAnonymous
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      canExperiment: canExperiment == freezed
+      canExperiment: freezed == canExperiment
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChangePin: isChangePin == freezed
+      isChangePin: freezed == isChangePin
           ? _value.isChangePin
           : isChangePin // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AuthCredentialResponseCopyWith<$Res>
+abstract class _$$_AuthCredentialResponseCopyWith<$Res>
     implements $AuthCredentialResponseCopyWith<$Res> {
-  factory _$AuthCredentialResponseCopyWith(_AuthCredentialResponse value,
-          $Res Function(_AuthCredentialResponse) then) =
-      __$AuthCredentialResponseCopyWithImpl<$Res>;
+  factory _$$_AuthCredentialResponseCopyWith(_$_AuthCredentialResponse value,
+          $Res Function(_$_AuthCredentialResponse) then) =
+      __$$_AuthCredentialResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'customToken') String? customToken,
       @JsonKey(name: 'id_token') String? idToken,
@@ -178,16 +150,15 @@ abstract class _$AuthCredentialResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AuthCredentialResponseCopyWithImpl<$Res>
-    extends _$AuthCredentialResponseCopyWithImpl<$Res>
-    implements _$AuthCredentialResponseCopyWith<$Res> {
-  __$AuthCredentialResponseCopyWithImpl(_AuthCredentialResponse _value,
-      $Res Function(_AuthCredentialResponse) _then)
-      : super(_value, (v) => _then(v as _AuthCredentialResponse));
+class __$$_AuthCredentialResponseCopyWithImpl<$Res>
+    extends _$AuthCredentialResponseCopyWithImpl<$Res,
+        _$_AuthCredentialResponse>
+    implements _$$_AuthCredentialResponseCopyWith<$Res> {
+  __$$_AuthCredentialResponseCopyWithImpl(_$_AuthCredentialResponse _value,
+      $Res Function(_$_AuthCredentialResponse) _then)
+      : super(_value, _then);
 
-  @override
-  _AuthCredentialResponse get _value => super._value as _AuthCredentialResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? customToken = freezed,
@@ -200,40 +171,40 @@ class __$AuthCredentialResponseCopyWithImpl<$Res>
     Object? canExperiment = freezed,
     Object? isChangePin = freezed,
   }) {
-    return _then(_AuthCredentialResponse(
-      customToken: customToken == freezed
+    return _then(_$_AuthCredentialResponse(
+      customToken: freezed == customToken
           ? _value.customToken
           : customToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      idToken: idToken == freezed
+      idToken: freezed == idToken
           ? _value.idToken
           : idToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiresIn: expiresIn == freezed
+      expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as String?,
-      refreshToken: refreshToken == freezed
+      refreshToken: freezed == refreshToken
           ? _value.refreshToken
           : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      uid: uid == freezed
+      uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAdmin: isAdmin == freezed
+      isAdmin: freezed == isAdmin
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isAnonymous: isAnonymous == freezed
+      isAnonymous: freezed == isAnonymous
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      canExperiment: canExperiment == freezed
+      canExperiment: freezed == canExperiment
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChangePin: isChangePin == freezed
+      isChangePin: freezed == isChangePin
           ? _value.isChangePin
           : isChangePin // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -256,7 +227,7 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
       @JsonKey(name: 'change_pin') this.isChangePin});
 
   factory _$_AuthCredentialResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuthCredentialResponseFromJson(json);
+      _$$_AuthCredentialResponseFromJson(json);
 
   @override
   @JsonKey(name: 'customToken')
@@ -294,71 +265,56 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AuthCredentialResponse &&
+        (other.runtimeType == runtimeType &&
+            other is _$_AuthCredentialResponse &&
             (identical(other.customToken, customToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.customToken, customToken)) &&
-            (identical(other.idToken, idToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.idToken, idToken)) &&
+                other.customToken == customToken) &&
+            (identical(other.idToken, idToken) || other.idToken == idToken) &&
             (identical(other.expiresIn, expiresIn) ||
-                const DeepCollectionEquality()
-                    .equals(other.expiresIn, expiresIn)) &&
+                other.expiresIn == expiresIn) &&
             (identical(other.refreshToken, refreshToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.refreshToken, refreshToken)) &&
-            (identical(other.uid, uid) ||
-                const DeepCollectionEquality().equals(other.uid, uid)) &&
-            (identical(other.isAdmin, isAdmin) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAdmin, isAdmin)) &&
+                other.refreshToken == refreshToken) &&
+            (identical(other.uid, uid) || other.uid == uid) &&
+            (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
             (identical(other.isAnonymous, isAnonymous) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAnonymous, isAnonymous)) &&
+                other.isAnonymous == isAnonymous) &&
             (identical(other.canExperiment, canExperiment) ||
-                const DeepCollectionEquality()
-                    .equals(other.canExperiment, canExperiment)) &&
+                other.canExperiment == canExperiment) &&
             (identical(other.isChangePin, isChangePin) ||
-                const DeepCollectionEquality()
-                    .equals(other.isChangePin, isChangePin)));
+                other.isChangePin == isChangePin));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(customToken) ^
-      const DeepCollectionEquality().hash(idToken) ^
-      const DeepCollectionEquality().hash(expiresIn) ^
-      const DeepCollectionEquality().hash(refreshToken) ^
-      const DeepCollectionEquality().hash(uid) ^
-      const DeepCollectionEquality().hash(isAdmin) ^
-      const DeepCollectionEquality().hash(isAnonymous) ^
-      const DeepCollectionEquality().hash(canExperiment) ^
-      const DeepCollectionEquality().hash(isChangePin);
 
   @JsonKey(ignore: true)
   @override
-  _$AuthCredentialResponseCopyWith<_AuthCredentialResponse> get copyWith =>
-      __$AuthCredentialResponseCopyWithImpl<_AuthCredentialResponse>(
+  int get hashCode => Object.hash(runtimeType, customToken, idToken, expiresIn,
+      refreshToken, uid, isAdmin, isAnonymous, canExperiment, isChangePin);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AuthCredentialResponseCopyWith<_$_AuthCredentialResponse> get copyWith =>
+      __$$_AuthCredentialResponseCopyWithImpl<_$_AuthCredentialResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuthCredentialResponseToJson(this);
+    return _$$_AuthCredentialResponseToJson(
+      this,
+    );
   }
 }
 
 abstract class _AuthCredentialResponse implements AuthCredentialResponse {
   factory _AuthCredentialResponse(
-          {@JsonKey(name: 'customToken') String? customToken,
-          @JsonKey(name: 'id_token') String? idToken,
-          @JsonKey(name: 'expires_in') String? expiresIn,
-          @JsonKey(name: 'refresh_token') String? refreshToken,
-          @JsonKey(name: 'uid') String? uid,
-          @JsonKey(name: 'is_admin') bool? isAdmin,
-          @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-          @JsonKey(name: 'can_experiment') bool? canExperiment,
-          @JsonKey(name: 'change_pin') bool? isChangePin}) =
+          {@JsonKey(name: 'customToken') final String? customToken,
+          @JsonKey(name: 'id_token') final String? idToken,
+          @JsonKey(name: 'expires_in') final String? expiresIn,
+          @JsonKey(name: 'refresh_token') final String? refreshToken,
+          @JsonKey(name: 'uid') final String? uid,
+          @JsonKey(name: 'is_admin') final bool? isAdmin,
+          @JsonKey(name: 'is_anonymous') final bool? isAnonymous,
+          @JsonKey(name: 'can_experiment') final bool? canExperiment,
+          @JsonKey(name: 'change_pin') final bool? isChangePin}) =
       _$_AuthCredentialResponse;
 
   factory _AuthCredentialResponse.fromJson(Map<String, dynamic> json) =
@@ -366,33 +322,33 @@ abstract class _AuthCredentialResponse implements AuthCredentialResponse {
 
   @override
   @JsonKey(name: 'customToken')
-  String? get customToken => throw _privateConstructorUsedError;
+  String? get customToken;
   @override
   @JsonKey(name: 'id_token')
-  String? get idToken => throw _privateConstructorUsedError;
+  String? get idToken;
   @override
   @JsonKey(name: 'expires_in')
-  String? get expiresIn => throw _privateConstructorUsedError;
+  String? get expiresIn;
   @override
   @JsonKey(name: 'refresh_token')
-  String? get refreshToken => throw _privateConstructorUsedError;
+  String? get refreshToken;
   @override
   @JsonKey(name: 'uid')
-  String? get uid => throw _privateConstructorUsedError;
+  String? get uid;
   @override
   @JsonKey(name: 'is_admin')
-  bool? get isAdmin => throw _privateConstructorUsedError;
+  bool? get isAdmin;
   @override
   @JsonKey(name: 'is_anonymous')
-  bool? get isAnonymous => throw _privateConstructorUsedError;
+  bool? get isAnonymous;
   @override
   @JsonKey(name: 'can_experiment')
-  bool? get canExperiment => throw _privateConstructorUsedError;
+  bool? get canExperiment;
   @override
   @JsonKey(name: 'change_pin')
-  bool? get isChangePin => throw _privateConstructorUsedError;
+  bool? get isChangePin;
   @override
   @JsonKey(ignore: true)
-  _$AuthCredentialResponseCopyWith<_AuthCredentialResponse> get copyWith =>
+  _$$_AuthCredentialResponseCopyWith<_$_AuthCredentialResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

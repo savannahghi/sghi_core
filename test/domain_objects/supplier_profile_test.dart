@@ -71,14 +71,12 @@ void main() {
       expect(json['sladeCode'], UNKNOWN);
       expect(json['parentOrganizationID'], UNKNOWN);
       expect(json['organizationName'], UNKNOWN);
-      expect(json['payables_account'], PayablesAccount.initial().toJson());
       expect(json['supplierKYC'], <String, dynamic>{});
       expect(json['underOrganization'], false);
       expect(json['isOrganizationVerified'], false);
       expect(json['hasBranches'], false);
       expect(json['partnerSetupComplete'], false);
       expect(json['kycSubmitted'], false);
-      expect(json['location'], Location.initial().toJson());
       expect(json['partnerType'], describeEnum(SupplierPartnerType.consumer));
     });
 

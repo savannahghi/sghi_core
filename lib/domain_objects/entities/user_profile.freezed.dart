@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'user_profile.dart';
 
@@ -10,73 +12,11 @@ part of 'user_profile.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserProfile _$UserProfileFromJson(Map<String, dynamic> json) {
   return _UserProfile.fromJson(json);
 }
-
-/// @nodoc
-class _$UserProfileTearOff {
-  const _$UserProfileTearOff();
-
-  _UserProfile call(
-      {@JsonKey(name: 'id')
-          String? id,
-      @JsonKey(name: 'userName')
-          Name? username,
-      @JsonKey(name: 'primaryPhone')
-          PhoneNumber? primaryPhoneNumber,
-      @JsonKey(name: 'primaryEmailAddress')
-          EmailAddress? primaryEmailAddress,
-      @JsonKey(name: 'secondaryPhoneNumbers')
-          List<PhoneNumber>? secondaryPhoneNumbers,
-      @JsonKey(name: 'secondaryEmailAddresses')
-          List<EmailAddress>? secondaryEmailAddresses,
-      @JsonKey(name: 'terms_accepted')
-          bool? termsAccepted,
-      @JsonKey(name: 'suspended')
-          bool? suspended,
-      @JsonKey(name: 'photoUploadID')
-          String? photoUploadID,
-      @JsonKey(name: 'covers')
-          List<Cover?>? covers,
-      @JsonKey(name: 'userBioData')
-          BioData? userBioData,
-      @JsonKey(name: 'homeAddress')
-          Address? homeAddress,
-      @JsonKey(name: 'workAddress')
-          Address? workAddress,
-      @JsonKey(name: 'referralLink')
-          String? referralLink,
-      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
-          Assistant? assistant}) {
-    return _UserProfile(
-      id: id,
-      username: username,
-      primaryPhoneNumber: primaryPhoneNumber,
-      primaryEmailAddress: primaryEmailAddress,
-      secondaryPhoneNumbers: secondaryPhoneNumbers,
-      secondaryEmailAddresses: secondaryEmailAddresses,
-      termsAccepted: termsAccepted,
-      suspended: suspended,
-      photoUploadID: photoUploadID,
-      covers: covers,
-      userBioData: userBioData,
-      homeAddress: homeAddress,
-      workAddress: workAddress,
-      referralLink: referralLink,
-      assistant: assistant,
-    );
-  }
-
-  UserProfile fromJson(Map<String, Object> json) {
-    return UserProfile.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserProfile = _$UserProfileTearOff();
 
 /// @nodoc
 mixin _$UserProfile {
@@ -126,7 +66,8 @@ mixin _$UserProfile {
 abstract class $UserProfileCopyWith<$Res> {
   factory $UserProfileCopyWith(
           UserProfile value, $Res Function(UserProfile) then) =
-      _$UserProfileCopyWithImpl<$Res>;
+      _$UserProfileCopyWithImpl<$Res, UserProfile>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -165,13 +106,16 @@ abstract class $UserProfileCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
+class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
+    implements $UserProfileCopyWith<$Res> {
   _$UserProfileCopyWithImpl(this._value, this._then);
 
-  final UserProfile _value;
   // ignore: unused_field
-  final $Res Function(UserProfile) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -191,110 +135,114 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
     Object? assistant = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as Name?,
-      primaryPhoneNumber: primaryPhoneNumber == freezed
+      primaryPhoneNumber: freezed == primaryPhoneNumber
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber?,
-      primaryEmailAddress: primaryEmailAddress == freezed
+      primaryEmailAddress: freezed == primaryEmailAddress
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
               as EmailAddress?,
-      secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
+      secondaryPhoneNumbers: freezed == secondaryPhoneNumbers
           ? _value.secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumber>?,
-      secondaryEmailAddresses: secondaryEmailAddresses == freezed
+      secondaryEmailAddresses: freezed == secondaryEmailAddresses
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<EmailAddress>?,
-      termsAccepted: termsAccepted == freezed
+      termsAccepted: freezed == termsAccepted
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
               as bool?,
-      suspended: suspended == freezed
+      suspended: freezed == suspended
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
               as bool?,
-      photoUploadID: photoUploadID == freezed
+      photoUploadID: freezed == photoUploadID
           ? _value.photoUploadID
           : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      covers: covers == freezed
+      covers: freezed == covers
           ? _value.covers
           : covers // ignore: cast_nullable_to_non_nullable
               as List<Cover?>?,
-      userBioData: userBioData == freezed
+      userBioData: freezed == userBioData
           ? _value.userBioData
           : userBioData // ignore: cast_nullable_to_non_nullable
               as BioData?,
-      homeAddress: homeAddress == freezed
+      homeAddress: freezed == homeAddress
           ? _value.homeAddress
           : homeAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      workAddress: workAddress == freezed
+      workAddress: freezed == workAddress
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      referralLink: referralLink == freezed
+      referralLink: freezed == referralLink
           ? _value.referralLink
           : referralLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      assistant: assistant == freezed
+      assistant: freezed == assistant
           ? _value.assistant
           : assistant // ignore: cast_nullable_to_non_nullable
               as Assistant?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BioDataCopyWith<$Res>? get userBioData {
     if (_value.userBioData == null) {
       return null;
     }
 
     return $BioDataCopyWith<$Res>(_value.userBioData!, (value) {
-      return _then(_value.copyWith(userBioData: value));
+      return _then(_value.copyWith(userBioData: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get homeAddress {
     if (_value.homeAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.homeAddress!, (value) {
-      return _then(_value.copyWith(homeAddress: value));
+      return _then(_value.copyWith(homeAddress: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get workAddress {
     if (_value.workAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.workAddress!, (value) {
-      return _then(_value.copyWith(workAddress: value));
+      return _then(_value.copyWith(workAddress: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$UserProfileCopyWith<$Res>
+abstract class _$$_UserProfileCopyWith<$Res>
     implements $UserProfileCopyWith<$Res> {
-  factory _$UserProfileCopyWith(
-          _UserProfile value, $Res Function(_UserProfile) then) =
-      __$UserProfileCopyWithImpl<$Res>;
+  factory _$$_UserProfileCopyWith(
+          _$_UserProfile value, $Res Function(_$_UserProfile) then) =
+      __$$_UserProfileCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -336,15 +284,14 @@ abstract class _$UserProfileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
-    implements _$UserProfileCopyWith<$Res> {
-  __$UserProfileCopyWithImpl(
-      _UserProfile _value, $Res Function(_UserProfile) _then)
-      : super(_value, (v) => _then(v as _UserProfile));
+class __$$_UserProfileCopyWithImpl<$Res>
+    extends _$UserProfileCopyWithImpl<$Res, _$_UserProfile>
+    implements _$$_UserProfileCopyWith<$Res> {
+  __$$_UserProfileCopyWithImpl(
+      _$_UserProfile _value, $Res Function(_$_UserProfile) _then)
+      : super(_value, _then);
 
-  @override
-  _UserProfile get _value => super._value as _UserProfile;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -363,64 +310,64 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
     Object? referralLink = freezed,
     Object? assistant = freezed,
   }) {
-    return _then(_UserProfile(
-      id: id == freezed
+    return _then(_$_UserProfile(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as Name?,
-      primaryPhoneNumber: primaryPhoneNumber == freezed
+      primaryPhoneNumber: freezed == primaryPhoneNumber
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber?,
-      primaryEmailAddress: primaryEmailAddress == freezed
+      primaryEmailAddress: freezed == primaryEmailAddress
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
               as EmailAddress?,
-      secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
-          ? _value.secondaryPhoneNumbers
+      secondaryPhoneNumbers: freezed == secondaryPhoneNumbers
+          ? _value._secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumber>?,
-      secondaryEmailAddresses: secondaryEmailAddresses == freezed
-          ? _value.secondaryEmailAddresses
+      secondaryEmailAddresses: freezed == secondaryEmailAddresses
+          ? _value._secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<EmailAddress>?,
-      termsAccepted: termsAccepted == freezed
+      termsAccepted: freezed == termsAccepted
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
               as bool?,
-      suspended: suspended == freezed
+      suspended: freezed == suspended
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
               as bool?,
-      photoUploadID: photoUploadID == freezed
+      photoUploadID: freezed == photoUploadID
           ? _value.photoUploadID
           : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      covers: covers == freezed
-          ? _value.covers
+      covers: freezed == covers
+          ? _value._covers
           : covers // ignore: cast_nullable_to_non_nullable
               as List<Cover?>?,
-      userBioData: userBioData == freezed
+      userBioData: freezed == userBioData
           ? _value.userBioData
           : userBioData // ignore: cast_nullable_to_non_nullable
               as BioData?,
-      homeAddress: homeAddress == freezed
+      homeAddress: freezed == homeAddress
           ? _value.homeAddress
           : homeAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      workAddress: workAddress == freezed
+      workAddress: freezed == workAddress
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      referralLink: referralLink == freezed
+      referralLink: freezed == referralLink
           ? _value.referralLink
           : referralLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      assistant: assistant == freezed
+      assistant: freezed == assistant
           ? _value.assistant
           : assistant // ignore: cast_nullable_to_non_nullable
               as Assistant?,
@@ -441,9 +388,9 @@ class _$_UserProfile implements _UserProfile {
       @JsonKey(name: 'primaryEmailAddress')
           this.primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
-          this.secondaryPhoneNumbers,
+          final List<PhoneNumber>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          this.secondaryEmailAddresses,
+          final List<EmailAddress>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
           this.termsAccepted,
       @JsonKey(name: 'suspended')
@@ -451,7 +398,7 @@ class _$_UserProfile implements _UserProfile {
       @JsonKey(name: 'photoUploadID')
           this.photoUploadID,
       @JsonKey(name: 'covers')
-          this.covers,
+          final List<Cover?>? covers,
       @JsonKey(name: 'userBioData')
           this.userBioData,
       @JsonKey(name: 'homeAddress')
@@ -461,10 +408,13 @@ class _$_UserProfile implements _UserProfile {
       @JsonKey(name: 'referralLink')
           this.referralLink,
       @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
-          this.assistant});
+          this.assistant})
+      : _secondaryPhoneNumbers = secondaryPhoneNumbers,
+        _secondaryEmailAddresses = secondaryEmailAddresses,
+        _covers = covers;
 
   factory _$_UserProfile.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserProfileFromJson(json);
+      _$$_UserProfileFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -478,12 +428,26 @@ class _$_UserProfile implements _UserProfile {
   @override
   @JsonKey(name: 'primaryEmailAddress')
   final EmailAddress? primaryEmailAddress;
+  final List<PhoneNumber>? _secondaryPhoneNumbers;
   @override
   @JsonKey(name: 'secondaryPhoneNumbers')
-  final List<PhoneNumber>? secondaryPhoneNumbers;
+  List<PhoneNumber>? get secondaryPhoneNumbers {
+    final value = _secondaryPhoneNumbers;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<EmailAddress>? _secondaryEmailAddresses;
   @override
   @JsonKey(name: 'secondaryEmailAddresses')
-  final List<EmailAddress>? secondaryEmailAddresses;
+  List<EmailAddress>? get secondaryEmailAddresses {
+    final value = _secondaryEmailAddresses;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'terms_accepted')
   final bool? termsAccepted;
@@ -493,9 +457,16 @@ class _$_UserProfile implements _UserProfile {
   @override
   @JsonKey(name: 'photoUploadID')
   final String? photoUploadID;
+  final List<Cover?>? _covers;
   @override
   @JsonKey(name: 'covers')
-  final List<Cover?>? covers;
+  List<Cover?>? get covers {
+    final value = _covers;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'userBioData')
   final BioData? userBioData;
@@ -508,10 +479,10 @@ class _$_UserProfile implements _UserProfile {
   @override
   @JsonKey(name: 'referralLink')
   final String? referralLink;
-  @override
 
   /// [assistant] refers to the name of the Be.Well user assistant,
   /// i.e Bev or Bowi.
+  @override
   @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
   final Assistant? assistant;
 
@@ -523,171 +494,158 @@ class _$_UserProfile implements _UserProfile {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserProfile &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_UserProfile &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.username, username) ||
-                const DeepCollectionEquality()
-                    .equals(other.username, username)) &&
+                other.username == username) &&
             (identical(other.primaryPhoneNumber, primaryPhoneNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.primaryPhoneNumber, primaryPhoneNumber)) &&
+                other.primaryPhoneNumber == primaryPhoneNumber) &&
             (identical(other.primaryEmailAddress, primaryEmailAddress) ||
-                const DeepCollectionEquality()
-                    .equals(other.primaryEmailAddress, primaryEmailAddress)) &&
-            (identical(other.secondaryPhoneNumbers, secondaryPhoneNumbers) ||
-                const DeepCollectionEquality().equals(
-                    other.secondaryPhoneNumbers, secondaryPhoneNumbers)) &&
-            (identical(
-                    other.secondaryEmailAddresses, secondaryEmailAddresses) ||
-                const DeepCollectionEquality().equals(
-                    other.secondaryEmailAddresses, secondaryEmailAddresses)) &&
+                other.primaryEmailAddress == primaryEmailAddress) &&
+            const DeepCollectionEquality()
+                .equals(other._secondaryPhoneNumbers, _secondaryPhoneNumbers) &&
+            const DeepCollectionEquality().equals(
+                other._secondaryEmailAddresses, _secondaryEmailAddresses) &&
             (identical(other.termsAccepted, termsAccepted) ||
-                const DeepCollectionEquality()
-                    .equals(other.termsAccepted, termsAccepted)) &&
+                other.termsAccepted == termsAccepted) &&
             (identical(other.suspended, suspended) ||
-                const DeepCollectionEquality()
-                    .equals(other.suspended, suspended)) &&
+                other.suspended == suspended) &&
             (identical(other.photoUploadID, photoUploadID) ||
-                const DeepCollectionEquality()
-                    .equals(other.photoUploadID, photoUploadID)) &&
-            (identical(other.covers, covers) ||
-                const DeepCollectionEquality().equals(other.covers, covers)) &&
+                other.photoUploadID == photoUploadID) &&
+            const DeepCollectionEquality().equals(other._covers, _covers) &&
             (identical(other.userBioData, userBioData) ||
-                const DeepCollectionEquality()
-                    .equals(other.userBioData, userBioData)) &&
+                other.userBioData == userBioData) &&
             (identical(other.homeAddress, homeAddress) ||
-                const DeepCollectionEquality()
-                    .equals(other.homeAddress, homeAddress)) &&
+                other.homeAddress == homeAddress) &&
             (identical(other.workAddress, workAddress) ||
-                const DeepCollectionEquality()
-                    .equals(other.workAddress, workAddress)) &&
+                other.workAddress == workAddress) &&
             (identical(other.referralLink, referralLink) ||
-                const DeepCollectionEquality()
-                    .equals(other.referralLink, referralLink)) &&
+                other.referralLink == referralLink) &&
             (identical(other.assistant, assistant) ||
-                const DeepCollectionEquality()
-                    .equals(other.assistant, assistant)));
+                other.assistant == assistant));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(username) ^
-      const DeepCollectionEquality().hash(primaryPhoneNumber) ^
-      const DeepCollectionEquality().hash(primaryEmailAddress) ^
-      const DeepCollectionEquality().hash(secondaryPhoneNumbers) ^
-      const DeepCollectionEquality().hash(secondaryEmailAddresses) ^
-      const DeepCollectionEquality().hash(termsAccepted) ^
-      const DeepCollectionEquality().hash(suspended) ^
-      const DeepCollectionEquality().hash(photoUploadID) ^
-      const DeepCollectionEquality().hash(covers) ^
-      const DeepCollectionEquality().hash(userBioData) ^
-      const DeepCollectionEquality().hash(homeAddress) ^
-      const DeepCollectionEquality().hash(workAddress) ^
-      const DeepCollectionEquality().hash(referralLink) ^
-      const DeepCollectionEquality().hash(assistant);
 
   @JsonKey(ignore: true)
   @override
-  _$UserProfileCopyWith<_UserProfile> get copyWith =>
-      __$UserProfileCopyWithImpl<_UserProfile>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      username,
+      primaryPhoneNumber,
+      primaryEmailAddress,
+      const DeepCollectionEquality().hash(_secondaryPhoneNumbers),
+      const DeepCollectionEquality().hash(_secondaryEmailAddresses),
+      termsAccepted,
+      suspended,
+      photoUploadID,
+      const DeepCollectionEquality().hash(_covers),
+      userBioData,
+      homeAddress,
+      workAddress,
+      referralLink,
+      assistant);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UserProfileCopyWith<_$_UserProfile> get copyWith =>
+      __$$_UserProfileCopyWithImpl<_$_UserProfile>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserProfileToJson(this);
+    return _$$_UserProfileToJson(
+      this,
+    );
   }
 }
 
 abstract class _UserProfile implements UserProfile {
   factory _UserProfile(
       {@JsonKey(name: 'id')
-          String? id,
+          final String? id,
       @JsonKey(name: 'userName')
-          Name? username,
+          final Name? username,
       @JsonKey(name: 'primaryPhone')
-          PhoneNumber? primaryPhoneNumber,
+          final PhoneNumber? primaryPhoneNumber,
       @JsonKey(name: 'primaryEmailAddress')
-          EmailAddress? primaryEmailAddress,
+          final EmailAddress? primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
-          List<PhoneNumber>? secondaryPhoneNumbers,
+          final List<PhoneNumber>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          List<EmailAddress>? secondaryEmailAddresses,
+          final List<EmailAddress>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
-          bool? termsAccepted,
+          final bool? termsAccepted,
       @JsonKey(name: 'suspended')
-          bool? suspended,
+          final bool? suspended,
       @JsonKey(name: 'photoUploadID')
-          String? photoUploadID,
+          final String? photoUploadID,
       @JsonKey(name: 'covers')
-          List<Cover?>? covers,
+          final List<Cover?>? covers,
       @JsonKey(name: 'userBioData')
-          BioData? userBioData,
+          final BioData? userBioData,
       @JsonKey(name: 'homeAddress')
-          Address? homeAddress,
+          final Address? homeAddress,
       @JsonKey(name: 'workAddress')
-          Address? workAddress,
+          final Address? workAddress,
       @JsonKey(name: 'referralLink')
-          String? referralLink,
+          final String? referralLink,
       @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
-          Assistant? assistant}) = _$_UserProfile;
+          final Assistant? assistant}) = _$_UserProfile;
 
   factory _UserProfile.fromJson(Map<String, dynamic> json) =
       _$_UserProfile.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'userName')
-  Name? get username => throw _privateConstructorUsedError;
+  Name? get username;
   @override
   @JsonKey(name: 'primaryPhone')
-  PhoneNumber? get primaryPhoneNumber => throw _privateConstructorUsedError;
+  PhoneNumber? get primaryPhoneNumber;
   @override
   @JsonKey(name: 'primaryEmailAddress')
-  EmailAddress? get primaryEmailAddress => throw _privateConstructorUsedError;
+  EmailAddress? get primaryEmailAddress;
   @override
   @JsonKey(name: 'secondaryPhoneNumbers')
-  List<PhoneNumber>? get secondaryPhoneNumbers =>
-      throw _privateConstructorUsedError;
+  List<PhoneNumber>? get secondaryPhoneNumbers;
   @override
   @JsonKey(name: 'secondaryEmailAddresses')
-  List<EmailAddress>? get secondaryEmailAddresses =>
-      throw _privateConstructorUsedError;
+  List<EmailAddress>? get secondaryEmailAddresses;
   @override
   @JsonKey(name: 'terms_accepted')
-  bool? get termsAccepted => throw _privateConstructorUsedError;
+  bool? get termsAccepted;
   @override
   @JsonKey(name: 'suspended')
-  bool? get suspended => throw _privateConstructorUsedError;
+  bool? get suspended;
   @override
   @JsonKey(name: 'photoUploadID')
-  String? get photoUploadID => throw _privateConstructorUsedError;
+  String? get photoUploadID;
   @override
   @JsonKey(name: 'covers')
-  List<Cover?>? get covers => throw _privateConstructorUsedError;
+  List<Cover?>? get covers;
   @override
   @JsonKey(name: 'userBioData')
-  BioData? get userBioData => throw _privateConstructorUsedError;
+  BioData? get userBioData;
   @override
   @JsonKey(name: 'homeAddress')
-  Address? get homeAddress => throw _privateConstructorUsedError;
+  Address? get homeAddress;
   @override
   @JsonKey(name: 'workAddress')
-  Address? get workAddress => throw _privateConstructorUsedError;
+  Address? get workAddress;
   @override
   @JsonKey(name: 'referralLink')
-  String? get referralLink => throw _privateConstructorUsedError;
+  String? get referralLink;
   @override
 
   /// [assistant] refers to the name of the Be.Well user assistant,
   /// i.e Bev or Bowi.
   @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
-  Assistant? get assistant => throw _privateConstructorUsedError;
+  Assistant? get assistant;
   @override
   @JsonKey(ignore: true)
-  _$UserProfileCopyWith<_UserProfile> get copyWith =>
+  _$$_UserProfileCopyWith<_$_UserProfile> get copyWith =>
       throw _privateConstructorUsedError;
 }

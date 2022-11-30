@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'communication_settings.dart';
 
@@ -10,39 +12,12 @@ part of 'communication_settings.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CommunicationSettings _$CommunicationSettingsFromJson(
     Map<String, dynamic> json) {
   return _CommunicationSettings.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationSettingsTearOff {
-  const _$CommunicationSettingsTearOff();
-
-  _CommunicationSettings call(
-      {@JsonKey(name: 'profileID') String? profileID,
-      @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
-      @JsonKey(name: 'allowTextSMS') bool? allowText,
-      @JsonKey(name: 'allowPush') bool? allowPush,
-      @JsonKey(name: 'allowEmail') bool? allowEmail}) {
-    return _CommunicationSettings(
-      profileID: profileID,
-      allowWhatsApp: allowWhatsApp,
-      allowText: allowText,
-      allowPush: allowPush,
-      allowEmail: allowEmail,
-    );
-  }
-
-  CommunicationSettings fromJson(Map<String, Object> json) {
-    return CommunicationSettings.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunicationSettings = _$CommunicationSettingsTearOff();
 
 /// @nodoc
 mixin _$CommunicationSettings {
@@ -67,7 +42,8 @@ mixin _$CommunicationSettings {
 abstract class $CommunicationSettingsCopyWith<$Res> {
   factory $CommunicationSettingsCopyWith(CommunicationSettings value,
           $Res Function(CommunicationSettings) then) =
-      _$CommunicationSettingsCopyWithImpl<$Res>;
+      _$CommunicationSettingsCopyWithImpl<$Res, CommunicationSettings>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'profileID') String? profileID,
       @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
@@ -77,14 +53,17 @@ abstract class $CommunicationSettingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationSettingsCopyWithImpl<$Res>
+class _$CommunicationSettingsCopyWithImpl<$Res,
+        $Val extends CommunicationSettings>
     implements $CommunicationSettingsCopyWith<$Res> {
   _$CommunicationSettingsCopyWithImpl(this._value, this._then);
 
-  final CommunicationSettings _value;
   // ignore: unused_field
-  final $Res Function(CommunicationSettings) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profileID = freezed,
@@ -94,37 +73,38 @@ class _$CommunicationSettingsCopyWithImpl<$Res>
     Object? allowEmail = freezed,
   }) {
     return _then(_value.copyWith(
-      profileID: profileID == freezed
+      profileID: freezed == profileID
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowWhatsApp: allowWhatsApp == freezed
+      allowWhatsApp: freezed == allowWhatsApp
           ? _value.allowWhatsApp
           : allowWhatsApp // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowText: allowText == freezed
+      allowText: freezed == allowText
           ? _value.allowText
           : allowText // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowPush: allowPush == freezed
+      allowPush: freezed == allowPush
           ? _value.allowPush
           : allowPush // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowEmail: allowEmail == freezed
+      allowEmail: freezed == allowEmail
           ? _value.allowEmail
           : allowEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationSettingsCopyWith<$Res>
+abstract class _$$_CommunicationSettingsCopyWith<$Res>
     implements $CommunicationSettingsCopyWith<$Res> {
-  factory _$CommunicationSettingsCopyWith(_CommunicationSettings value,
-          $Res Function(_CommunicationSettings) then) =
-      __$CommunicationSettingsCopyWithImpl<$Res>;
+  factory _$$_CommunicationSettingsCopyWith(_$_CommunicationSettings value,
+          $Res Function(_$_CommunicationSettings) then) =
+      __$$_CommunicationSettingsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'profileID') String? profileID,
       @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
@@ -134,16 +114,14 @@ abstract class _$CommunicationSettingsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationSettingsCopyWithImpl<$Res>
-    extends _$CommunicationSettingsCopyWithImpl<$Res>
-    implements _$CommunicationSettingsCopyWith<$Res> {
-  __$CommunicationSettingsCopyWithImpl(_CommunicationSettings _value,
-      $Res Function(_CommunicationSettings) _then)
-      : super(_value, (v) => _then(v as _CommunicationSettings));
+class __$$_CommunicationSettingsCopyWithImpl<$Res>
+    extends _$CommunicationSettingsCopyWithImpl<$Res, _$_CommunicationSettings>
+    implements _$$_CommunicationSettingsCopyWith<$Res> {
+  __$$_CommunicationSettingsCopyWithImpl(_$_CommunicationSettings _value,
+      $Res Function(_$_CommunicationSettings) _then)
+      : super(_value, _then);
 
-  @override
-  _CommunicationSettings get _value => super._value as _CommunicationSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profileID = freezed,
@@ -152,24 +130,24 @@ class __$CommunicationSettingsCopyWithImpl<$Res>
     Object? allowPush = freezed,
     Object? allowEmail = freezed,
   }) {
-    return _then(_CommunicationSettings(
-      profileID: profileID == freezed
+    return _then(_$_CommunicationSettings(
+      profileID: freezed == profileID
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowWhatsApp: allowWhatsApp == freezed
+      allowWhatsApp: freezed == allowWhatsApp
           ? _value.allowWhatsApp
           : allowWhatsApp // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowText: allowText == freezed
+      allowText: freezed == allowText
           ? _value.allowText
           : allowText // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowPush: allowPush == freezed
+      allowPush: freezed == allowPush
           ? _value.allowPush
           : allowPush // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowEmail: allowEmail == freezed
+      allowEmail: freezed == allowEmail
           ? _value.allowEmail
           : allowEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -188,7 +166,7 @@ class _$_CommunicationSettings implements _CommunicationSettings {
       @JsonKey(name: 'allowEmail') this.allowEmail});
 
   factory _$_CommunicationSettings.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationSettingsFromJson(json);
+      _$$_CommunicationSettingsFromJson(json);
 
   @override
   @JsonKey(name: 'profileID')
@@ -214,52 +192,47 @@ class _$_CommunicationSettings implements _CommunicationSettings {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunicationSettings &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CommunicationSettings &&
             (identical(other.profileID, profileID) ||
-                const DeepCollectionEquality()
-                    .equals(other.profileID, profileID)) &&
+                other.profileID == profileID) &&
             (identical(other.allowWhatsApp, allowWhatsApp) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowWhatsApp, allowWhatsApp)) &&
+                other.allowWhatsApp == allowWhatsApp) &&
             (identical(other.allowText, allowText) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowText, allowText)) &&
+                other.allowText == allowText) &&
             (identical(other.allowPush, allowPush) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowPush, allowPush)) &&
+                other.allowPush == allowPush) &&
             (identical(other.allowEmail, allowEmail) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowEmail, allowEmail)));
+                other.allowEmail == allowEmail));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(profileID) ^
-      const DeepCollectionEquality().hash(allowWhatsApp) ^
-      const DeepCollectionEquality().hash(allowText) ^
-      const DeepCollectionEquality().hash(allowPush) ^
-      const DeepCollectionEquality().hash(allowEmail);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationSettingsCopyWith<_CommunicationSettings> get copyWith =>
-      __$CommunicationSettingsCopyWithImpl<_CommunicationSettings>(
+  int get hashCode => Object.hash(
+      runtimeType, profileID, allowWhatsApp, allowText, allowPush, allowEmail);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationSettingsCopyWith<_$_CommunicationSettings> get copyWith =>
+      __$$_CommunicationSettingsCopyWithImpl<_$_CommunicationSettings>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationSettingsToJson(this);
+    return _$$_CommunicationSettingsToJson(
+      this,
+    );
   }
 }
 
 abstract class _CommunicationSettings implements CommunicationSettings {
   factory _CommunicationSettings(
-          {@JsonKey(name: 'profileID') String? profileID,
-          @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
-          @JsonKey(name: 'allowTextSMS') bool? allowText,
-          @JsonKey(name: 'allowPush') bool? allowPush,
-          @JsonKey(name: 'allowEmail') bool? allowEmail}) =
+          {@JsonKey(name: 'profileID') final String? profileID,
+          @JsonKey(name: 'allowWhatsApp') final bool? allowWhatsApp,
+          @JsonKey(name: 'allowTextSMS') final bool? allowText,
+          @JsonKey(name: 'allowPush') final bool? allowPush,
+          @JsonKey(name: 'allowEmail') final bool? allowEmail}) =
       _$_CommunicationSettings;
 
   factory _CommunicationSettings.fromJson(Map<String, dynamic> json) =
@@ -267,21 +240,21 @@ abstract class _CommunicationSettings implements CommunicationSettings {
 
   @override
   @JsonKey(name: 'profileID')
-  String? get profileID => throw _privateConstructorUsedError;
+  String? get profileID;
   @override
   @JsonKey(name: 'allowWhatsApp')
-  bool? get allowWhatsApp => throw _privateConstructorUsedError;
+  bool? get allowWhatsApp;
   @override
   @JsonKey(name: 'allowTextSMS')
-  bool? get allowText => throw _privateConstructorUsedError;
+  bool? get allowText;
   @override
   @JsonKey(name: 'allowPush')
-  bool? get allowPush => throw _privateConstructorUsedError;
+  bool? get allowPush;
   @override
   @JsonKey(name: 'allowEmail')
-  bool? get allowEmail => throw _privateConstructorUsedError;
+  bool? get allowEmail;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationSettingsCopyWith<_CommunicationSettings> get copyWith =>
+  _$$_CommunicationSettingsCopyWith<_$_CommunicationSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
