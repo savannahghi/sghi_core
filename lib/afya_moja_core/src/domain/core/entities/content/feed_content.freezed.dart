@@ -33,45 +33,40 @@ mixin _$FeedContent {
 abstract class $FeedContentCopyWith<$Res> {
   factory $FeedContentCopyWith(
           FeedContent value, $Res Function(FeedContent) then) =
-      _$FeedContentCopyWithImpl<$Res, FeedContent>;
-  @useResult
+      _$FeedContentCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'getContent') FeedItems? feedContent});
 
   $FeedItemsCopyWith<$Res>? get feedContent;
 }
 
 /// @nodoc
-class _$FeedContentCopyWithImpl<$Res, $Val extends FeedContent>
-    implements $FeedContentCopyWith<$Res> {
+class _$FeedContentCopyWithImpl<$Res> implements $FeedContentCopyWith<$Res> {
   _$FeedContentCopyWithImpl(this._value, this._then);
 
+  final FeedContent _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(FeedContent) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? feedContent = freezed,
   }) {
     return _then(_value.copyWith(
-      feedContent: freezed == feedContent
+      feedContent: feedContent == freezed
           ? _value.feedContent
           : feedContent // ignore: cast_nullable_to_non_nullable
               as FeedItems?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $FeedItemsCopyWith<$Res>? get feedContent {
     if (_value.feedContent == null) {
       return null;
     }
 
     return $FeedItemsCopyWith<$Res>(_value.feedContent!, (value) {
-      return _then(_value.copyWith(feedContent: value) as $Val);
+      return _then(_value.copyWith(feedContent: value));
     });
   }
 }
@@ -83,7 +78,6 @@ abstract class _$$_FeedContentCopyWith<$Res>
           _$_FeedContent value, $Res Function(_$_FeedContent) then) =
       __$$_FeedContentCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'getContent') FeedItems? feedContent});
 
   @override
@@ -91,20 +85,21 @@ abstract class _$$_FeedContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FeedContentCopyWithImpl<$Res>
-    extends _$FeedContentCopyWithImpl<$Res, _$_FeedContent>
+class __$$_FeedContentCopyWithImpl<$Res> extends _$FeedContentCopyWithImpl<$Res>
     implements _$$_FeedContentCopyWith<$Res> {
   __$$_FeedContentCopyWithImpl(
       _$_FeedContent _value, $Res Function(_$_FeedContent) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_FeedContent));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_FeedContent get _value => super._value as _$_FeedContent;
+
   @override
   $Res call({
     Object? feedContent = freezed,
   }) {
     return _then(_$_FeedContent(
-      feedContent: freezed == feedContent
+      feedContent: feedContent == freezed
           ? _value.feedContent
           : feedContent // ignore: cast_nullable_to_non_nullable
               as FeedItems?,
@@ -134,17 +129,17 @@ class _$_FeedContent implements _FeedContent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FeedContent &&
-            (identical(other.feedContent, feedContent) ||
-                other.feedContent == feedContent));
+            const DeepCollectionEquality()
+                .equals(other.feedContent, feedContent));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, feedContent);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(feedContent));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_FeedContentCopyWith<_$_FeedContent> get copyWith =>
       __$$_FeedContentCopyWithImpl<_$_FeedContent>(this, _$identity);
 

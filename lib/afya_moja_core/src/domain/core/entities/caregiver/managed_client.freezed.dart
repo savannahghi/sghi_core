@@ -40,8 +40,7 @@ mixin _$ManagedClient {
 abstract class $ManagedClientCopyWith<$Res> {
   factory $ManagedClientCopyWith(
           ManagedClient value, $Res Function(ManagedClient) then) =
-      _$ManagedClientCopyWithImpl<$Res, ManagedClient>;
-  @useResult
+      _$ManagedClientCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'caregiverConsent')
           bool? caregiverConsent,
@@ -57,16 +56,14 @@ abstract class $ManagedClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ManagedClientCopyWithImpl<$Res, $Val extends ManagedClient>
+class _$ManagedClientCopyWithImpl<$Res>
     implements $ManagedClientCopyWith<$Res> {
   _$ManagedClientCopyWithImpl(this._value, this._then);
 
+  final ManagedClient _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ManagedClient) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? caregiverConsent = freezed,
@@ -75,27 +72,26 @@ class _$ManagedClientCopyWithImpl<$Res, $Val extends ManagedClient>
     Object? user = freezed,
   }) {
     return _then(_value.copyWith(
-      caregiverConsent: freezed == caregiverConsent
+      caregiverConsent: caregiverConsent == freezed
           ? _value.caregiverConsent
           : caregiverConsent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      clientConsent: freezed == clientConsent
+      clientConsent: clientConsent == freezed
           ? _value.clientConsent
           : clientConsent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      workStationDetails: freezed == workStationDetails
+      workStationDetails: workStationDetails == freezed
           ? _value.workStationDetails
           : workStationDetails // ignore: cast_nullable_to_non_nullable
               as WorkStationDetails?,
-      user: freezed == user
+      user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserData?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $WorkStationDetailsCopyWith<$Res>? get workStationDetails {
     if (_value.workStationDetails == null) {
       return null;
@@ -103,19 +99,18 @@ class _$ManagedClientCopyWithImpl<$Res, $Val extends ManagedClient>
 
     return $WorkStationDetailsCopyWith<$Res>(_value.workStationDetails!,
         (value) {
-      return _then(_value.copyWith(workStationDetails: value) as $Val);
+      return _then(_value.copyWith(workStationDetails: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $UserDataCopyWith<$Res>? get user {
     if (_value.user == null) {
       return null;
     }
 
     return $UserDataCopyWith<$Res>(_value.user!, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
+      return _then(_value.copyWith(user: value));
     });
   }
 }
@@ -127,7 +122,6 @@ abstract class _$$_ManagedClientCopyWith<$Res>
           _$_ManagedClient value, $Res Function(_$_ManagedClient) then) =
       __$$_ManagedClientCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'caregiverConsent')
           bool? caregiverConsent,
@@ -146,13 +140,15 @@ abstract class _$$_ManagedClientCopyWith<$Res>
 
 /// @nodoc
 class __$$_ManagedClientCopyWithImpl<$Res>
-    extends _$ManagedClientCopyWithImpl<$Res, _$_ManagedClient>
+    extends _$ManagedClientCopyWithImpl<$Res>
     implements _$$_ManagedClientCopyWith<$Res> {
   __$$_ManagedClientCopyWithImpl(
       _$_ManagedClient _value, $Res Function(_$_ManagedClient) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ManagedClient));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ManagedClient get _value => super._value as _$_ManagedClient;
+
   @override
   $Res call({
     Object? caregiverConsent = freezed,
@@ -161,19 +157,19 @@ class __$$_ManagedClientCopyWithImpl<$Res>
     Object? user = freezed,
   }) {
     return _then(_$_ManagedClient(
-      caregiverConsent: freezed == caregiverConsent
+      caregiverConsent: caregiverConsent == freezed
           ? _value.caregiverConsent
           : caregiverConsent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      clientConsent: freezed == clientConsent
+      clientConsent: clientConsent == freezed
           ? _value.clientConsent
           : clientConsent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      workStationDetails: freezed == workStationDetails
+      workStationDetails: workStationDetails == freezed
           ? _value.workStationDetails
           : workStationDetails // ignore: cast_nullable_to_non_nullable
               as WorkStationDetails?,
-      user: freezed == user
+      user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserData?,
@@ -216,23 +212,26 @@ class _$_ManagedClient implements _ManagedClient {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ManagedClient &&
-            (identical(other.caregiverConsent, caregiverConsent) ||
-                other.caregiverConsent == caregiverConsent) &&
-            (identical(other.clientConsent, clientConsent) ||
-                other.clientConsent == clientConsent) &&
-            (identical(other.workStationDetails, workStationDetails) ||
-                other.workStationDetails == workStationDetails) &&
-            (identical(other.user, user) || other.user == user));
+            const DeepCollectionEquality()
+                .equals(other.caregiverConsent, caregiverConsent) &&
+            const DeepCollectionEquality()
+                .equals(other.clientConsent, clientConsent) &&
+            const DeepCollectionEquality()
+                .equals(other.workStationDetails, workStationDetails) &&
+            const DeepCollectionEquality().equals(other.user, user));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, caregiverConsent, clientConsent, workStationDetails, user);
+      runtimeType,
+      const DeepCollectionEquality().hash(caregiverConsent),
+      const DeepCollectionEquality().hash(clientConsent),
+      const DeepCollectionEquality().hash(workStationDetails),
+      const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ManagedClientCopyWith<_$_ManagedClient> get copyWith =>
       __$$_ManagedClientCopyWithImpl<_$_ManagedClient>(this, _$identity);
 

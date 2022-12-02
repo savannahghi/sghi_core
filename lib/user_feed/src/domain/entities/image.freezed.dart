@@ -33,39 +33,35 @@ mixin _$Image {
 /// @nodoc
 abstract class $ImageCopyWith<$Res> {
   factory $ImageCopyWith(Image value, $Res Function(Image) then) =
-      _$ImageCopyWithImpl<$Res, Image>;
-  @useResult
+      _$ImageCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'base64') String? base64});
 }
 
 /// @nodoc
-class _$ImageCopyWithImpl<$Res, $Val extends Image>
-    implements $ImageCopyWith<$Res> {
+class _$ImageCopyWithImpl<$Res> implements $ImageCopyWith<$Res> {
   _$ImageCopyWithImpl(this._value, this._then);
 
+  final Image _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Image) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? base64 = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      base64: freezed == base64
+      base64: base64 == freezed
           ? _value.base64
           : base64 // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -74,30 +70,31 @@ abstract class _$$_ImageCopyWith<$Res> implements $ImageCopyWith<$Res> {
   factory _$$_ImageCopyWith(_$_Image value, $Res Function(_$_Image) then) =
       __$$_ImageCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'base64') String? base64});
 }
 
 /// @nodoc
-class __$$_ImageCopyWithImpl<$Res> extends _$ImageCopyWithImpl<$Res, _$_Image>
+class __$$_ImageCopyWithImpl<$Res> extends _$ImageCopyWithImpl<$Res>
     implements _$$_ImageCopyWith<$Res> {
   __$$_ImageCopyWithImpl(_$_Image _value, $Res Function(_$_Image) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Image));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Image get _value => super._value as _$_Image;
+
   @override
   $Res call({
     Object? id = freezed,
     Object? base64 = freezed,
   }) {
     return _then(_$_Image(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      base64: freezed == base64
+      base64: base64 == freezed
           ? _value.base64
           : base64 // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -131,17 +128,19 @@ class _$_Image implements _Image {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Image &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.base64, base64) || other.base64 == base64));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.base64, base64));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, base64);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(base64));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ImageCopyWith<_$_Image> get copyWith =>
       __$$_ImageCopyWithImpl<_$_Image>(this, _$identity);
 

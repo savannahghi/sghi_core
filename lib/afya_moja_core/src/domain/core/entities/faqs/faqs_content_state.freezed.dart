@@ -34,8 +34,7 @@ mixin _$FAQsContentState {
 abstract class $FAQsContentStateCopyWith<$Res> {
   factory $FAQsContentStateCopyWith(
           FAQsContentState value, $Res Function(FAQsContentState) then) =
-      _$FAQsContentStateCopyWithImpl<$Res, FAQsContentState>;
-  @useResult
+      _$FAQsContentStateCopyWithImpl<$Res>;
   $Res call(
       {List<Content?>? profileFAQs,
       bool? errorFetchingFAQs,
@@ -43,16 +42,14 @@ abstract class $FAQsContentStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FAQsContentStateCopyWithImpl<$Res, $Val extends FAQsContentState>
+class _$FAQsContentStateCopyWithImpl<$Res>
     implements $FAQsContentStateCopyWith<$Res> {
   _$FAQsContentStateCopyWithImpl(this._value, this._then);
 
+  final FAQsContentState _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(FAQsContentState) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profileFAQs = freezed,
@@ -60,19 +57,19 @@ class _$FAQsContentStateCopyWithImpl<$Res, $Val extends FAQsContentState>
     Object? timeoutFetchingFAQs = freezed,
   }) {
     return _then(_value.copyWith(
-      profileFAQs: freezed == profileFAQs
+      profileFAQs: profileFAQs == freezed
           ? _value.profileFAQs
           : profileFAQs // ignore: cast_nullable_to_non_nullable
               as List<Content?>?,
-      errorFetchingFAQs: freezed == errorFetchingFAQs
+      errorFetchingFAQs: errorFetchingFAQs == freezed
           ? _value.errorFetchingFAQs
           : errorFetchingFAQs // ignore: cast_nullable_to_non_nullable
               as bool?,
-      timeoutFetchingFAQs: freezed == timeoutFetchingFAQs
+      timeoutFetchingFAQs: timeoutFetchingFAQs == freezed
           ? _value.timeoutFetchingFAQs
           : timeoutFetchingFAQs // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -83,7 +80,6 @@ abstract class _$$_FAQsContentStateCopyWith<$Res>
           _$_FAQsContentState value, $Res Function(_$_FAQsContentState) then) =
       __$$_FAQsContentStateCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {List<Content?>? profileFAQs,
       bool? errorFetchingFAQs,
@@ -92,13 +88,15 @@ abstract class _$$_FAQsContentStateCopyWith<$Res>
 
 /// @nodoc
 class __$$_FAQsContentStateCopyWithImpl<$Res>
-    extends _$FAQsContentStateCopyWithImpl<$Res, _$_FAQsContentState>
+    extends _$FAQsContentStateCopyWithImpl<$Res>
     implements _$$_FAQsContentStateCopyWith<$Res> {
   __$$_FAQsContentStateCopyWithImpl(
       _$_FAQsContentState _value, $Res Function(_$_FAQsContentState) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_FAQsContentState));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_FAQsContentState get _value => super._value as _$_FAQsContentState;
+
   @override
   $Res call({
     Object? profileFAQs = freezed,
@@ -106,15 +104,15 @@ class __$$_FAQsContentStateCopyWithImpl<$Res>
     Object? timeoutFetchingFAQs = freezed,
   }) {
     return _then(_$_FAQsContentState(
-      profileFAQs: freezed == profileFAQs
+      profileFAQs: profileFAQs == freezed
           ? _value._profileFAQs
           : profileFAQs // ignore: cast_nullable_to_non_nullable
               as List<Content?>?,
-      errorFetchingFAQs: freezed == errorFetchingFAQs
+      errorFetchingFAQs: errorFetchingFAQs == freezed
           ? _value.errorFetchingFAQs
           : errorFetchingFAQs // ignore: cast_nullable_to_non_nullable
               as bool?,
-      timeoutFetchingFAQs: freezed == timeoutFetchingFAQs
+      timeoutFetchingFAQs: timeoutFetchingFAQs == freezed
           ? _value.timeoutFetchingFAQs
           : timeoutFetchingFAQs // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -160,10 +158,10 @@ class _$_FAQsContentState implements _FAQsContentState {
             other is _$_FAQsContentState &&
             const DeepCollectionEquality()
                 .equals(other._profileFAQs, _profileFAQs) &&
-            (identical(other.errorFetchingFAQs, errorFetchingFAQs) ||
-                other.errorFetchingFAQs == errorFetchingFAQs) &&
-            (identical(other.timeoutFetchingFAQs, timeoutFetchingFAQs) ||
-                other.timeoutFetchingFAQs == timeoutFetchingFAQs));
+            const DeepCollectionEquality()
+                .equals(other.errorFetchingFAQs, errorFetchingFAQs) &&
+            const DeepCollectionEquality()
+                .equals(other.timeoutFetchingFAQs, timeoutFetchingFAQs));
   }
 
   @JsonKey(ignore: true)
@@ -171,12 +169,11 @@ class _$_FAQsContentState implements _FAQsContentState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_profileFAQs),
-      errorFetchingFAQs,
-      timeoutFetchingFAQs);
+      const DeepCollectionEquality().hash(errorFetchingFAQs),
+      const DeepCollectionEquality().hash(timeoutFetchingFAQs));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_FAQsContentStateCopyWith<_$_FAQsContentState> get copyWith =>
       __$$_FAQsContentStateCopyWithImpl<_$_FAQsContentState>(this, _$identity);
 

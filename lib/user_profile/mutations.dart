@@ -1,3 +1,4 @@
+// TODO(Maiyo): Extract endpoints to BeWell
 const String setupUserAsExperimentParticipant = r'''
 mutation SetupExperimentParticipant($participate:Boolean){
   setupAsExperimentParticipant(participate:$participate)

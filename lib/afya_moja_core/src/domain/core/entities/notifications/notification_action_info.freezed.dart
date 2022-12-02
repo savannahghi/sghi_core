@@ -32,43 +32,39 @@ mixin _$NotificationActionInfo {
 abstract class $NotificationActionInfoCopyWith<$Res> {
   factory $NotificationActionInfoCopyWith(NotificationActionInfo value,
           $Res Function(NotificationActionInfo) then) =
-      _$NotificationActionInfoCopyWithImpl<$Res, NotificationActionInfo>;
-  @useResult
+      _$NotificationActionInfoCopyWithImpl<$Res>;
   $Res call({String? actionTitle, String? route, dynamic arguments});
 }
 
 /// @nodoc
-class _$NotificationActionInfoCopyWithImpl<$Res,
-        $Val extends NotificationActionInfo>
+class _$NotificationActionInfoCopyWithImpl<$Res>
     implements $NotificationActionInfoCopyWith<$Res> {
   _$NotificationActionInfoCopyWithImpl(this._value, this._then);
 
+  final NotificationActionInfo _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(NotificationActionInfo) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? actionTitle = freezed,
     Object? route = freezed,
-    Object? arguments = null,
+    Object? arguments = freezed,
   }) {
     return _then(_value.copyWith(
-      actionTitle: freezed == actionTitle
+      actionTitle: actionTitle == freezed
           ? _value.actionTitle
           : actionTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: freezed == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      arguments: null == arguments
+      arguments: arguments == freezed
           ? _value.arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as dynamic,
-    ) as $Val);
+    ));
   }
 }
 
@@ -79,36 +75,37 @@ abstract class _$$_NotificationActionInfoCopyWith<$Res>
           $Res Function(_$_NotificationActionInfo) then) =
       __$$_NotificationActionInfoCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({String? actionTitle, String? route, dynamic arguments});
 }
 
 /// @nodoc
 class __$$_NotificationActionInfoCopyWithImpl<$Res>
-    extends _$NotificationActionInfoCopyWithImpl<$Res,
-        _$_NotificationActionInfo>
+    extends _$NotificationActionInfoCopyWithImpl<$Res>
     implements _$$_NotificationActionInfoCopyWith<$Res> {
   __$$_NotificationActionInfoCopyWithImpl(_$_NotificationActionInfo _value,
       $Res Function(_$_NotificationActionInfo) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_NotificationActionInfo));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_NotificationActionInfo get _value =>
+      super._value as _$_NotificationActionInfo;
+
   @override
   $Res call({
     Object? actionTitle = freezed,
     Object? route = freezed,
-    Object? arguments = null,
+    Object? arguments = freezed,
   }) {
     return _then(_$_NotificationActionInfo(
-      actionTitle: freezed == actionTitle
+      actionTitle: actionTitle == freezed
           ? _value.actionTitle
           : actionTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: freezed == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      arguments: null == arguments
+      arguments: arguments == freezed
           ? _value.arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -143,19 +140,21 @@ class _$_NotificationActionInfo implements _NotificationActionInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NotificationActionInfo &&
-            (identical(other.actionTitle, actionTitle) ||
-                other.actionTitle == actionTitle) &&
-            (identical(other.route, route) || other.route == route) &&
+            const DeepCollectionEquality()
+                .equals(other.actionTitle, actionTitle) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
             const DeepCollectionEquality().equals(other.arguments, arguments));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, actionTitle, route,
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(actionTitle),
+      const DeepCollectionEquality().hash(route),
       const DeepCollectionEquality().hash(arguments));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NotificationActionInfoCopyWith<_$_NotificationActionInfo> get copyWith =>
       __$$_NotificationActionInfoCopyWithImpl<_$_NotificationActionInfo>(
           this, _$identity);

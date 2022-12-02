@@ -34,39 +34,35 @@ mixin _$ExtraData {
 /// @nodoc
 abstract class $ExtraDataCopyWith<$Res> {
   factory $ExtraDataCopyWith(ExtraData value, $Res Function(ExtraData) then) =
-      _$ExtraDataCopyWithImpl<$Res, ExtraData>;
-  @useResult
+      _$ExtraDataCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'banned') bool? isBanned,
       @JsonKey(name: 'userType') UserType? userType});
 }
 
 /// @nodoc
-class _$ExtraDataCopyWithImpl<$Res, $Val extends ExtraData>
-    implements $ExtraDataCopyWith<$Res> {
+class _$ExtraDataCopyWithImpl<$Res> implements $ExtraDataCopyWith<$Res> {
   _$ExtraDataCopyWithImpl(this._value, this._then);
 
+  final ExtraData _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ExtraData) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isBanned = freezed,
     Object? userType = freezed,
   }) {
     return _then(_value.copyWith(
-      isBanned: freezed == isBanned
+      isBanned: isBanned == freezed
           ? _value.isBanned
           : isBanned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      userType: freezed == userType
+      userType: userType == freezed
           ? _value.userType
           : userType // ignore: cast_nullable_to_non_nullable
               as UserType?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -76,32 +72,32 @@ abstract class _$$_ExtraDataCopyWith<$Res> implements $ExtraDataCopyWith<$Res> {
           _$_ExtraData value, $Res Function(_$_ExtraData) then) =
       __$$_ExtraDataCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'banned') bool? isBanned,
       @JsonKey(name: 'userType') UserType? userType});
 }
 
 /// @nodoc
-class __$$_ExtraDataCopyWithImpl<$Res>
-    extends _$ExtraDataCopyWithImpl<$Res, _$_ExtraData>
+class __$$_ExtraDataCopyWithImpl<$Res> extends _$ExtraDataCopyWithImpl<$Res>
     implements _$$_ExtraDataCopyWith<$Res> {
   __$$_ExtraDataCopyWithImpl(
       _$_ExtraData _value, $Res Function(_$_ExtraData) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ExtraData));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ExtraData get _value => super._value as _$_ExtraData;
+
   @override
   $Res call({
     Object? isBanned = freezed,
     Object? userType = freezed,
   }) {
     return _then(_$_ExtraData(
-      isBanned: freezed == isBanned
+      isBanned: isBanned == freezed
           ? _value.isBanned
           : isBanned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      userType: freezed == userType
+      userType: userType == freezed
           ? _value.userType
           : userType // ignore: cast_nullable_to_non_nullable
               as UserType?,
@@ -136,19 +132,19 @@ class _$_ExtraData implements _ExtraData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ExtraData &&
-            (identical(other.isBanned, isBanned) ||
-                other.isBanned == isBanned) &&
-            (identical(other.userType, userType) ||
-                other.userType == userType));
+            const DeepCollectionEquality().equals(other.isBanned, isBanned) &&
+            const DeepCollectionEquality().equals(other.userType, userType));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, isBanned, userType);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isBanned),
+      const DeepCollectionEquality().hash(userType));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ExtraDataCopyWith<_$_ExtraData> get copyWith =>
       __$$_ExtraDataCopyWithImpl<_$_ExtraData>(this, _$identity);
 

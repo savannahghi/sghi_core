@@ -50,8 +50,7 @@ mixin _$AuthCredentialResponse {
 abstract class $AuthCredentialResponseCopyWith<$Res> {
   factory $AuthCredentialResponseCopyWith(AuthCredentialResponse value,
           $Res Function(AuthCredentialResponse) then) =
-      _$AuthCredentialResponseCopyWithImpl<$Res, AuthCredentialResponse>;
-  @useResult
+      _$AuthCredentialResponseCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'customToken') String? customToken,
       @JsonKey(name: 'id_token') String? idToken,
@@ -65,17 +64,14 @@ abstract class $AuthCredentialResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthCredentialResponseCopyWithImpl<$Res,
-        $Val extends AuthCredentialResponse>
+class _$AuthCredentialResponseCopyWithImpl<$Res>
     implements $AuthCredentialResponseCopyWith<$Res> {
   _$AuthCredentialResponseCopyWithImpl(this._value, this._then);
 
+  final AuthCredentialResponse _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(AuthCredentialResponse) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? customToken = freezed,
@@ -89,43 +85,43 @@ class _$AuthCredentialResponseCopyWithImpl<$Res,
     Object? isChangePin = freezed,
   }) {
     return _then(_value.copyWith(
-      customToken: freezed == customToken
+      customToken: customToken == freezed
           ? _value.customToken
           : customToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      idToken: freezed == idToken
+      idToken: idToken == freezed
           ? _value.idToken
           : idToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiresIn: freezed == expiresIn
+      expiresIn: expiresIn == freezed
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as String?,
-      refreshToken: freezed == refreshToken
+      refreshToken: refreshToken == freezed
           ? _value.refreshToken
           : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      uid: freezed == uid
+      uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAdmin: freezed == isAdmin
+      isAdmin: isAdmin == freezed
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isAnonymous: freezed == isAnonymous
+      isAnonymous: isAnonymous == freezed
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      canExperiment: freezed == canExperiment
+      canExperiment: canExperiment == freezed
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChangePin: freezed == isChangePin
+      isChangePin: isChangePin == freezed
           ? _value.isChangePin
           : isChangePin // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -136,7 +132,6 @@ abstract class _$$_AuthCredentialResponseCopyWith<$Res>
           $Res Function(_$_AuthCredentialResponse) then) =
       __$$_AuthCredentialResponseCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'customToken') String? customToken,
       @JsonKey(name: 'id_token') String? idToken,
@@ -151,14 +146,16 @@ abstract class _$$_AuthCredentialResponseCopyWith<$Res>
 
 /// @nodoc
 class __$$_AuthCredentialResponseCopyWithImpl<$Res>
-    extends _$AuthCredentialResponseCopyWithImpl<$Res,
-        _$_AuthCredentialResponse>
+    extends _$AuthCredentialResponseCopyWithImpl<$Res>
     implements _$$_AuthCredentialResponseCopyWith<$Res> {
   __$$_AuthCredentialResponseCopyWithImpl(_$_AuthCredentialResponse _value,
       $Res Function(_$_AuthCredentialResponse) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_AuthCredentialResponse));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_AuthCredentialResponse get _value =>
+      super._value as _$_AuthCredentialResponse;
+
   @override
   $Res call({
     Object? customToken = freezed,
@@ -172,39 +169,39 @@ class __$$_AuthCredentialResponseCopyWithImpl<$Res>
     Object? isChangePin = freezed,
   }) {
     return _then(_$_AuthCredentialResponse(
-      customToken: freezed == customToken
+      customToken: customToken == freezed
           ? _value.customToken
           : customToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      idToken: freezed == idToken
+      idToken: idToken == freezed
           ? _value.idToken
           : idToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      expiresIn: freezed == expiresIn
+      expiresIn: expiresIn == freezed
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as String?,
-      refreshToken: freezed == refreshToken
+      refreshToken: refreshToken == freezed
           ? _value.refreshToken
           : refreshToken // ignore: cast_nullable_to_non_nullable
               as String?,
-      uid: freezed == uid
+      uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String?,
-      isAdmin: freezed == isAdmin
+      isAdmin: isAdmin == freezed
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isAnonymous: freezed == isAnonymous
+      isAnonymous: isAnonymous == freezed
           ? _value.isAnonymous
           : isAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-      canExperiment: freezed == canExperiment
+      canExperiment: canExperiment == freezed
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChangePin: freezed == isChangePin
+      isChangePin: isChangePin == freezed
           ? _value.isChangePin
           : isChangePin // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -267,31 +264,38 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AuthCredentialResponse &&
-            (identical(other.customToken, customToken) ||
-                other.customToken == customToken) &&
-            (identical(other.idToken, idToken) || other.idToken == idToken) &&
-            (identical(other.expiresIn, expiresIn) ||
-                other.expiresIn == expiresIn) &&
-            (identical(other.refreshToken, refreshToken) ||
-                other.refreshToken == refreshToken) &&
-            (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
-            (identical(other.isAnonymous, isAnonymous) ||
-                other.isAnonymous == isAnonymous) &&
-            (identical(other.canExperiment, canExperiment) ||
-                other.canExperiment == canExperiment) &&
-            (identical(other.isChangePin, isChangePin) ||
-                other.isChangePin == isChangePin));
+            const DeepCollectionEquality()
+                .equals(other.customToken, customToken) &&
+            const DeepCollectionEquality().equals(other.idToken, idToken) &&
+            const DeepCollectionEquality().equals(other.expiresIn, expiresIn) &&
+            const DeepCollectionEquality()
+                .equals(other.refreshToken, refreshToken) &&
+            const DeepCollectionEquality().equals(other.uid, uid) &&
+            const DeepCollectionEquality().equals(other.isAdmin, isAdmin) &&
+            const DeepCollectionEquality()
+                .equals(other.isAnonymous, isAnonymous) &&
+            const DeepCollectionEquality()
+                .equals(other.canExperiment, canExperiment) &&
+            const DeepCollectionEquality()
+                .equals(other.isChangePin, isChangePin));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, customToken, idToken, expiresIn,
-      refreshToken, uid, isAdmin, isAnonymous, canExperiment, isChangePin);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(customToken),
+      const DeepCollectionEquality().hash(idToken),
+      const DeepCollectionEquality().hash(expiresIn),
+      const DeepCollectionEquality().hash(refreshToken),
+      const DeepCollectionEquality().hash(uid),
+      const DeepCollectionEquality().hash(isAdmin),
+      const DeepCollectionEquality().hash(isAnonymous),
+      const DeepCollectionEquality().hash(canExperiment),
+      const DeepCollectionEquality().hash(isChangePin));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_AuthCredentialResponseCopyWith<_$_AuthCredentialResponse> get copyWith =>
       __$$_AuthCredentialResponseCopyWithImpl<_$_AuthCredentialResponse>(
           this, _$identity);

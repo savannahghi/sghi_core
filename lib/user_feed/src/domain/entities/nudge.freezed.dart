@@ -53,8 +53,7 @@ mixin _$Nudge {
 /// @nodoc
 abstract class $NudgeCopyWith<$Res> {
   factory $NudgeCopyWith(Nudge value, $Res Function(Nudge) then) =
-      _$NudgeCopyWithImpl<$Res, Nudge>;
-  @useResult
+      _$NudgeCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -83,16 +82,13 @@ abstract class $NudgeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NudgeCopyWithImpl<$Res, $Val extends Nudge>
-    implements $NudgeCopyWith<$Res> {
+class _$NudgeCopyWithImpl<$Res> implements $NudgeCopyWith<$Res> {
   _$NudgeCopyWithImpl(this._value, this._then);
 
+  final Nudge _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Nudge) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -109,55 +105,55 @@ class _$NudgeCopyWithImpl<$Res, $Val extends Nudge>
     Object? notificationChannels = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: freezed == text
+      text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      actions: freezed == actions
+      actions: actions == freezed
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      visibility: freezed == visibility
+      visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as Visibility?,
-      status: freezed == status
+      status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status?,
-      expiry: freezed == expiry
+      expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as String?,
-      links: freezed == links
+      links: links == freezed
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
               as List<Link>?,
-      groups: freezed == groups
+      groups: groups == freezed
           ? _value.groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      users: freezed == users
+      users: users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      notificationChannels: freezed == notificationChannels
+      notificationChannels: notificationChannels == freezed
           ? _value.notificationChannels
           : notificationChannels // ignore: cast_nullable_to_non_nullable
               as List<Channel>?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -166,7 +162,6 @@ abstract class _$$_NudgeCopyWith<$Res> implements $NudgeCopyWith<$Res> {
   factory _$$_NudgeCopyWith(_$_Nudge value, $Res Function(_$_Nudge) then) =
       __$$_NudgeCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -195,12 +190,14 @@ abstract class _$$_NudgeCopyWith<$Res> implements $NudgeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_NudgeCopyWithImpl<$Res> extends _$NudgeCopyWithImpl<$Res, _$_Nudge>
+class __$$_NudgeCopyWithImpl<$Res> extends _$NudgeCopyWithImpl<$Res>
     implements _$$_NudgeCopyWith<$Res> {
   __$$_NudgeCopyWithImpl(_$_Nudge _value, $Res Function(_$_Nudge) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Nudge));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Nudge get _value => super._value as _$_Nudge;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -217,51 +214,51 @@ class __$$_NudgeCopyWithImpl<$Res> extends _$NudgeCopyWithImpl<$Res, _$_Nudge>
     Object? notificationChannels = freezed,
   }) {
     return _then(_$_Nudge(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: freezed == text
+      text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      actions: freezed == actions
+      actions: actions == freezed
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Action>?,
-      visibility: freezed == visibility
+      visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as Visibility?,
-      status: freezed == status
+      status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status?,
-      expiry: freezed == expiry
+      expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as String?,
-      links: freezed == links
+      links: links == freezed
           ? _value._links
           : links // ignore: cast_nullable_to_non_nullable
               as List<Link>?,
-      groups: freezed == groups
+      groups: groups == freezed
           ? _value._groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      users: freezed == users
+      users: users == freezed
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      notificationChannels: freezed == notificationChannels
+      notificationChannels: notificationChannels == freezed
           ? _value._notificationChannels
           : notificationChannels // ignore: cast_nullable_to_non_nullable
               as List<Channel>?,
@@ -387,16 +384,16 @@ class _$_Nudge implements _Nudge {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Nudge &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.sequenceNumber, sequenceNumber) ||
-                other.sequenceNumber == sequenceNumber) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.sequenceNumber, sequenceNumber) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other._actions, _actions) &&
-            (identical(other.visibility, visibility) ||
-                other.visibility == visibility) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.expiry, expiry) || other.expiry == expiry) &&
+            const DeepCollectionEquality()
+                .equals(other.visibility, visibility) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality().equals(other.expiry, expiry) &&
             const DeepCollectionEquality().equals(other._links, _links) &&
             const DeepCollectionEquality().equals(other._groups, _groups) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
@@ -408,14 +405,14 @@ class _$_Nudge implements _Nudge {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
-      sequenceNumber,
-      title,
-      text,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(sequenceNumber),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(_actions),
-      visibility,
-      status,
-      expiry,
+      const DeepCollectionEquality().hash(visibility),
+      const DeepCollectionEquality().hash(status),
+      const DeepCollectionEquality().hash(expiry),
       const DeepCollectionEquality().hash(_links),
       const DeepCollectionEquality().hash(_groups),
       const DeepCollectionEquality().hash(_users),
@@ -423,7 +420,6 @@ class _$_Nudge implements _Nudge {
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NudgeCopyWith<_$_Nudge> get copyWith =>
       __$$_NudgeCopyWithImpl<_$_Nudge>(this, _$identity);
 

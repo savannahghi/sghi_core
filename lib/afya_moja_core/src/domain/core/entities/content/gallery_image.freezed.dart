@@ -33,50 +33,45 @@ mixin _$GalleryImage {
 abstract class $GalleryImageCopyWith<$Res> {
   factory $GalleryImageCopyWith(
           GalleryImage value, $Res Function(GalleryImage) then) =
-      _$GalleryImageCopyWithImpl<$Res, GalleryImage>;
-  @useResult
+      _$GalleryImageCopyWithImpl<$Res>;
   $Res call({int? id, ImageDetail? image});
 
   $ImageDetailCopyWith<$Res>? get image;
 }
 
 /// @nodoc
-class _$GalleryImageCopyWithImpl<$Res, $Val extends GalleryImage>
-    implements $GalleryImageCopyWith<$Res> {
+class _$GalleryImageCopyWithImpl<$Res> implements $GalleryImageCopyWith<$Res> {
   _$GalleryImageCopyWithImpl(this._value, this._then);
 
+  final GalleryImage _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(GalleryImage) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? image = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      image: freezed == image
+      image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as ImageDetail?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $ImageDetailCopyWith<$Res>? get image {
     if (_value.image == null) {
       return null;
     }
 
     return $ImageDetailCopyWith<$Res>(_value.image!, (value) {
-      return _then(_value.copyWith(image: value) as $Val);
+      return _then(_value.copyWith(image: value));
     });
   }
 }
@@ -88,7 +83,6 @@ abstract class _$$_GalleryImageCopyWith<$Res>
           _$_GalleryImage value, $Res Function(_$_GalleryImage) then) =
       __$$_GalleryImageCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({int? id, ImageDetail? image});
 
   @override
@@ -97,24 +91,26 @@ abstract class _$$_GalleryImageCopyWith<$Res>
 
 /// @nodoc
 class __$$_GalleryImageCopyWithImpl<$Res>
-    extends _$GalleryImageCopyWithImpl<$Res, _$_GalleryImage>
+    extends _$GalleryImageCopyWithImpl<$Res>
     implements _$$_GalleryImageCopyWith<$Res> {
   __$$_GalleryImageCopyWithImpl(
       _$_GalleryImage _value, $Res Function(_$_GalleryImage) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_GalleryImage));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_GalleryImage get _value => super._value as _$_GalleryImage;
+
   @override
   $Res call({
     Object? id = freezed,
     Object? image = freezed,
   }) {
     return _then(_$_GalleryImage(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      image: freezed == image
+      image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as ImageDetail?,
@@ -145,17 +141,19 @@ class _$_GalleryImage implements _GalleryImage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GalleryImage &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.image, image) || other.image == image));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.image, image));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, image);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(image));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_GalleryImageCopyWith<_$_GalleryImage> get copyWith =>
       __$$_GalleryImageCopyWithImpl<_$_GalleryImage>(this, _$identity);
 

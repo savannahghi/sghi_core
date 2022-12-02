@@ -40,9 +40,7 @@ mixin _$VerifySecurityQuestionData {
 abstract class $VerifySecurityQuestionDataCopyWith<$Res> {
   factory $VerifySecurityQuestionDataCopyWith(VerifySecurityQuestionData value,
           $Res Function(VerifySecurityQuestionData) then) =
-      _$VerifySecurityQuestionDataCopyWithImpl<$Res,
-          VerifySecurityQuestionData>;
-  @useResult
+      _$VerifySecurityQuestionDataCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'questionID') String? questionID,
       @JsonKey(name: 'flavour') String? flavour,
@@ -51,17 +49,14 @@ abstract class $VerifySecurityQuestionDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$VerifySecurityQuestionDataCopyWithImpl<$Res,
-        $Val extends VerifySecurityQuestionData>
+class _$VerifySecurityQuestionDataCopyWithImpl<$Res>
     implements $VerifySecurityQuestionDataCopyWith<$Res> {
   _$VerifySecurityQuestionDataCopyWithImpl(this._value, this._then);
 
+  final VerifySecurityQuestionData _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(VerifySecurityQuestionData) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? questionID = freezed,
@@ -70,23 +65,23 @@ class _$VerifySecurityQuestionDataCopyWithImpl<$Res,
     Object? phoneNumber = freezed,
   }) {
     return _then(_value.copyWith(
-      questionID: freezed == questionID
+      questionID: questionID == freezed
           ? _value.questionID
           : questionID // ignore: cast_nullable_to_non_nullable
               as String?,
-      flavour: freezed == flavour
+      flavour: flavour == freezed
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as String?,
-      response: freezed == response
+      response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as String?,
-      phoneNumber: freezed == phoneNumber
+      phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -98,7 +93,6 @@ abstract class _$$_VerifySecurityQuestionDataCopyWith<$Res>
           $Res Function(_$_VerifySecurityQuestionData) then) =
       __$$_VerifySecurityQuestionDataCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'questionID') String? questionID,
       @JsonKey(name: 'flavour') String? flavour,
@@ -108,15 +102,17 @@ abstract class _$$_VerifySecurityQuestionDataCopyWith<$Res>
 
 /// @nodoc
 class __$$_VerifySecurityQuestionDataCopyWithImpl<$Res>
-    extends _$VerifySecurityQuestionDataCopyWithImpl<$Res,
-        _$_VerifySecurityQuestionData>
+    extends _$VerifySecurityQuestionDataCopyWithImpl<$Res>
     implements _$$_VerifySecurityQuestionDataCopyWith<$Res> {
   __$$_VerifySecurityQuestionDataCopyWithImpl(
       _$_VerifySecurityQuestionData _value,
       $Res Function(_$_VerifySecurityQuestionData) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_VerifySecurityQuestionData));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_VerifySecurityQuestionData get _value =>
+      super._value as _$_VerifySecurityQuestionData;
+
   @override
   $Res call({
     Object? questionID = freezed,
@@ -125,19 +121,19 @@ class __$$_VerifySecurityQuestionDataCopyWithImpl<$Res>
     Object? phoneNumber = freezed,
   }) {
     return _then(_$_VerifySecurityQuestionData(
-      questionID: freezed == questionID
+      questionID: questionID == freezed
           ? _value.questionID
           : questionID // ignore: cast_nullable_to_non_nullable
               as String?,
-      flavour: freezed == flavour
+      flavour: flavour == freezed
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as String?,
-      response: freezed == response
+      response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as String?,
-      phoneNumber: freezed == phoneNumber
+      phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -180,23 +176,25 @@ class _$_VerifySecurityQuestionData implements _VerifySecurityQuestionData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_VerifySecurityQuestionData &&
-            (identical(other.questionID, questionID) ||
-                other.questionID == questionID) &&
-            (identical(other.flavour, flavour) || other.flavour == flavour) &&
-            (identical(other.response, response) ||
-                other.response == response) &&
-            (identical(other.phoneNumber, phoneNumber) ||
-                other.phoneNumber == phoneNumber));
+            const DeepCollectionEquality()
+                .equals(other.questionID, questionID) &&
+            const DeepCollectionEquality().equals(other.flavour, flavour) &&
+            const DeepCollectionEquality().equals(other.response, response) &&
+            const DeepCollectionEquality()
+                .equals(other.phoneNumber, phoneNumber));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, questionID, flavour, response, phoneNumber);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(questionID),
+      const DeepCollectionEquality().hash(flavour),
+      const DeepCollectionEquality().hash(response),
+      const DeepCollectionEquality().hash(phoneNumber));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_VerifySecurityQuestionDataCopyWith<_$_VerifySecurityQuestionData>
       get copyWith => __$$_VerifySecurityQuestionDataCopyWithImpl<
           _$_VerifySecurityQuestionData>(this, _$identity);

@@ -66,8 +66,7 @@ mixin _$UserProfile {
 abstract class $UserProfileCopyWith<$Res> {
   factory $UserProfileCopyWith(
           UserProfile value, $Res Function(UserProfile) then) =
-      _$UserProfileCopyWithImpl<$Res, UserProfile>;
-  @useResult
+      _$UserProfileCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -106,16 +105,13 @@ abstract class $UserProfileCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
-    implements $UserProfileCopyWith<$Res> {
+class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
   _$UserProfileCopyWithImpl(this._value, this._then);
 
+  final UserProfile _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(UserProfile) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -135,102 +131,99 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
     Object? assistant = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: freezed == username
+      username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as Name?,
-      primaryPhoneNumber: freezed == primaryPhoneNumber
+      primaryPhoneNumber: primaryPhoneNumber == freezed
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber?,
-      primaryEmailAddress: freezed == primaryEmailAddress
+      primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
               as EmailAddress?,
-      secondaryPhoneNumbers: freezed == secondaryPhoneNumbers
+      secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
           ? _value.secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumber>?,
-      secondaryEmailAddresses: freezed == secondaryEmailAddresses
+      secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<EmailAddress>?,
-      termsAccepted: freezed == termsAccepted
+      termsAccepted: termsAccepted == freezed
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
               as bool?,
-      suspended: freezed == suspended
+      suspended: suspended == freezed
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
               as bool?,
-      photoUploadID: freezed == photoUploadID
+      photoUploadID: photoUploadID == freezed
           ? _value.photoUploadID
           : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      covers: freezed == covers
+      covers: covers == freezed
           ? _value.covers
           : covers // ignore: cast_nullable_to_non_nullable
               as List<Cover?>?,
-      userBioData: freezed == userBioData
+      userBioData: userBioData == freezed
           ? _value.userBioData
           : userBioData // ignore: cast_nullable_to_non_nullable
               as BioData?,
-      homeAddress: freezed == homeAddress
+      homeAddress: homeAddress == freezed
           ? _value.homeAddress
           : homeAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      workAddress: freezed == workAddress
+      workAddress: workAddress == freezed
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      referralLink: freezed == referralLink
+      referralLink: referralLink == freezed
           ? _value.referralLink
           : referralLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      assistant: freezed == assistant
+      assistant: assistant == freezed
           ? _value.assistant
           : assistant // ignore: cast_nullable_to_non_nullable
               as Assistant?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $BioDataCopyWith<$Res>? get userBioData {
     if (_value.userBioData == null) {
       return null;
     }
 
     return $BioDataCopyWith<$Res>(_value.userBioData!, (value) {
-      return _then(_value.copyWith(userBioData: value) as $Val);
+      return _then(_value.copyWith(userBioData: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get homeAddress {
     if (_value.homeAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.homeAddress!, (value) {
-      return _then(_value.copyWith(homeAddress: value) as $Val);
+      return _then(_value.copyWith(homeAddress: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get workAddress {
     if (_value.workAddress == null) {
       return null;
     }
 
     return $AddressCopyWith<$Res>(_value.workAddress!, (value) {
-      return _then(_value.copyWith(workAddress: value) as $Val);
+      return _then(_value.copyWith(workAddress: value));
     });
   }
 }
@@ -242,7 +235,6 @@ abstract class _$$_UserProfileCopyWith<$Res>
           _$_UserProfile value, $Res Function(_$_UserProfile) then) =
       __$$_UserProfileCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -284,14 +276,15 @@ abstract class _$$_UserProfileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserProfileCopyWithImpl<$Res>
-    extends _$UserProfileCopyWithImpl<$Res, _$_UserProfile>
+class __$$_UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
     implements _$$_UserProfileCopyWith<$Res> {
   __$$_UserProfileCopyWithImpl(
       _$_UserProfile _value, $Res Function(_$_UserProfile) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_UserProfile));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_UserProfile get _value => super._value as _$_UserProfile;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -311,63 +304,63 @@ class __$$_UserProfileCopyWithImpl<$Res>
     Object? assistant = freezed,
   }) {
     return _then(_$_UserProfile(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: freezed == username
+      username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as Name?,
-      primaryPhoneNumber: freezed == primaryPhoneNumber
+      primaryPhoneNumber: primaryPhoneNumber == freezed
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber?,
-      primaryEmailAddress: freezed == primaryEmailAddress
+      primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
               as EmailAddress?,
-      secondaryPhoneNumbers: freezed == secondaryPhoneNumbers
+      secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
           ? _value._secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumber>?,
-      secondaryEmailAddresses: freezed == secondaryEmailAddresses
+      secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value._secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<EmailAddress>?,
-      termsAccepted: freezed == termsAccepted
+      termsAccepted: termsAccepted == freezed
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
               as bool?,
-      suspended: freezed == suspended
+      suspended: suspended == freezed
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
               as bool?,
-      photoUploadID: freezed == photoUploadID
+      photoUploadID: photoUploadID == freezed
           ? _value.photoUploadID
           : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      covers: freezed == covers
+      covers: covers == freezed
           ? _value._covers
           : covers // ignore: cast_nullable_to_non_nullable
               as List<Cover?>?,
-      userBioData: freezed == userBioData
+      userBioData: userBioData == freezed
           ? _value.userBioData
           : userBioData // ignore: cast_nullable_to_non_nullable
               as BioData?,
-      homeAddress: freezed == homeAddress
+      homeAddress: homeAddress == freezed
           ? _value.homeAddress
           : homeAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      workAddress: freezed == workAddress
+      workAddress: workAddress == freezed
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
-      referralLink: freezed == referralLink
+      referralLink: referralLink == freezed
           ? _value.referralLink
           : referralLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      assistant: freezed == assistant
+      assistant: assistant == freezed
           ? _value.assistant
           : assistant // ignore: cast_nullable_to_non_nullable
               as Assistant?,
@@ -496,59 +489,55 @@ class _$_UserProfile implements _UserProfile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserProfile &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.primaryPhoneNumber, primaryPhoneNumber) ||
-                other.primaryPhoneNumber == primaryPhoneNumber) &&
-            (identical(other.primaryEmailAddress, primaryEmailAddress) ||
-                other.primaryEmailAddress == primaryEmailAddress) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality()
+                .equals(other.primaryPhoneNumber, primaryPhoneNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.primaryEmailAddress, primaryEmailAddress) &&
             const DeepCollectionEquality()
                 .equals(other._secondaryPhoneNumbers, _secondaryPhoneNumbers) &&
             const DeepCollectionEquality().equals(
                 other._secondaryEmailAddresses, _secondaryEmailAddresses) &&
-            (identical(other.termsAccepted, termsAccepted) ||
-                other.termsAccepted == termsAccepted) &&
-            (identical(other.suspended, suspended) ||
-                other.suspended == suspended) &&
-            (identical(other.photoUploadID, photoUploadID) ||
-                other.photoUploadID == photoUploadID) &&
+            const DeepCollectionEquality()
+                .equals(other.termsAccepted, termsAccepted) &&
+            const DeepCollectionEquality().equals(other.suspended, suspended) &&
+            const DeepCollectionEquality()
+                .equals(other.photoUploadID, photoUploadID) &&
             const DeepCollectionEquality().equals(other._covers, _covers) &&
-            (identical(other.userBioData, userBioData) ||
-                other.userBioData == userBioData) &&
-            (identical(other.homeAddress, homeAddress) ||
-                other.homeAddress == homeAddress) &&
-            (identical(other.workAddress, workAddress) ||
-                other.workAddress == workAddress) &&
-            (identical(other.referralLink, referralLink) ||
-                other.referralLink == referralLink) &&
-            (identical(other.assistant, assistant) ||
-                other.assistant == assistant));
+            const DeepCollectionEquality()
+                .equals(other.userBioData, userBioData) &&
+            const DeepCollectionEquality()
+                .equals(other.homeAddress, homeAddress) &&
+            const DeepCollectionEquality()
+                .equals(other.workAddress, workAddress) &&
+            const DeepCollectionEquality()
+                .equals(other.referralLink, referralLink) &&
+            const DeepCollectionEquality().equals(other.assistant, assistant));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
-      username,
-      primaryPhoneNumber,
-      primaryEmailAddress,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(primaryPhoneNumber),
+      const DeepCollectionEquality().hash(primaryEmailAddress),
       const DeepCollectionEquality().hash(_secondaryPhoneNumbers),
       const DeepCollectionEquality().hash(_secondaryEmailAddresses),
-      termsAccepted,
-      suspended,
-      photoUploadID,
+      const DeepCollectionEquality().hash(termsAccepted),
+      const DeepCollectionEquality().hash(suspended),
+      const DeepCollectionEquality().hash(photoUploadID),
       const DeepCollectionEquality().hash(_covers),
-      userBioData,
-      homeAddress,
-      workAddress,
-      referralLink,
-      assistant);
+      const DeepCollectionEquality().hash(userBioData),
+      const DeepCollectionEquality().hash(homeAddress),
+      const DeepCollectionEquality().hash(workAddress),
+      const DeepCollectionEquality().hash(referralLink),
+      const DeepCollectionEquality().hash(assistant));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_UserProfileCopyWith<_$_UserProfile> get copyWith =>
       __$$_UserProfileCopyWithImpl<_$_UserProfile>(this, _$identity);
 

@@ -35,40 +35,36 @@ mixin _$NavigationNestedItem {
 abstract class $NavigationNestedItemCopyWith<$Res> {
   factory $NavigationNestedItemCopyWith(NavigationNestedItem value,
           $Res Function(NavigationNestedItem) then) =
-      _$NavigationNestedItemCopyWithImpl<$Res, NavigationNestedItem>;
-  @useResult
+      _$NavigationNestedItemCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'onTapRoute') String? route});
 }
 
 /// @nodoc
-class _$NavigationNestedItemCopyWithImpl<$Res,
-        $Val extends NavigationNestedItem>
+class _$NavigationNestedItemCopyWithImpl<$Res>
     implements $NavigationNestedItemCopyWith<$Res> {
   _$NavigationNestedItemCopyWithImpl(this._value, this._then);
 
+  final NavigationNestedItem _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(NavigationNestedItem) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = freezed,
     Object? route = freezed,
   }) {
     return _then(_value.copyWith(
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: freezed == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -79,7 +75,6 @@ abstract class _$$_NavigationNestedItemCopyWith<$Res>
           $Res Function(_$_NavigationNestedItem) then) =
       __$$_NavigationNestedItemCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'onTapRoute') String? route});
@@ -87,24 +82,26 @@ abstract class _$$_NavigationNestedItemCopyWith<$Res>
 
 /// @nodoc
 class __$$_NavigationNestedItemCopyWithImpl<$Res>
-    extends _$NavigationNestedItemCopyWithImpl<$Res, _$_NavigationNestedItem>
+    extends _$NavigationNestedItemCopyWithImpl<$Res>
     implements _$$_NavigationNestedItemCopyWith<$Res> {
   __$$_NavigationNestedItemCopyWithImpl(_$_NavigationNestedItem _value,
       $Res Function(_$_NavigationNestedItem) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_NavigationNestedItem));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_NavigationNestedItem get _value => super._value as _$_NavigationNestedItem;
+
   @override
   $Res call({
     Object? title = freezed,
     Object? route = freezed,
   }) {
     return _then(_$_NavigationNestedItem(
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      route: freezed == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -139,17 +136,19 @@ class _$_NavigationNestedItem implements _NavigationNestedItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NavigationNestedItem &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.route, route) || other.route == route));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.route, route));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, route);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(route));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NavigationNestedItemCopyWith<_$_NavigationNestedItem> get copyWith =>
       __$$_NavigationNestedItemCopyWithImpl<_$_NavigationNestedItem>(
           this, _$identity);

@@ -42,8 +42,7 @@ mixin _$CommunicationSettings {
 abstract class $CommunicationSettingsCopyWith<$Res> {
   factory $CommunicationSettingsCopyWith(CommunicationSettings value,
           $Res Function(CommunicationSettings) then) =
-      _$CommunicationSettingsCopyWithImpl<$Res, CommunicationSettings>;
-  @useResult
+      _$CommunicationSettingsCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'profileID') String? profileID,
       @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
@@ -53,17 +52,14 @@ abstract class $CommunicationSettingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationSettingsCopyWithImpl<$Res,
-        $Val extends CommunicationSettings>
+class _$CommunicationSettingsCopyWithImpl<$Res>
     implements $CommunicationSettingsCopyWith<$Res> {
   _$CommunicationSettingsCopyWithImpl(this._value, this._then);
 
+  final CommunicationSettings _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(CommunicationSettings) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profileID = freezed,
@@ -73,27 +69,27 @@ class _$CommunicationSettingsCopyWithImpl<$Res,
     Object? allowEmail = freezed,
   }) {
     return _then(_value.copyWith(
-      profileID: freezed == profileID
+      profileID: profileID == freezed
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowWhatsApp: freezed == allowWhatsApp
+      allowWhatsApp: allowWhatsApp == freezed
           ? _value.allowWhatsApp
           : allowWhatsApp // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowText: freezed == allowText
+      allowText: allowText == freezed
           ? _value.allowText
           : allowText // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowPush: freezed == allowPush
+      allowPush: allowPush == freezed
           ? _value.allowPush
           : allowPush // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowEmail: freezed == allowEmail
+      allowEmail: allowEmail == freezed
           ? _value.allowEmail
           : allowEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -104,7 +100,6 @@ abstract class _$$_CommunicationSettingsCopyWith<$Res>
           $Res Function(_$_CommunicationSettings) then) =
       __$$_CommunicationSettingsCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'profileID') String? profileID,
       @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
@@ -115,13 +110,16 @@ abstract class _$$_CommunicationSettingsCopyWith<$Res>
 
 /// @nodoc
 class __$$_CommunicationSettingsCopyWithImpl<$Res>
-    extends _$CommunicationSettingsCopyWithImpl<$Res, _$_CommunicationSettings>
+    extends _$CommunicationSettingsCopyWithImpl<$Res>
     implements _$$_CommunicationSettingsCopyWith<$Res> {
   __$$_CommunicationSettingsCopyWithImpl(_$_CommunicationSettings _value,
       $Res Function(_$_CommunicationSettings) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_CommunicationSettings));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_CommunicationSettings get _value =>
+      super._value as _$_CommunicationSettings;
+
   @override
   $Res call({
     Object? profileID = freezed,
@@ -131,23 +129,23 @@ class __$$_CommunicationSettingsCopyWithImpl<$Res>
     Object? allowEmail = freezed,
   }) {
     return _then(_$_CommunicationSettings(
-      profileID: freezed == profileID
+      profileID: profileID == freezed
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowWhatsApp: freezed == allowWhatsApp
+      allowWhatsApp: allowWhatsApp == freezed
           ? _value.allowWhatsApp
           : allowWhatsApp // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowText: freezed == allowText
+      allowText: allowText == freezed
           ? _value.allowText
           : allowText // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowPush: freezed == allowPush
+      allowPush: allowPush == freezed
           ? _value.allowPush
           : allowPush // ignore: cast_nullable_to_non_nullable
               as bool?,
-      allowEmail: freezed == allowEmail
+      allowEmail: allowEmail == freezed
           ? _value.allowEmail
           : allowEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -194,26 +192,27 @@ class _$_CommunicationSettings implements _CommunicationSettings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CommunicationSettings &&
-            (identical(other.profileID, profileID) ||
-                other.profileID == profileID) &&
-            (identical(other.allowWhatsApp, allowWhatsApp) ||
-                other.allowWhatsApp == allowWhatsApp) &&
-            (identical(other.allowText, allowText) ||
-                other.allowText == allowText) &&
-            (identical(other.allowPush, allowPush) ||
-                other.allowPush == allowPush) &&
-            (identical(other.allowEmail, allowEmail) ||
-                other.allowEmail == allowEmail));
+            const DeepCollectionEquality().equals(other.profileID, profileID) &&
+            const DeepCollectionEquality()
+                .equals(other.allowWhatsApp, allowWhatsApp) &&
+            const DeepCollectionEquality().equals(other.allowText, allowText) &&
+            const DeepCollectionEquality().equals(other.allowPush, allowPush) &&
+            const DeepCollectionEquality()
+                .equals(other.allowEmail, allowEmail));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, profileID, allowWhatsApp, allowText, allowPush, allowEmail);
+      runtimeType,
+      const DeepCollectionEquality().hash(profileID),
+      const DeepCollectionEquality().hash(allowWhatsApp),
+      const DeepCollectionEquality().hash(allowText),
+      const DeepCollectionEquality().hash(allowPush),
+      const DeepCollectionEquality().hash(allowEmail));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_CommunicationSettingsCopyWith<_$_CommunicationSettings> get copyWith =>
       __$$_CommunicationSettingsCopyWithImpl<_$_CommunicationSettings>(
           this, _$identity);

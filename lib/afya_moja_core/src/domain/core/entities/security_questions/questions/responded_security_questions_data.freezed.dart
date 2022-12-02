@@ -36,36 +36,31 @@ abstract class $RespondedSecurityQuestionsDataCopyWith<$Res> {
   factory $RespondedSecurityQuestionsDataCopyWith(
           RespondedSecurityQuestionsData value,
           $Res Function(RespondedSecurityQuestionsData) then) =
-      _$RespondedSecurityQuestionsDataCopyWithImpl<$Res,
-          RespondedSecurityQuestionsData>;
-  @useResult
+      _$RespondedSecurityQuestionsDataCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'getUserRespondedSecurityQuestions')
           List<SecurityQuestion> securityQuestions});
 }
 
 /// @nodoc
-class _$RespondedSecurityQuestionsDataCopyWithImpl<$Res,
-        $Val extends RespondedSecurityQuestionsData>
+class _$RespondedSecurityQuestionsDataCopyWithImpl<$Res>
     implements $RespondedSecurityQuestionsDataCopyWith<$Res> {
   _$RespondedSecurityQuestionsDataCopyWithImpl(this._value, this._then);
 
+  final RespondedSecurityQuestionsData _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(RespondedSecurityQuestionsData) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? securityQuestions = null,
+    Object? securityQuestions = freezed,
   }) {
     return _then(_value.copyWith(
-      securityQuestions: null == securityQuestions
+      securityQuestions: securityQuestions == freezed
           ? _value.securityQuestions
           : securityQuestions // ignore: cast_nullable_to_non_nullable
               as List<SecurityQuestion>,
-    ) as $Val);
+    ));
   }
 }
 
@@ -77,7 +72,6 @@ abstract class _$$_RespondedSecurityQuestionsDataCopyWith<$Res>
           $Res Function(_$_RespondedSecurityQuestionsData) then) =
       __$$_RespondedSecurityQuestionsDataCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'getUserRespondedSecurityQuestions')
           List<SecurityQuestion> securityQuestions});
@@ -85,21 +79,23 @@ abstract class _$$_RespondedSecurityQuestionsDataCopyWith<$Res>
 
 /// @nodoc
 class __$$_RespondedSecurityQuestionsDataCopyWithImpl<$Res>
-    extends _$RespondedSecurityQuestionsDataCopyWithImpl<$Res,
-        _$_RespondedSecurityQuestionsData>
+    extends _$RespondedSecurityQuestionsDataCopyWithImpl<$Res>
     implements _$$_RespondedSecurityQuestionsDataCopyWith<$Res> {
   __$$_RespondedSecurityQuestionsDataCopyWithImpl(
       _$_RespondedSecurityQuestionsData _value,
       $Res Function(_$_RespondedSecurityQuestionsData) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_RespondedSecurityQuestionsData));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_RespondedSecurityQuestionsData get _value =>
+      super._value as _$_RespondedSecurityQuestionsData;
+
   @override
   $Res call({
-    Object? securityQuestions = null,
+    Object? securityQuestions = freezed,
   }) {
     return _then(_$_RespondedSecurityQuestionsData(
-      securityQuestions: null == securityQuestions
+      securityQuestions: securityQuestions == freezed
           ? _value._securityQuestions
           : securityQuestions // ignore: cast_nullable_to_non_nullable
               as List<SecurityQuestion>,
@@ -149,7 +145,6 @@ class _$_RespondedSecurityQuestionsData
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_RespondedSecurityQuestionsDataCopyWith<_$_RespondedSecurityQuestionsData>
       get copyWith => __$$_RespondedSecurityQuestionsDataCopyWithImpl<
           _$_RespondedSecurityQuestionsData>(this, _$identity);

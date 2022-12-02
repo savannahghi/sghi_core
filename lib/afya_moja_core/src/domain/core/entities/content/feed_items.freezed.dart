@@ -32,32 +32,28 @@ mixin _$FeedItems {
 /// @nodoc
 abstract class $FeedItemsCopyWith<$Res> {
   factory $FeedItemsCopyWith(FeedItems value, $Res Function(FeedItems) then) =
-      _$FeedItemsCopyWithImpl<$Res, FeedItems>;
-  @useResult
+      _$FeedItemsCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'items') List<Content>? items});
 }
 
 /// @nodoc
-class _$FeedItemsCopyWithImpl<$Res, $Val extends FeedItems>
-    implements $FeedItemsCopyWith<$Res> {
+class _$FeedItemsCopyWithImpl<$Res> implements $FeedItemsCopyWith<$Res> {
   _$FeedItemsCopyWithImpl(this._value, this._then);
 
+  final FeedItems _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(FeedItems) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? items = freezed,
   }) {
     return _then(_value.copyWith(
-      items: freezed == items
+      items: items == freezed
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Content>?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -67,25 +63,25 @@ abstract class _$$_FeedItemsCopyWith<$Res> implements $FeedItemsCopyWith<$Res> {
           _$_FeedItems value, $Res Function(_$_FeedItems) then) =
       __$$_FeedItemsCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'items') List<Content>? items});
 }
 
 /// @nodoc
-class __$$_FeedItemsCopyWithImpl<$Res>
-    extends _$FeedItemsCopyWithImpl<$Res, _$_FeedItems>
+class __$$_FeedItemsCopyWithImpl<$Res> extends _$FeedItemsCopyWithImpl<$Res>
     implements _$$_FeedItemsCopyWith<$Res> {
   __$$_FeedItemsCopyWithImpl(
       _$_FeedItems _value, $Res Function(_$_FeedItems) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_FeedItems));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_FeedItems get _value => super._value as _$_FeedItems;
+
   @override
   $Res call({
     Object? items = freezed,
   }) {
     return _then(_$_FeedItems(
-      items: freezed == items
+      items: items == freezed
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Content>?,
@@ -132,7 +128,6 @@ class _$_FeedItems implements _FeedItems {
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_FeedItemsCopyWith<_$_FeedItems> get copyWith =>
       __$$_FeedItemsCopyWithImpl<_$_FeedItems>(this, _$identity);
 

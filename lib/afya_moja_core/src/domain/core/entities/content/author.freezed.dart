@@ -31,32 +31,28 @@ mixin _$Author {
 /// @nodoc
 abstract class $AuthorCopyWith<$Res> {
   factory $AuthorCopyWith(Author value, $Res Function(Author) then) =
-      _$AuthorCopyWithImpl<$Res, Author>;
-  @useResult
+      _$AuthorCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'ID') String? id});
 }
 
 /// @nodoc
-class _$AuthorCopyWithImpl<$Res, $Val extends Author>
-    implements $AuthorCopyWith<$Res> {
+class _$AuthorCopyWithImpl<$Res> implements $AuthorCopyWith<$Res> {
   _$AuthorCopyWithImpl(this._value, this._then);
 
+  final Author _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Author) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -65,24 +61,24 @@ abstract class _$$_AuthorCopyWith<$Res> implements $AuthorCopyWith<$Res> {
   factory _$$_AuthorCopyWith(_$_Author value, $Res Function(_$_Author) then) =
       __$$_AuthorCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'ID') String? id});
 }
 
 /// @nodoc
-class __$$_AuthorCopyWithImpl<$Res>
-    extends _$AuthorCopyWithImpl<$Res, _$_Author>
+class __$$_AuthorCopyWithImpl<$Res> extends _$AuthorCopyWithImpl<$Res>
     implements _$$_AuthorCopyWith<$Res> {
   __$$_AuthorCopyWithImpl(_$_Author _value, $Res Function(_$_Author) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Author));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Author get _value => super._value as _$_Author;
+
   @override
   $Res call({
     Object? id = freezed,
   }) {
     return _then(_$_Author(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -112,16 +108,16 @@ class _$_Author implements _Author {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Author &&
-            (identical(other.id, id) || other.id == id));
+            const DeepCollectionEquality().equals(other.id, id));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_AuthorCopyWith<_$_Author> get copyWith =>
       __$$_AuthorCopyWithImpl<_$_Author>(this, _$identity);
 

@@ -30,38 +30,34 @@ mixin _$OnboardingPathConfig {
 abstract class $OnboardingPathConfigCopyWith<$Res> {
   factory $OnboardingPathConfigCopyWith(OnboardingPathConfig value,
           $Res Function(OnboardingPathConfig) then) =
-      _$OnboardingPathConfigCopyWithImpl<$Res, OnboardingPathConfig>;
-  @useResult
+      _$OnboardingPathConfigCopyWithImpl<$Res>;
   $Res call({String route, dynamic arguments});
 }
 
 /// @nodoc
-class _$OnboardingPathConfigCopyWithImpl<$Res,
-        $Val extends OnboardingPathConfig>
+class _$OnboardingPathConfigCopyWithImpl<$Res>
     implements $OnboardingPathConfigCopyWith<$Res> {
   _$OnboardingPathConfigCopyWithImpl(this._value, this._then);
 
+  final OnboardingPathConfig _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(OnboardingPathConfig) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? route = null,
-    Object? arguments = null,
+    Object? route = freezed,
+    Object? arguments = freezed,
   }) {
     return _then(_value.copyWith(
-      route: null == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String,
-      arguments: null == arguments
+      arguments: arguments == freezed
           ? _value.arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as dynamic,
-    ) as $Val);
+    ));
   }
 }
 
@@ -72,30 +68,31 @@ abstract class _$$_OnboardingPathConfigCopyWith<$Res>
           $Res Function(_$_OnboardingPathConfig) then) =
       __$$_OnboardingPathConfigCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({String route, dynamic arguments});
 }
 
 /// @nodoc
 class __$$_OnboardingPathConfigCopyWithImpl<$Res>
-    extends _$OnboardingPathConfigCopyWithImpl<$Res, _$_OnboardingPathConfig>
+    extends _$OnboardingPathConfigCopyWithImpl<$Res>
     implements _$$_OnboardingPathConfigCopyWith<$Res> {
   __$$_OnboardingPathConfigCopyWithImpl(_$_OnboardingPathConfig _value,
       $Res Function(_$_OnboardingPathConfig) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_OnboardingPathConfig));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_OnboardingPathConfig get _value => super._value as _$_OnboardingPathConfig;
+
   @override
   $Res call({
-    Object? route = null,
-    Object? arguments = null,
+    Object? route = freezed,
+    Object? arguments = freezed,
   }) {
     return _then(_$_OnboardingPathConfig(
-      route: null == route
+      route: route == freezed
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String,
-      arguments: null == arguments
+      arguments: arguments == freezed
           ? _value.arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -126,17 +123,18 @@ class _$_OnboardingPathConfig implements _OnboardingPathConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OnboardingPathConfig &&
-            (identical(other.route, route) || other.route == route) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
             const DeepCollectionEquality().equals(other.arguments, arguments));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, route, const DeepCollectionEquality().hash(arguments));
+      runtimeType,
+      const DeepCollectionEquality().hash(route),
+      const DeepCollectionEquality().hash(arguments));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_OnboardingPathConfigCopyWith<_$_OnboardingPathConfig> get copyWith =>
       __$$_OnboardingPathConfigCopyWithImpl<_$_OnboardingPathConfig>(
           this, _$identity);

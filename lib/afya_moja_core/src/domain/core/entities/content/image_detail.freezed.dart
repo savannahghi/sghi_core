@@ -34,24 +34,20 @@ mixin _$ImageDetail {
 abstract class $ImageDetailCopyWith<$Res> {
   factory $ImageDetailCopyWith(
           ImageDetail value, $Res Function(ImageDetail) then) =
-      _$ImageDetailCopyWithImpl<$Res, ImageDetail>;
-  @useResult
+      _$ImageDetailCopyWithImpl<$Res>;
   $Res call({int? id, String? title, ImageMeta? meta});
 
   $ImageMetaCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
-class _$ImageDetailCopyWithImpl<$Res, $Val extends ImageDetail>
-    implements $ImageDetailCopyWith<$Res> {
+class _$ImageDetailCopyWithImpl<$Res> implements $ImageDetailCopyWith<$Res> {
   _$ImageDetailCopyWithImpl(this._value, this._then);
 
+  final ImageDetail _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ImageDetail) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -59,30 +55,29 @@ class _$ImageDetailCopyWithImpl<$Res, $Val extends ImageDetail>
     Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: freezed == meta
+      meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ImageMeta?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $ImageMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $ImageMetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value) as $Val);
+      return _then(_value.copyWith(meta: value));
     });
   }
 }
@@ -94,7 +89,6 @@ abstract class _$$_ImageDetailCopyWith<$Res>
           _$_ImageDetail value, $Res Function(_$_ImageDetail) then) =
       __$$_ImageDetailCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({int? id, String? title, ImageMeta? meta});
 
   @override
@@ -102,14 +96,15 @@ abstract class _$$_ImageDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ImageDetailCopyWithImpl<$Res>
-    extends _$ImageDetailCopyWithImpl<$Res, _$_ImageDetail>
+class __$$_ImageDetailCopyWithImpl<$Res> extends _$ImageDetailCopyWithImpl<$Res>
     implements _$$_ImageDetailCopyWith<$Res> {
   __$$_ImageDetailCopyWithImpl(
       _$_ImageDetail _value, $Res Function(_$_ImageDetail) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ImageDetail));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ImageDetail get _value => super._value as _$_ImageDetail;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -117,15 +112,15 @@ class __$$_ImageDetailCopyWithImpl<$Res>
     Object? meta = freezed,
   }) {
     return _then(_$_ImageDetail(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: freezed == meta
+      meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ImageMeta?,
@@ -158,18 +153,21 @@ class _$_ImageDetail implements _ImageDetail {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ImageDetail &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.meta, meta) || other.meta == meta));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, meta);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ImageDetailCopyWith<_$_ImageDetail> get copyWith =>
       __$$_ImageDetailCopyWithImpl<_$_ImageDetail>(this, _$identity);
 
