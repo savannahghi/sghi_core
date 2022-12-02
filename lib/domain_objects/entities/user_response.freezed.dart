@@ -44,8 +44,7 @@ mixin _$UserResponse {
 abstract class $UserResponseCopyWith<$Res> {
   factory $UserResponseCopyWith(
           UserResponse value, $Res Function(UserResponse) then) =
-      _$UserResponseCopyWithImpl<$Res, UserResponse>;
-  @useResult
+      _$UserResponseCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'profile')
           UserProfile? profile,
@@ -69,16 +68,13 @@ abstract class $UserResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserResponseCopyWithImpl<$Res, $Val extends UserResponse>
-    implements $UserResponseCopyWith<$Res> {
+class _$UserResponseCopyWithImpl<$Res> implements $UserResponseCopyWith<$Res> {
   _$UserResponseCopyWithImpl(this._value, this._then);
 
+  final UserResponse _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(UserResponse) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profile = freezed,
@@ -89,71 +85,67 @@ class _$UserResponseCopyWithImpl<$Res, $Val extends UserResponse>
     Object? navigation = freezed,
   }) {
     return _then(_value.copyWith(
-      profile: freezed == profile
+      profile: profile == freezed
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as UserProfile?,
-      supplierProfile: freezed == supplierProfile
+      supplierProfile: supplierProfile == freezed
           ? _value.supplierProfile
           : supplierProfile // ignore: cast_nullable_to_non_nullable
               as SupplierProfile?,
-      customerProfile: freezed == customerProfile
+      customerProfile: customerProfile == freezed
           ? _value.customerProfile
           : customerProfile // ignore: cast_nullable_to_non_nullable
               as Customer?,
-      communicationSettings: freezed == communicationSettings
+      communicationSettings: communicationSettings == freezed
           ? _value.communicationSettings
           : communicationSettings // ignore: cast_nullable_to_non_nullable
               as CommunicationSettings?,
-      auth: freezed == auth
+      auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as AuthCredentialResponse?,
-      navigation: freezed == navigation
+      navigation: navigation == freezed
           ? _value.navigation
           : navigation // ignore: cast_nullable_to_non_nullable
               as Navigation?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $UserProfileCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
 
     return $UserProfileCopyWith<$Res>(_value.profile!, (value) {
-      return _then(_value.copyWith(profile: value) as $Val);
+      return _then(_value.copyWith(profile: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $SupplierProfileCopyWith<$Res>? get supplierProfile {
     if (_value.supplierProfile == null) {
       return null;
     }
 
     return $SupplierProfileCopyWith<$Res>(_value.supplierProfile!, (value) {
-      return _then(_value.copyWith(supplierProfile: value) as $Val);
+      return _then(_value.copyWith(supplierProfile: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $CustomerCopyWith<$Res>? get customerProfile {
     if (_value.customerProfile == null) {
       return null;
     }
 
     return $CustomerCopyWith<$Res>(_value.customerProfile!, (value) {
-      return _then(_value.copyWith(customerProfile: value) as $Val);
+      return _then(_value.copyWith(customerProfile: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $CommunicationSettingsCopyWith<$Res>? get communicationSettings {
     if (_value.communicationSettings == null) {
       return null;
@@ -161,31 +153,29 @@ class _$UserResponseCopyWithImpl<$Res, $Val extends UserResponse>
 
     return $CommunicationSettingsCopyWith<$Res>(_value.communicationSettings!,
         (value) {
-      return _then(_value.copyWith(communicationSettings: value) as $Val);
+      return _then(_value.copyWith(communicationSettings: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $AuthCredentialResponseCopyWith<$Res>? get auth {
     if (_value.auth == null) {
       return null;
     }
 
     return $AuthCredentialResponseCopyWith<$Res>(_value.auth!, (value) {
-      return _then(_value.copyWith(auth: value) as $Val);
+      return _then(_value.copyWith(auth: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $NavigationCopyWith<$Res>? get navigation {
     if (_value.navigation == null) {
       return null;
     }
 
     return $NavigationCopyWith<$Res>(_value.navigation!, (value) {
-      return _then(_value.copyWith(navigation: value) as $Val);
+      return _then(_value.copyWith(navigation: value));
     });
   }
 }
@@ -197,7 +187,6 @@ abstract class _$$_UserResponseCopyWith<$Res>
           _$_UserResponse value, $Res Function(_$_UserResponse) then) =
       __$$_UserResponseCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'profile')
           UserProfile? profile,
@@ -228,13 +217,15 @@ abstract class _$$_UserResponseCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserResponseCopyWithImpl<$Res>
-    extends _$UserResponseCopyWithImpl<$Res, _$_UserResponse>
+    extends _$UserResponseCopyWithImpl<$Res>
     implements _$$_UserResponseCopyWith<$Res> {
   __$$_UserResponseCopyWithImpl(
       _$_UserResponse _value, $Res Function(_$_UserResponse) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_UserResponse));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_UserResponse get _value => super._value as _$_UserResponse;
+
   @override
   $Res call({
     Object? profile = freezed,
@@ -245,27 +236,27 @@ class __$$_UserResponseCopyWithImpl<$Res>
     Object? navigation = freezed,
   }) {
     return _then(_$_UserResponse(
-      profile: freezed == profile
+      profile: profile == freezed
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as UserProfile?,
-      supplierProfile: freezed == supplierProfile
+      supplierProfile: supplierProfile == freezed
           ? _value.supplierProfile
           : supplierProfile // ignore: cast_nullable_to_non_nullable
               as SupplierProfile?,
-      customerProfile: freezed == customerProfile
+      customerProfile: customerProfile == freezed
           ? _value.customerProfile
           : customerProfile // ignore: cast_nullable_to_non_nullable
               as Customer?,
-      communicationSettings: freezed == communicationSettings
+      communicationSettings: communicationSettings == freezed
           ? _value.communicationSettings
           : communicationSettings // ignore: cast_nullable_to_non_nullable
               as CommunicationSettings?,
-      auth: freezed == auth
+      auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as AuthCredentialResponse?,
-      navigation: freezed == navigation
+      navigation: navigation == freezed
           ? _value.navigation
           : navigation // ignore: cast_nullable_to_non_nullable
               as Navigation?,
@@ -316,26 +307,31 @@ class _$_UserResponse implements _UserResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserResponse &&
-            (identical(other.profile, profile) || other.profile == profile) &&
-            (identical(other.supplierProfile, supplierProfile) ||
-                other.supplierProfile == supplierProfile) &&
-            (identical(other.customerProfile, customerProfile) ||
-                other.customerProfile == customerProfile) &&
-            (identical(other.communicationSettings, communicationSettings) ||
-                other.communicationSettings == communicationSettings) &&
-            (identical(other.auth, auth) || other.auth == auth) &&
-            (identical(other.navigation, navigation) ||
-                other.navigation == navigation));
+            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality()
+                .equals(other.supplierProfile, supplierProfile) &&
+            const DeepCollectionEquality()
+                .equals(other.customerProfile, customerProfile) &&
+            const DeepCollectionEquality()
+                .equals(other.communicationSettings, communicationSettings) &&
+            const DeepCollectionEquality().equals(other.auth, auth) &&
+            const DeepCollectionEquality()
+                .equals(other.navigation, navigation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, profile, supplierProfile,
-      customerProfile, communicationSettings, auth, navigation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(supplierProfile),
+      const DeepCollectionEquality().hash(customerProfile),
+      const DeepCollectionEquality().hash(communicationSettings),
+      const DeepCollectionEquality().hash(auth),
+      const DeepCollectionEquality().hash(navigation));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_UserResponseCopyWith<_$_UserResponse> get copyWith =>
       __$$_UserResponseCopyWithImpl<_$_UserResponse>(this, _$identity);
 

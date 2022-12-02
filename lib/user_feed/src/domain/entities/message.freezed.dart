@@ -43,8 +43,7 @@ mixin _$Message {
 /// @nodoc
 abstract class $MessageCopyWith<$Res> {
   factory $MessageCopyWith(Message value, $Res Function(Message) then) =
-      _$MessageCopyWithImpl<$Res, Message>;
-  @useResult
+      _$MessageCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'sequenceNumber') int? sequenceNumber,
@@ -56,16 +55,13 @@ abstract class $MessageCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MessageCopyWithImpl<$Res, $Val extends Message>
-    implements $MessageCopyWith<$Res> {
+class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
   _$MessageCopyWithImpl(this._value, this._then);
 
+  final Message _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Message) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -77,35 +73,35 @@ class _$MessageCopyWithImpl<$Res, $Val extends Message>
     Object? timestamp = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      replyTo: freezed == replyTo
+      replyTo: replyTo == freezed
           ? _value.replyTo
           : replyTo // ignore: cast_nullable_to_non_nullable
               as String?,
-      postedByUID: freezed == postedByUID
+      postedByUID: postedByUID == freezed
           ? _value.postedByUID
           : postedByUID // ignore: cast_nullable_to_non_nullable
               as String?,
-      postedByName: freezed == postedByName
+      postedByName: postedByName == freezed
           ? _value.postedByName
           : postedByName // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: freezed == text
+      text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: freezed == timestamp
+      timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -115,7 +111,6 @@ abstract class _$$_MessageCopyWith<$Res> implements $MessageCopyWith<$Res> {
           _$_Message value, $Res Function(_$_Message) then) =
       __$$_MessageCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'sequenceNumber') int? sequenceNumber,
@@ -127,13 +122,14 @@ abstract class _$$_MessageCopyWith<$Res> implements $MessageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MessageCopyWithImpl<$Res>
-    extends _$MessageCopyWithImpl<$Res, _$_Message>
+class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
     implements _$$_MessageCopyWith<$Res> {
   __$$_MessageCopyWithImpl(_$_Message _value, $Res Function(_$_Message) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Message));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Message get _value => super._value as _$_Message;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -145,31 +141,31 @@ class __$$_MessageCopyWithImpl<$Res>
     Object? timestamp = freezed,
   }) {
     return _then(_$_Message(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      replyTo: freezed == replyTo
+      replyTo: replyTo == freezed
           ? _value.replyTo
           : replyTo // ignore: cast_nullable_to_non_nullable
               as String?,
-      postedByUID: freezed == postedByUID
+      postedByUID: postedByUID == freezed
           ? _value.postedByUID
           : postedByUID // ignore: cast_nullable_to_non_nullable
               as String?,
-      postedByName: freezed == postedByName
+      postedByName: postedByName == freezed
           ? _value.postedByName
           : postedByName // ignore: cast_nullable_to_non_nullable
               as String?,
-      text: freezed == text
+      text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: freezed == timestamp
+      timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -224,27 +220,32 @@ class _$_Message implements _Message {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Message &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.sequenceNumber, sequenceNumber) ||
-                other.sequenceNumber == sequenceNumber) &&
-            (identical(other.replyTo, replyTo) || other.replyTo == replyTo) &&
-            (identical(other.postedByUID, postedByUID) ||
-                other.postedByUID == postedByUID) &&
-            (identical(other.postedByName, postedByName) ||
-                other.postedByName == postedByName) &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.sequenceNumber, sequenceNumber) &&
+            const DeepCollectionEquality().equals(other.replyTo, replyTo) &&
+            const DeepCollectionEquality()
+                .equals(other.postedByUID, postedByUID) &&
+            const DeepCollectionEquality()
+                .equals(other.postedByName, postedByName) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, sequenceNumber, replyTo,
-      postedByUID, postedByName, text, timestamp);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(sequenceNumber),
+      const DeepCollectionEquality().hash(replyTo),
+      const DeepCollectionEquality().hash(postedByUID),
+      const DeepCollectionEquality().hash(postedByName),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(timestamp));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_MessageCopyWith<_$_Message> get copyWith =>
       __$$_MessageCopyWithImpl<_$_Message>(this, _$identity);
 

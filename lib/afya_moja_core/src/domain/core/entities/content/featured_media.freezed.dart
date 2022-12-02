@@ -48,8 +48,7 @@ mixin _$FeaturedMedia {
 abstract class $FeaturedMediaCopyWith<$Res> {
   factory $FeaturedMediaCopyWith(
           FeaturedMedia value, $Res Function(FeaturedMedia) then) =
-      _$FeaturedMediaCopyWithImpl<$Res, FeaturedMedia>;
-  @useResult
+      _$FeaturedMediaCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'ID')
           int? id,
@@ -70,16 +69,14 @@ abstract class $FeaturedMediaCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FeaturedMediaCopyWithImpl<$Res, $Val extends FeaturedMedia>
+class _$FeaturedMediaCopyWithImpl<$Res>
     implements $FeaturedMediaCopyWith<$Res> {
   _$FeaturedMediaCopyWithImpl(this._value, this._then);
 
+  final FeaturedMedia _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(FeaturedMedia) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -92,39 +89,39 @@ class _$FeaturedMediaCopyWithImpl<$Res, $Val extends FeaturedMedia>
     Object? thumbnail = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      mediaUrl: freezed == mediaUrl
+      mediaUrl: mediaUrl == freezed
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      featuredMediaType: freezed == featuredMediaType
+      featuredMediaType: featuredMediaType == freezed
           ? _value.featuredMediaType
           : featuredMediaType // ignore: cast_nullable_to_non_nullable
               as FeaturedMediaType?,
-      duration: freezed == duration
+      duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int?,
-      width: freezed == width
+      width: width == freezed
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int?,
-      height: freezed == height
+      height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int?,
-      thumbnail: freezed == thumbnail
+      thumbnail: thumbnail == freezed
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -135,7 +132,6 @@ abstract class _$$_FeaturedMediaCopyWith<$Res>
           _$_FeaturedMedia value, $Res Function(_$_FeaturedMedia) then) =
       __$$_FeaturedMediaCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'ID')
           int? id,
@@ -157,13 +153,15 @@ abstract class _$$_FeaturedMediaCopyWith<$Res>
 
 /// @nodoc
 class __$$_FeaturedMediaCopyWithImpl<$Res>
-    extends _$FeaturedMediaCopyWithImpl<$Res, _$_FeaturedMedia>
+    extends _$FeaturedMediaCopyWithImpl<$Res>
     implements _$$_FeaturedMediaCopyWith<$Res> {
   __$$_FeaturedMediaCopyWithImpl(
       _$_FeaturedMedia _value, $Res Function(_$_FeaturedMedia) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_FeaturedMedia));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_FeaturedMedia get _value => super._value as _$_FeaturedMedia;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -176,35 +174,35 @@ class __$$_FeaturedMediaCopyWithImpl<$Res>
     Object? thumbnail = freezed,
   }) {
     return _then(_$_FeaturedMedia(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      mediaUrl: freezed == mediaUrl
+      mediaUrl: mediaUrl == freezed
           ? _value.mediaUrl
           : mediaUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      featuredMediaType: freezed == featuredMediaType
+      featuredMediaType: featuredMediaType == freezed
           ? _value.featuredMediaType
           : featuredMediaType // ignore: cast_nullable_to_non_nullable
               as FeaturedMediaType?,
-      duration: freezed == duration
+      duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int?,
-      width: freezed == width
+      width: width == freezed
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int?,
-      height: freezed == height
+      height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int?,
-      thumbnail: freezed == thumbnail
+      thumbnail: thumbnail == freezed
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -271,28 +269,32 @@ class _$_FeaturedMedia implements _FeaturedMedia {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FeaturedMedia &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.mediaUrl, mediaUrl) ||
-                other.mediaUrl == mediaUrl) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.featuredMediaType, featuredMediaType) ||
-                other.featuredMediaType == featuredMediaType) &&
-            (identical(other.duration, duration) ||
-                other.duration == duration) &&
-            (identical(other.width, width) || other.width == width) &&
-            (identical(other.height, height) || other.height == height) &&
-            (identical(other.thumbnail, thumbnail) ||
-                other.thumbnail == thumbnail));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.mediaUrl, mediaUrl) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.featuredMediaType, featuredMediaType) &&
+            const DeepCollectionEquality().equals(other.duration, duration) &&
+            const DeepCollectionEquality().equals(other.width, width) &&
+            const DeepCollectionEquality().equals(other.height, height) &&
+            const DeepCollectionEquality().equals(other.thumbnail, thumbnail));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, mediaUrl, title,
-      featuredMediaType, duration, width, height, thumbnail);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(mediaUrl),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(featuredMediaType),
+      const DeepCollectionEquality().hash(duration),
+      const DeepCollectionEquality().hash(width),
+      const DeepCollectionEquality().hash(height),
+      const DeepCollectionEquality().hash(thumbnail));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_FeaturedMediaCopyWith<_$_FeaturedMedia> get copyWith =>
       __$$_FeaturedMediaCopyWithImpl<_$_FeaturedMedia>(this, _$identity);
 

@@ -33,32 +33,28 @@ mixin _$IconDetails {
 abstract class $IconDetailsCopyWith<$Res> {
   factory $IconDetailsCopyWith(
           IconDetails value, $Res Function(IconDetails) then) =
-      _$IconDetailsCopyWithImpl<$Res, IconDetails>;
-  @useResult
+      _$IconDetailsCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'url') String iconUrlSvgPath});
 }
 
 /// @nodoc
-class _$IconDetailsCopyWithImpl<$Res, $Val extends IconDetails>
-    implements $IconDetailsCopyWith<$Res> {
+class _$IconDetailsCopyWithImpl<$Res> implements $IconDetailsCopyWith<$Res> {
   _$IconDetailsCopyWithImpl(this._value, this._then);
 
+  final IconDetails _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(IconDetails) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrlSvgPath = null,
+    Object? iconUrlSvgPath = freezed,
   }) {
     return _then(_value.copyWith(
-      iconUrlSvgPath: null == iconUrlSvgPath
+      iconUrlSvgPath: iconUrlSvgPath == freezed
           ? _value.iconUrlSvgPath
           : iconUrlSvgPath // ignore: cast_nullable_to_non_nullable
               as String,
-    ) as $Val);
+    ));
   }
 }
 
@@ -69,25 +65,25 @@ abstract class _$$_IconDetailsCopyWith<$Res>
           _$_IconDetails value, $Res Function(_$_IconDetails) then) =
       __$$_IconDetailsCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'url') String iconUrlSvgPath});
 }
 
 /// @nodoc
-class __$$_IconDetailsCopyWithImpl<$Res>
-    extends _$IconDetailsCopyWithImpl<$Res, _$_IconDetails>
+class __$$_IconDetailsCopyWithImpl<$Res> extends _$IconDetailsCopyWithImpl<$Res>
     implements _$$_IconDetailsCopyWith<$Res> {
   __$$_IconDetailsCopyWithImpl(
       _$_IconDetails _value, $Res Function(_$_IconDetails) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_IconDetails));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_IconDetails get _value => super._value as _$_IconDetails;
+
   @override
   $Res call({
-    Object? iconUrlSvgPath = null,
+    Object? iconUrlSvgPath = freezed,
   }) {
     return _then(_$_IconDetails(
-      iconUrlSvgPath: null == iconUrlSvgPath
+      iconUrlSvgPath: iconUrlSvgPath == freezed
           ? _value.iconUrlSvgPath
           : iconUrlSvgPath // ignore: cast_nullable_to_non_nullable
               as String,
@@ -117,17 +113,17 @@ class _$_IconDetails implements _IconDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_IconDetails &&
-            (identical(other.iconUrlSvgPath, iconUrlSvgPath) ||
-                other.iconUrlSvgPath == iconUrlSvgPath));
+            const DeepCollectionEquality()
+                .equals(other.iconUrlSvgPath, iconUrlSvgPath));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, iconUrlSvgPath);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(iconUrlSvgPath));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_IconDetailsCopyWith<_$_IconDetails> get copyWith =>
       __$$_IconDetailsCopyWithImpl<_$_IconDetails>(this, _$identity);
 

@@ -36,8 +36,7 @@ mixin _$Location {
 /// @nodoc
 abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
-      _$LocationCopyWithImpl<$Res, Location>;
-  @useResult
+      _$LocationCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'branchSladeCode') String? branchSladeCode,
       @JsonKey(name: 'name') String? name,
@@ -45,16 +44,13 @@ abstract class $LocationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocationCopyWithImpl<$Res, $Val extends Location>
-    implements $LocationCopyWith<$Res> {
+class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   _$LocationCopyWithImpl(this._value, this._then);
 
+  final Location _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Location) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? branchSladeCode = freezed,
@@ -62,19 +58,19 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      branchSladeCode: freezed == branchSladeCode
+      branchSladeCode: branchSladeCode == freezed
           ? _value.branchSladeCode
           : branchSladeCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -84,7 +80,6 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           _$_Location value, $Res Function(_$_Location) then) =
       __$$_LocationCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'branchSladeCode') String? branchSladeCode,
       @JsonKey(name: 'name') String? name,
@@ -92,14 +87,15 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LocationCopyWithImpl<$Res>
-    extends _$LocationCopyWithImpl<$Res, _$_Location>
+class __$$_LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     implements _$$_LocationCopyWith<$Res> {
   __$$_LocationCopyWithImpl(
       _$_Location _value, $Res Function(_$_Location) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Location));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Location get _value => super._value as _$_Location;
+
   @override
   $Res call({
     Object? branchSladeCode = freezed,
@@ -107,15 +103,15 @@ class __$$_LocationCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(_$_Location(
-      branchSladeCode: freezed == branchSladeCode
+      branchSladeCode: branchSladeCode == freezed
           ? _value.branchSladeCode
           : branchSladeCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -154,19 +150,22 @@ class _$_Location implements _Location {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Location &&
-            (identical(other.branchSladeCode, branchSladeCode) ||
-                other.branchSladeCode == branchSladeCode) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.id, id) || other.id == id));
+            const DeepCollectionEquality()
+                .equals(other.branchSladeCode, branchSladeCode) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.id, id));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, branchSladeCode, name, id);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(branchSladeCode),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(id));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_LocationCopyWith<_$_Location> get copyWith =>
       __$$_LocationCopyWithImpl<_$_Location>(this, _$identity);
 

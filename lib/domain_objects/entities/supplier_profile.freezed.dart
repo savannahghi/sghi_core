@@ -65,8 +65,7 @@ mixin _$SupplierProfile {
 abstract class $SupplierProfileCopyWith<$Res> {
   factory $SupplierProfileCopyWith(
           SupplierProfile value, $Res Function(SupplierProfile) then) =
-      _$SupplierProfileCopyWithImpl<$Res, SupplierProfile>;
-  @useResult
+      _$SupplierProfileCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'supplierID')
           String? supplierID,
@@ -108,16 +107,14 @@ abstract class $SupplierProfileCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplierProfileCopyWithImpl<$Res, $Val extends SupplierProfile>
+class _$SupplierProfileCopyWithImpl<$Res>
     implements $SupplierProfileCopyWith<$Res> {
   _$SupplierProfileCopyWithImpl(this._value, this._then);
 
+  final SupplierProfile _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(SupplierProfile) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? supplierID = freezed,
@@ -139,98 +136,96 @@ class _$SupplierProfileCopyWithImpl<$Res, $Val extends SupplierProfile>
     Object? kycSubmitted = freezed,
   }) {
     return _then(_value.copyWith(
-      supplierID: freezed == supplierID
+      supplierID: supplierID == freezed
           ? _value.supplierID
           : supplierID // ignore: cast_nullable_to_non_nullable
               as String?,
-      profileID: freezed == profileID
+      profileID: profileID == freezed
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      erpSupplierID: freezed == erpSupplierID
+      erpSupplierID: erpSupplierID == freezed
           ? _value.erpSupplierID
           : erpSupplierID // ignore: cast_nullable_to_non_nullable
               as String?,
-      payablesAccount: freezed == payablesAccount
+      payablesAccount: payablesAccount == freezed
           ? _value.payablesAccount
           : payablesAccount // ignore: cast_nullable_to_non_nullable
               as PayablesAccount?,
-      supplierKYC: freezed == supplierKYC
+      supplierKYC: supplierKYC == freezed
           ? _value.supplierKYC
           : supplierKYC // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      active: freezed == active
+      active: active == freezed
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
               as bool?,
-      accountType: freezed == accountType
+      accountType: accountType == freezed
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
               as SupplierAccountType?,
-      underOrganization: freezed == underOrganization
+      underOrganization: underOrganization == freezed
           ? _value.underOrganization
           : underOrganization // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isOrganizationVerified: freezed == isOrganizationVerified
+      isOrganizationVerified: isOrganizationVerified == freezed
           ? _value.isOrganizationVerified
           : isOrganizationVerified // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sladeCode: freezed == sladeCode
+      sladeCode: sladeCode == freezed
           ? _value.sladeCode
           : sladeCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      parentOrganizationID: freezed == parentOrganizationID
+      parentOrganizationID: parentOrganizationID == freezed
           ? _value.parentOrganizationID
           : parentOrganizationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      organizationName: freezed == organizationName
+      organizationName: organizationName == freezed
           ? _value.organizationName
           : organizationName // ignore: cast_nullable_to_non_nullable
               as String?,
-      hasBranches: freezed == hasBranches
+      hasBranches: hasBranches == freezed
           ? _value.hasBranches
           : hasBranches // ignore: cast_nullable_to_non_nullable
               as bool?,
-      location: freezed == location
+      location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location?,
-      partnerType: freezed == partnerType
+      partnerType: partnerType == freezed
           ? _value.partnerType
           : partnerType // ignore: cast_nullable_to_non_nullable
               as SupplierPartnerType?,
-      partnerSetupComplete: freezed == partnerSetupComplete
+      partnerSetupComplete: partnerSetupComplete == freezed
           ? _value.partnerSetupComplete
           : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
               as bool?,
-      kycSubmitted: freezed == kycSubmitted
+      kycSubmitted: kycSubmitted == freezed
           ? _value.kycSubmitted
           : kycSubmitted // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $PayablesAccountCopyWith<$Res>? get payablesAccount {
     if (_value.payablesAccount == null) {
       return null;
     }
 
     return $PayablesAccountCopyWith<$Res>(_value.payablesAccount!, (value) {
-      return _then(_value.copyWith(payablesAccount: value) as $Val);
+      return _then(_value.copyWith(payablesAccount: value));
     });
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $LocationCopyWith<$Res>? get location {
     if (_value.location == null) {
       return null;
     }
 
     return $LocationCopyWith<$Res>(_value.location!, (value) {
-      return _then(_value.copyWith(location: value) as $Val);
+      return _then(_value.copyWith(location: value));
     });
   }
 }
@@ -242,7 +237,6 @@ abstract class _$$_SupplierProfileCopyWith<$Res>
           _$_SupplierProfile value, $Res Function(_$_SupplierProfile) then) =
       __$$_SupplierProfileCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'supplierID')
           String? supplierID,
@@ -287,13 +281,15 @@ abstract class _$$_SupplierProfileCopyWith<$Res>
 
 /// @nodoc
 class __$$_SupplierProfileCopyWithImpl<$Res>
-    extends _$SupplierProfileCopyWithImpl<$Res, _$_SupplierProfile>
+    extends _$SupplierProfileCopyWithImpl<$Res>
     implements _$$_SupplierProfileCopyWith<$Res> {
   __$$_SupplierProfileCopyWithImpl(
       _$_SupplierProfile _value, $Res Function(_$_SupplierProfile) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_SupplierProfile));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_SupplierProfile get _value => super._value as _$_SupplierProfile;
+
   @override
   $Res call({
     Object? supplierID = freezed,
@@ -315,71 +311,71 @@ class __$$_SupplierProfileCopyWithImpl<$Res>
     Object? kycSubmitted = freezed,
   }) {
     return _then(_$_SupplierProfile(
-      supplierID: freezed == supplierID
+      supplierID: supplierID == freezed
           ? _value.supplierID
           : supplierID // ignore: cast_nullable_to_non_nullable
               as String?,
-      profileID: freezed == profileID
+      profileID: profileID == freezed
           ? _value.profileID
           : profileID // ignore: cast_nullable_to_non_nullable
               as String?,
-      erpSupplierID: freezed == erpSupplierID
+      erpSupplierID: erpSupplierID == freezed
           ? _value.erpSupplierID
           : erpSupplierID // ignore: cast_nullable_to_non_nullable
               as String?,
-      payablesAccount: freezed == payablesAccount
+      payablesAccount: payablesAccount == freezed
           ? _value.payablesAccount
           : payablesAccount // ignore: cast_nullable_to_non_nullable
               as PayablesAccount?,
-      supplierKYC: freezed == supplierKYC
+      supplierKYC: supplierKYC == freezed
           ? _value._supplierKYC
           : supplierKYC // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      active: freezed == active
+      active: active == freezed
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
               as bool?,
-      accountType: freezed == accountType
+      accountType: accountType == freezed
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
               as SupplierAccountType?,
-      underOrganization: freezed == underOrganization
+      underOrganization: underOrganization == freezed
           ? _value.underOrganization
           : underOrganization // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isOrganizationVerified: freezed == isOrganizationVerified
+      isOrganizationVerified: isOrganizationVerified == freezed
           ? _value.isOrganizationVerified
           : isOrganizationVerified // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sladeCode: freezed == sladeCode
+      sladeCode: sladeCode == freezed
           ? _value.sladeCode
           : sladeCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      parentOrganizationID: freezed == parentOrganizationID
+      parentOrganizationID: parentOrganizationID == freezed
           ? _value.parentOrganizationID
           : parentOrganizationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      organizationName: freezed == organizationName
+      organizationName: organizationName == freezed
           ? _value.organizationName
           : organizationName // ignore: cast_nullable_to_non_nullable
               as String?,
-      hasBranches: freezed == hasBranches
+      hasBranches: hasBranches == freezed
           ? _value.hasBranches
           : hasBranches // ignore: cast_nullable_to_non_nullable
               as bool?,
-      location: freezed == location
+      location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location?,
-      partnerType: freezed == partnerType
+      partnerType: partnerType == freezed
           ? _value.partnerType
           : partnerType // ignore: cast_nullable_to_non_nullable
               as SupplierPartnerType?,
-      partnerSetupComplete: freezed == partnerSetupComplete
+      partnerSetupComplete: partnerSetupComplete == freezed
           ? _value.partnerSetupComplete
           : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
               as bool?,
-      kycSubmitted: freezed == kycSubmitted
+      kycSubmitted: kycSubmitted == freezed
           ? _value.kycSubmitted
           : kycSubmitted // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -499,66 +495,62 @@ class _$_SupplierProfile implements _SupplierProfile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SupplierProfile &&
-            (identical(other.supplierID, supplierID) ||
-                other.supplierID == supplierID) &&
-            (identical(other.profileID, profileID) ||
-                other.profileID == profileID) &&
-            (identical(other.erpSupplierID, erpSupplierID) ||
-                other.erpSupplierID == erpSupplierID) &&
-            (identical(other.payablesAccount, payablesAccount) ||
-                other.payablesAccount == payablesAccount) &&
+            const DeepCollectionEquality()
+                .equals(other.supplierID, supplierID) &&
+            const DeepCollectionEquality().equals(other.profileID, profileID) &&
+            const DeepCollectionEquality()
+                .equals(other.erpSupplierID, erpSupplierID) &&
+            const DeepCollectionEquality()
+                .equals(other.payablesAccount, payablesAccount) &&
             const DeepCollectionEquality()
                 .equals(other._supplierKYC, _supplierKYC) &&
-            (identical(other.active, active) || other.active == active) &&
-            (identical(other.accountType, accountType) ||
-                other.accountType == accountType) &&
-            (identical(other.underOrganization, underOrganization) ||
-                other.underOrganization == underOrganization) &&
-            (identical(other.isOrganizationVerified, isOrganizationVerified) ||
-                other.isOrganizationVerified == isOrganizationVerified) &&
-            (identical(other.sladeCode, sladeCode) ||
-                other.sladeCode == sladeCode) &&
-            (identical(other.parentOrganizationID, parentOrganizationID) ||
-                other.parentOrganizationID == parentOrganizationID) &&
-            (identical(other.organizationName, organizationName) ||
-                other.organizationName == organizationName) &&
-            (identical(other.hasBranches, hasBranches) ||
-                other.hasBranches == hasBranches) &&
-            (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.partnerType, partnerType) ||
-                other.partnerType == partnerType) &&
-            (identical(other.partnerSetupComplete, partnerSetupComplete) ||
-                other.partnerSetupComplete == partnerSetupComplete) &&
-            (identical(other.kycSubmitted, kycSubmitted) ||
-                other.kycSubmitted == kycSubmitted));
+            const DeepCollectionEquality().equals(other.active, active) &&
+            const DeepCollectionEquality()
+                .equals(other.accountType, accountType) &&
+            const DeepCollectionEquality()
+                .equals(other.underOrganization, underOrganization) &&
+            const DeepCollectionEquality()
+                .equals(other.isOrganizationVerified, isOrganizationVerified) &&
+            const DeepCollectionEquality().equals(other.sladeCode, sladeCode) &&
+            const DeepCollectionEquality()
+                .equals(other.parentOrganizationID, parentOrganizationID) &&
+            const DeepCollectionEquality()
+                .equals(other.organizationName, organizationName) &&
+            const DeepCollectionEquality()
+                .equals(other.hasBranches, hasBranches) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality()
+                .equals(other.partnerType, partnerType) &&
+            const DeepCollectionEquality()
+                .equals(other.partnerSetupComplete, partnerSetupComplete) &&
+            const DeepCollectionEquality()
+                .equals(other.kycSubmitted, kycSubmitted));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      supplierID,
-      profileID,
-      erpSupplierID,
-      payablesAccount,
+      const DeepCollectionEquality().hash(supplierID),
+      const DeepCollectionEquality().hash(profileID),
+      const DeepCollectionEquality().hash(erpSupplierID),
+      const DeepCollectionEquality().hash(payablesAccount),
       const DeepCollectionEquality().hash(_supplierKYC),
-      active,
-      accountType,
-      underOrganization,
-      isOrganizationVerified,
-      sladeCode,
-      parentOrganizationID,
-      organizationName,
-      hasBranches,
-      location,
-      partnerType,
-      partnerSetupComplete,
-      kycSubmitted);
+      const DeepCollectionEquality().hash(active),
+      const DeepCollectionEquality().hash(accountType),
+      const DeepCollectionEquality().hash(underOrganization),
+      const DeepCollectionEquality().hash(isOrganizationVerified),
+      const DeepCollectionEquality().hash(sladeCode),
+      const DeepCollectionEquality().hash(parentOrganizationID),
+      const DeepCollectionEquality().hash(organizationName),
+      const DeepCollectionEquality().hash(hasBranches),
+      const DeepCollectionEquality().hash(location),
+      const DeepCollectionEquality().hash(partnerType),
+      const DeepCollectionEquality().hash(partnerSetupComplete),
+      const DeepCollectionEquality().hash(kycSubmitted));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_SupplierProfileCopyWith<_$_SupplierProfile> get copyWith =>
       __$$_SupplierProfileCopyWithImpl<_$_SupplierProfile>(this, _$identity);
 

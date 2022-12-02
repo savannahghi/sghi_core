@@ -43,8 +43,7 @@ mixin _$ReceivablesAccount {
 abstract class $ReceivablesAccountCopyWith<$Res> {
   factory $ReceivablesAccountCopyWith(
           ReceivablesAccount value, $Res Function(ReceivablesAccount) then) =
-      _$ReceivablesAccountCopyWithImpl<$Res, ReceivablesAccount>;
-  @useResult
+      _$ReceivablesAccountCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
@@ -55,16 +54,14 @@ abstract class $ReceivablesAccountCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ReceivablesAccountCopyWithImpl<$Res, $Val extends ReceivablesAccount>
+class _$ReceivablesAccountCopyWithImpl<$Res>
     implements $ReceivablesAccountCopyWith<$Res> {
   _$ReceivablesAccountCopyWithImpl(this._value, this._then);
 
+  final ReceivablesAccount _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ReceivablesAccount) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -75,31 +72,31 @@ class _$ReceivablesAccountCopyWithImpl<$Res, $Val extends ReceivablesAccount>
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      isActive: freezed == isActive
+      isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      number: freezed == number
+      number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as String?,
-      tag: freezed == tag
+      tag: tag == freezed
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
+      description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -110,7 +107,6 @@ abstract class _$$_ReceivablesAccountCopyWith<$Res>
           $Res Function(_$_ReceivablesAccount) then) =
       __$$_ReceivablesAccountCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
@@ -122,13 +118,15 @@ abstract class _$$_ReceivablesAccountCopyWith<$Res>
 
 /// @nodoc
 class __$$_ReceivablesAccountCopyWithImpl<$Res>
-    extends _$ReceivablesAccountCopyWithImpl<$Res, _$_ReceivablesAccount>
+    extends _$ReceivablesAccountCopyWithImpl<$Res>
     implements _$$_ReceivablesAccountCopyWith<$Res> {
   __$$_ReceivablesAccountCopyWithImpl(
       _$_ReceivablesAccount _value, $Res Function(_$_ReceivablesAccount) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ReceivablesAccount));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ReceivablesAccount get _value => super._value as _$_ReceivablesAccount;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -139,27 +137,27 @@ class __$$_ReceivablesAccountCopyWithImpl<$Res>
     Object? description = freezed,
   }) {
     return _then(_$_ReceivablesAccount(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      isActive: freezed == isActive
+      isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      number: freezed == number
+      number: number == freezed
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as String?,
-      tag: freezed == tag
+      tag: tag == freezed
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
+      description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -210,24 +208,28 @@ class _$_ReceivablesAccount implements _ReceivablesAccount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ReceivablesAccount &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.isActive, isActive) ||
-                other.isActive == isActive) &&
-            (identical(other.number, number) || other.number == number) &&
-            (identical(other.tag, tag) || other.tag == tag) &&
-            (identical(other.description, description) ||
-                other.description == description));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.isActive, isActive) &&
+            const DeepCollectionEquality().equals(other.number, number) &&
+            const DeepCollectionEquality().equals(other.tag, tag) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, isActive, number, tag, description);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(isActive),
+      const DeepCollectionEquality().hash(number),
+      const DeepCollectionEquality().hash(tag),
+      const DeepCollectionEquality().hash(description));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ReceivablesAccountCopyWith<_$_ReceivablesAccount> get copyWith =>
       __$$_ReceivablesAccountCopyWithImpl<_$_ReceivablesAccount>(
           this, _$identity);

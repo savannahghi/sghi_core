@@ -41,8 +41,7 @@ mixin _$Navigation {
 abstract class $NavigationCopyWith<$Res> {
   factory $NavigationCopyWith(
           Navigation value, $Res Function(Navigation) then) =
-      _$NavigationCopyWithImpl<$Res, Navigation>;
-  @useResult
+      _$NavigationCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
       @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
@@ -51,41 +50,38 @@ abstract class $NavigationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NavigationCopyWithImpl<$Res, $Val extends Navigation>
-    implements $NavigationCopyWith<$Res> {
+class _$NavigationCopyWithImpl<$Res> implements $NavigationCopyWith<$Res> {
   _$NavigationCopyWithImpl(this._value, this._then);
 
+  final Navigation _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Navigation) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? primaryActions = freezed,
     Object? secondaryActions = freezed,
-    Object? drawerSelectedIndex = null,
-    Object? bottomBarSelectedIndex = null,
+    Object? drawerSelectedIndex = freezed,
+    Object? bottomBarSelectedIndex = freezed,
   }) {
     return _then(_value.copyWith(
-      primaryActions: freezed == primaryActions
+      primaryActions: primaryActions == freezed
           ? _value.primaryActions
           : primaryActions // ignore: cast_nullable_to_non_nullable
               as List<NavigationItem>?,
-      secondaryActions: freezed == secondaryActions
+      secondaryActions: secondaryActions == freezed
           ? _value.secondaryActions
           : secondaryActions // ignore: cast_nullable_to_non_nullable
               as List<NavigationItem>?,
-      drawerSelectedIndex: null == drawerSelectedIndex
+      drawerSelectedIndex: drawerSelectedIndex == freezed
           ? _value.drawerSelectedIndex
           : drawerSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      bottomBarSelectedIndex: null == bottomBarSelectedIndex
+      bottomBarSelectedIndex: bottomBarSelectedIndex == freezed
           ? _value.bottomBarSelectedIndex
           : bottomBarSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
-    ) as $Val);
+    ));
   }
 }
 
@@ -96,7 +92,6 @@ abstract class _$$_NavigationCopyWith<$Res>
           _$_Navigation value, $Res Function(_$_Navigation) then) =
       __$$_NavigationCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
       @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
@@ -105,35 +100,36 @@ abstract class _$$_NavigationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NavigationCopyWithImpl<$Res>
-    extends _$NavigationCopyWithImpl<$Res, _$_Navigation>
+class __$$_NavigationCopyWithImpl<$Res> extends _$NavigationCopyWithImpl<$Res>
     implements _$$_NavigationCopyWith<$Res> {
   __$$_NavigationCopyWithImpl(
       _$_Navigation _value, $Res Function(_$_Navigation) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Navigation));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Navigation get _value => super._value as _$_Navigation;
+
   @override
   $Res call({
     Object? primaryActions = freezed,
     Object? secondaryActions = freezed,
-    Object? drawerSelectedIndex = null,
-    Object? bottomBarSelectedIndex = null,
+    Object? drawerSelectedIndex = freezed,
+    Object? bottomBarSelectedIndex = freezed,
   }) {
     return _then(_$_Navigation(
-      primaryActions: freezed == primaryActions
+      primaryActions: primaryActions == freezed
           ? _value._primaryActions
           : primaryActions // ignore: cast_nullable_to_non_nullable
               as List<NavigationItem>?,
-      secondaryActions: freezed == secondaryActions
+      secondaryActions: secondaryActions == freezed
           ? _value._secondaryActions
           : secondaryActions // ignore: cast_nullable_to_non_nullable
               as List<NavigationItem>?,
-      drawerSelectedIndex: null == drawerSelectedIndex
+      drawerSelectedIndex: drawerSelectedIndex == freezed
           ? _value.drawerSelectedIndex
           : drawerSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      bottomBarSelectedIndex: null == bottomBarSelectedIndex
+      bottomBarSelectedIndex: bottomBarSelectedIndex == freezed
           ? _value.bottomBarSelectedIndex
           : bottomBarSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
@@ -196,10 +192,10 @@ class _$_Navigation implements _Navigation {
                 .equals(other._primaryActions, _primaryActions) &&
             const DeepCollectionEquality()
                 .equals(other._secondaryActions, _secondaryActions) &&
-            (identical(other.drawerSelectedIndex, drawerSelectedIndex) ||
-                other.drawerSelectedIndex == drawerSelectedIndex) &&
-            (identical(other.bottomBarSelectedIndex, bottomBarSelectedIndex) ||
-                other.bottomBarSelectedIndex == bottomBarSelectedIndex));
+            const DeepCollectionEquality()
+                .equals(other.drawerSelectedIndex, drawerSelectedIndex) &&
+            const DeepCollectionEquality()
+                .equals(other.bottomBarSelectedIndex, bottomBarSelectedIndex));
   }
 
   @JsonKey(ignore: true)
@@ -208,12 +204,11 @@ class _$_Navigation implements _Navigation {
       runtimeType,
       const DeepCollectionEquality().hash(_primaryActions),
       const DeepCollectionEquality().hash(_secondaryActions),
-      drawerSelectedIndex,
-      bottomBarSelectedIndex);
+      const DeepCollectionEquality().hash(drawerSelectedIndex),
+      const DeepCollectionEquality().hash(bottomBarSelectedIndex));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NavigationCopyWith<_$_Navigation> get copyWith =>
       __$$_NavigationCopyWithImpl<_$_Navigation>(this, _$identity);
 

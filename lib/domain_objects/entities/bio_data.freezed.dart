@@ -37,8 +37,7 @@ mixin _$BioData {
 /// @nodoc
 abstract class $BioDataCopyWith<$Res> {
   factory $BioDataCopyWith(BioData value, $Res Function(BioData) then) =
-      _$BioDataCopyWithImpl<$Res, BioData>;
-  @useResult
+      _$BioDataCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'firstName')
           Name? firstName,
@@ -51,16 +50,13 @@ abstract class $BioDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BioDataCopyWithImpl<$Res, $Val extends BioData>
-    implements $BioDataCopyWith<$Res> {
+class _$BioDataCopyWithImpl<$Res> implements $BioDataCopyWith<$Res> {
   _$BioDataCopyWithImpl(this._value, this._then);
 
+  final BioData _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(BioData) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? firstName = freezed,
@@ -69,23 +65,23 @@ class _$BioDataCopyWithImpl<$Res, $Val extends BioData>
     Object? gender = freezed,
   }) {
     return _then(_value.copyWith(
-      firstName: freezed == firstName
+      firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      lastName: freezed == lastName
+      lastName: lastName == freezed
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      dateOfBirth: freezed == dateOfBirth
+      dateOfBirth: dateOfBirth == freezed
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: freezed == gender
+      gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -95,7 +91,6 @@ abstract class _$$_BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
           _$_BioData value, $Res Function(_$_BioData) then) =
       __$$_BioDataCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'firstName')
           Name? firstName,
@@ -108,13 +103,14 @@ abstract class _$$_BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_BioDataCopyWithImpl<$Res>
-    extends _$BioDataCopyWithImpl<$Res, _$_BioData>
+class __$$_BioDataCopyWithImpl<$Res> extends _$BioDataCopyWithImpl<$Res>
     implements _$$_BioDataCopyWith<$Res> {
   __$$_BioDataCopyWithImpl(_$_BioData _value, $Res Function(_$_BioData) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_BioData));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_BioData get _value => super._value as _$_BioData;
+
   @override
   $Res call({
     Object? firstName = freezed,
@@ -123,19 +119,19 @@ class __$$_BioDataCopyWithImpl<$Res>
     Object? gender = freezed,
   }) {
     return _then(_$_BioData(
-      firstName: freezed == firstName
+      firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      lastName: freezed == lastName
+      lastName: lastName == freezed
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as Name?,
-      dateOfBirth: freezed == dateOfBirth
+      dateOfBirth: dateOfBirth == freezed
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: freezed == gender
+      gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
@@ -178,23 +174,24 @@ class _$_BioData implements _BioData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BioData &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.dateOfBirth, dateOfBirth) ||
-                other.dateOfBirth == dateOfBirth) &&
-            (identical(other.gender, gender) || other.gender == gender));
+            const DeepCollectionEquality().equals(other.firstName, firstName) &&
+            const DeepCollectionEquality().equals(other.lastName, lastName) &&
+            const DeepCollectionEquality()
+                .equals(other.dateOfBirth, dateOfBirth) &&
+            const DeepCollectionEquality().equals(other.gender, gender));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, firstName, lastName, dateOfBirth, gender);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(firstName),
+      const DeepCollectionEquality().hash(lastName),
+      const DeepCollectionEquality().hash(dateOfBirth),
+      const DeepCollectionEquality().hash(gender));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_BioDataCopyWith<_$_BioData> get copyWith =>
       __$$_BioDataCopyWithImpl<_$_BioData>(this, _$identity);
 

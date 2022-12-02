@@ -41,8 +41,7 @@ mixin _$Cover {
 /// @nodoc
 abstract class $CoverCopyWith<$Res> {
   factory $CoverCopyWith(Cover value, $Res Function(Cover) then) =
-      _$CoverCopyWithImpl<$Res, Cover>;
-  @useResult
+      _$CoverCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
@@ -53,16 +52,13 @@ abstract class $CoverCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CoverCopyWithImpl<$Res, $Val extends Cover>
-    implements $CoverCopyWith<$Res> {
+class _$CoverCopyWithImpl<$Res> implements $CoverCopyWith<$Res> {
   _$CoverCopyWithImpl(this._value, this._then);
 
+  final Cover _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Cover) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? payerName = freezed,
@@ -73,31 +69,31 @@ class _$CoverCopyWithImpl<$Res, $Val extends Cover>
     Object? validFrom = freezed,
   }) {
     return _then(_value.copyWith(
-      payerName: freezed == payerName
+      payerName: payerName == freezed
           ? _value.payerName
           : payerName // ignore: cast_nullable_to_non_nullable
               as String?,
-      payerSladeCode: freezed == payerSladeCode
+      payerSladeCode: payerSladeCode == freezed
           ? _value.payerSladeCode
           : payerSladeCode // ignore: cast_nullable_to_non_nullable
               as int?,
-      memberNumber: freezed == memberNumber
+      memberNumber: memberNumber == freezed
           ? _value.memberNumber
           : memberNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      memberName: freezed == memberName
+      memberName: memberName == freezed
           ? _value.memberName
           : memberName // ignore: cast_nullable_to_non_nullable
               as String?,
-      validTo: freezed == validTo
+      validTo: validTo == freezed
           ? _value.validTo
           : validTo // ignore: cast_nullable_to_non_nullable
               as String?,
-      validFrom: freezed == validFrom
+      validFrom: validFrom == freezed
           ? _value.validFrom
           : validFrom // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -106,7 +102,6 @@ abstract class _$$_CoverCopyWith<$Res> implements $CoverCopyWith<$Res> {
   factory _$$_CoverCopyWith(_$_Cover value, $Res Function(_$_Cover) then) =
       __$$_CoverCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
@@ -117,12 +112,14 @@ abstract class _$$_CoverCopyWith<$Res> implements $CoverCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res, _$_Cover>
+class __$$_CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
     implements _$$_CoverCopyWith<$Res> {
   __$$_CoverCopyWithImpl(_$_Cover _value, $Res Function(_$_Cover) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Cover));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Cover get _value => super._value as _$_Cover;
+
   @override
   $Res call({
     Object? payerName = freezed,
@@ -133,27 +130,27 @@ class __$$_CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res, _$_Cover>
     Object? validFrom = freezed,
   }) {
     return _then(_$_Cover(
-      payerName: freezed == payerName
+      payerName: payerName == freezed
           ? _value.payerName
           : payerName // ignore: cast_nullable_to_non_nullable
               as String?,
-      payerSladeCode: freezed == payerSladeCode
+      payerSladeCode: payerSladeCode == freezed
           ? _value.payerSladeCode
           : payerSladeCode // ignore: cast_nullable_to_non_nullable
               as int?,
-      memberNumber: freezed == memberNumber
+      memberNumber: memberNumber == freezed
           ? _value.memberNumber
           : memberNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      memberName: freezed == memberName
+      memberName: memberName == freezed
           ? _value.memberName
           : memberName // ignore: cast_nullable_to_non_nullable
               as String?,
-      validTo: freezed == validTo
+      validTo: validTo == freezed
           ? _value.validTo
           : validTo // ignore: cast_nullable_to_non_nullable
               as String?,
-      validFrom: freezed == validFrom
+      validFrom: validFrom == freezed
           ? _value.validFrom
           : validFrom // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -204,27 +201,30 @@ class _$_Cover implements _Cover {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Cover &&
-            (identical(other.payerName, payerName) ||
-                other.payerName == payerName) &&
-            (identical(other.payerSladeCode, payerSladeCode) ||
-                other.payerSladeCode == payerSladeCode) &&
-            (identical(other.memberNumber, memberNumber) ||
-                other.memberNumber == memberNumber) &&
-            (identical(other.memberName, memberName) ||
-                other.memberName == memberName) &&
-            (identical(other.validTo, validTo) || other.validTo == validTo) &&
-            (identical(other.validFrom, validFrom) ||
-                other.validFrom == validFrom));
+            const DeepCollectionEquality().equals(other.payerName, payerName) &&
+            const DeepCollectionEquality()
+                .equals(other.payerSladeCode, payerSladeCode) &&
+            const DeepCollectionEquality()
+                .equals(other.memberNumber, memberNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.memberName, memberName) &&
+            const DeepCollectionEquality().equals(other.validTo, validTo) &&
+            const DeepCollectionEquality().equals(other.validFrom, validFrom));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, payerName, payerSladeCode,
-      memberNumber, memberName, validTo, validFrom);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(payerName),
+      const DeepCollectionEquality().hash(payerSladeCode),
+      const DeepCollectionEquality().hash(memberNumber),
+      const DeepCollectionEquality().hash(memberName),
+      const DeepCollectionEquality().hash(validTo),
+      const DeepCollectionEquality().hash(validFrom));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_CoverCopyWith<_$_Cover> get copyWith =>
       __$$_CoverCopyWithImpl<_$_Cover>(this, _$identity);
 

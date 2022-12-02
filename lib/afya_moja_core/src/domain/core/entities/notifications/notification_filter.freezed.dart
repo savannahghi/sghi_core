@@ -35,39 +35,36 @@ mixin _$NotificationFilter {
 abstract class $NotificationFilterCopyWith<$Res> {
   factory $NotificationFilterCopyWith(
           NotificationFilter value, $Res Function(NotificationFilter) then) =
-      _$NotificationFilterCopyWithImpl<$Res, NotificationFilter>;
-  @useResult
+      _$NotificationFilterCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'enum') NotificationType? type});
 }
 
 /// @nodoc
-class _$NotificationFilterCopyWithImpl<$Res, $Val extends NotificationFilter>
+class _$NotificationFilterCopyWithImpl<$Res>
     implements $NotificationFilterCopyWith<$Res> {
   _$NotificationFilterCopyWithImpl(this._value, this._then);
 
+  final NotificationFilter _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(NotificationFilter) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
     Object? type = freezed,
   }) {
     return _then(_value.copyWith(
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: freezed == type
+      type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationType?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -78,7 +75,6 @@ abstract class _$$_NotificationFilterCopyWith<$Res>
           $Res Function(_$_NotificationFilter) then) =
       __$$_NotificationFilterCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'enum') NotificationType? type});
@@ -86,24 +82,26 @@ abstract class _$$_NotificationFilterCopyWith<$Res>
 
 /// @nodoc
 class __$$_NotificationFilterCopyWithImpl<$Res>
-    extends _$NotificationFilterCopyWithImpl<$Res, _$_NotificationFilter>
+    extends _$NotificationFilterCopyWithImpl<$Res>
     implements _$$_NotificationFilterCopyWith<$Res> {
   __$$_NotificationFilterCopyWithImpl(
       _$_NotificationFilter _value, $Res Function(_$_NotificationFilter) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_NotificationFilter));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_NotificationFilter get _value => super._value as _$_NotificationFilter;
+
   @override
   $Res call({
     Object? name = freezed,
     Object? type = freezed,
   }) {
     return _then(_$_NotificationFilter(
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: freezed == type
+      type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationType?,
@@ -137,17 +135,19 @@ class _$_NotificationFilter implements _NotificationFilter {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NotificationFilter &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.type, type) || other.type == type));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.type, type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, type);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(type));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NotificationFilterCopyWith<_$_NotificationFilter> get copyWith =>
       __$$_NotificationFilterCopyWithImpl<_$_NotificationFilter>(
           this, _$identity);

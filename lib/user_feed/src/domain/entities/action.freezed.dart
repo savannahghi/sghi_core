@@ -43,8 +43,7 @@ mixin _$Action {
 /// @nodoc
 abstract class $ActionCopyWith<$Res> {
   factory $ActionCopyWith(Action value, $Res Function(Action) then) =
-      _$ActionCopyWithImpl<$Res, Action>;
-  @useResult
+      _$ActionCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -65,16 +64,13 @@ abstract class $ActionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ActionCopyWithImpl<$Res, $Val extends Action>
-    implements $ActionCopyWith<$Res> {
+class _$ActionCopyWithImpl<$Res> implements $ActionCopyWith<$Res> {
   _$ActionCopyWithImpl(this._value, this._then);
 
+  final Action _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Action) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -86,46 +82,45 @@ class _$ActionCopyWithImpl<$Res, $Val extends Action>
     Object? allowAnonymous = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      actionType: freezed == actionType
+      actionType: actionType == freezed
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as ActionType?,
-      handling: freezed == handling
+      handling: handling == freezed
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
               as Handling?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: freezed == icon
+      icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Link?,
-      allowAnonymous: freezed == allowAnonymous
+      allowAnonymous: allowAnonymous == freezed
           ? _value.allowAnonymous
           : allowAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $LinkCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
     }
 
     return $LinkCopyWith<$Res>(_value.icon!, (value) {
-      return _then(_value.copyWith(icon: value) as $Val);
+      return _then(_value.copyWith(icon: value));
     });
   }
 }
@@ -135,7 +130,6 @@ abstract class _$$_ActionCopyWith<$Res> implements $ActionCopyWith<$Res> {
   factory _$$_ActionCopyWith(_$_Action value, $Res Function(_$_Action) then) =
       __$$_ActionCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -157,13 +151,14 @@ abstract class _$$_ActionCopyWith<$Res> implements $ActionCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ActionCopyWithImpl<$Res>
-    extends _$ActionCopyWithImpl<$Res, _$_Action>
+class __$$_ActionCopyWithImpl<$Res> extends _$ActionCopyWithImpl<$Res>
     implements _$$_ActionCopyWith<$Res> {
   __$$_ActionCopyWithImpl(_$_Action _value, $Res Function(_$_Action) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Action));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Action get _value => super._value as _$_Action;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -175,31 +170,31 @@ class __$$_ActionCopyWithImpl<$Res>
     Object? allowAnonymous = freezed,
   }) {
     return _then(_$_Action(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      sequenceNumber: freezed == sequenceNumber
+      sequenceNumber: sequenceNumber == freezed
           ? _value.sequenceNumber
           : sequenceNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      actionType: freezed == actionType
+      actionType: actionType == freezed
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
               as ActionType?,
-      handling: freezed == handling
+      handling: handling == freezed
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
               as Handling?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: freezed == icon
+      icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Link?,
-      allowAnonymous: freezed == allowAnonymous
+      allowAnonymous: allowAnonymous == freezed
           ? _value.allowAnonymous
           : allowAnonymous // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -261,27 +256,32 @@ class _$_Action implements _Action {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Action &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.sequenceNumber, sequenceNumber) ||
-                other.sequenceNumber == sequenceNumber) &&
-            (identical(other.actionType, actionType) ||
-                other.actionType == actionType) &&
-            (identical(other.handling, handling) ||
-                other.handling == handling) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.allowAnonymous, allowAnonymous) ||
-                other.allowAnonymous == allowAnonymous));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.sequenceNumber, sequenceNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.actionType, actionType) &&
+            const DeepCollectionEquality().equals(other.handling, handling) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality()
+                .equals(other.allowAnonymous, allowAnonymous));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, sequenceNumber, actionType,
-      handling, name, icon, allowAnonymous);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(sequenceNumber),
+      const DeepCollectionEquality().hash(actionType),
+      const DeepCollectionEquality().hash(handling),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(allowAnonymous));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ActionCopyWith<_$_Action> get copyWith =>
       __$$_ActionCopyWithImpl<_$_Action>(this, _$identity);
 

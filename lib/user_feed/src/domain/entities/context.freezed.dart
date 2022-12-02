@@ -39,8 +39,7 @@ mixin _$Context {
 /// @nodoc
 abstract class $ContextCopyWith<$Res> {
   factory $ContextCopyWith(Context value, $Res Function(Context) then) =
-      _$ContextCopyWithImpl<$Res, Context>;
-  @useResult
+      _$ContextCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'userID')
           String? userID,
@@ -55,16 +54,13 @@ abstract class $ContextCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ContextCopyWithImpl<$Res, $Val extends Context>
-    implements $ContextCopyWith<$Res> {
+class _$ContextCopyWithImpl<$Res> implements $ContextCopyWith<$Res> {
   _$ContextCopyWithImpl(this._value, this._then);
 
+  final Context _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Context) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? userID = freezed,
@@ -74,27 +70,27 @@ class _$ContextCopyWithImpl<$Res, $Val extends Context>
     Object? timestamp = freezed,
   }) {
     return _then(_value.copyWith(
-      userID: freezed == userID
+      userID: userID == freezed
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String?,
-      flavour: freezed == flavour
+      flavour: flavour == freezed
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as Flavour?,
-      organizationID: freezed == organizationID
+      organizationID: organizationID == freezed
           ? _value.organizationID
           : organizationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      locationID: freezed == locationID
+      locationID: locationID == freezed
           ? _value.locationID
           : locationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: freezed == timestamp
+      timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -104,7 +100,6 @@ abstract class _$$_ContextCopyWith<$Res> implements $ContextCopyWith<$Res> {
           _$_Context value, $Res Function(_$_Context) then) =
       __$$_ContextCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'userID')
           String? userID,
@@ -119,13 +114,14 @@ abstract class _$$_ContextCopyWith<$Res> implements $ContextCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ContextCopyWithImpl<$Res>
-    extends _$ContextCopyWithImpl<$Res, _$_Context>
+class __$$_ContextCopyWithImpl<$Res> extends _$ContextCopyWithImpl<$Res>
     implements _$$_ContextCopyWith<$Res> {
   __$$_ContextCopyWithImpl(_$_Context _value, $Res Function(_$_Context) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Context));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Context get _value => super._value as _$_Context;
+
   @override
   $Res call({
     Object? userID = freezed,
@@ -135,23 +131,23 @@ class __$$_ContextCopyWithImpl<$Res>
     Object? timestamp = freezed,
   }) {
     return _then(_$_Context(
-      userID: freezed == userID
+      userID: userID == freezed
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String?,
-      flavour: freezed == flavour
+      flavour: flavour == freezed
           ? _value.flavour
           : flavour // ignore: cast_nullable_to_non_nullable
               as Flavour?,
-      organizationID: freezed == organizationID
+      organizationID: organizationID == freezed
           ? _value.organizationID
           : organizationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      locationID: freezed == locationID
+      locationID: locationID == freezed
           ? _value.locationID
           : locationID // ignore: cast_nullable_to_non_nullable
               as String?,
-      timestamp: freezed == timestamp
+      timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -198,24 +194,27 @@ class _$_Context implements _Context {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Context &&
-            (identical(other.userID, userID) || other.userID == userID) &&
-            (identical(other.flavour, flavour) || other.flavour == flavour) &&
-            (identical(other.organizationID, organizationID) ||
-                other.organizationID == organizationID) &&
-            (identical(other.locationID, locationID) ||
-                other.locationID == locationID) &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp));
+            const DeepCollectionEquality().equals(other.userID, userID) &&
+            const DeepCollectionEquality().equals(other.flavour, flavour) &&
+            const DeepCollectionEquality()
+                .equals(other.organizationID, organizationID) &&
+            const DeepCollectionEquality()
+                .equals(other.locationID, locationID) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, userID, flavour, organizationID, locationID, timestamp);
+      runtimeType,
+      const DeepCollectionEquality().hash(userID),
+      const DeepCollectionEquality().hash(flavour),
+      const DeepCollectionEquality().hash(organizationID),
+      const DeepCollectionEquality().hash(locationID),
+      const DeepCollectionEquality().hash(timestamp));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ContextCopyWith<_$_Context> get copyWith =>
       __$$_ContextCopyWithImpl<_$_Context>(this, _$identity);
 

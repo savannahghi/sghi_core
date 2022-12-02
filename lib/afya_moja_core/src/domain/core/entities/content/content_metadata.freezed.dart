@@ -35,39 +35,36 @@ mixin _$ContentMetadata {
 abstract class $ContentMetadataCopyWith<$Res> {
   factory $ContentMetadataCopyWith(
           ContentMetadata value, $Res Function(ContentMetadata) then) =
-      _$ContentMetadataCopyWithImpl<$Res, ContentMetadata>;
-  @useResult
+      _$ContentMetadataCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'contentHTMLURL') String? publicLink,
       @JsonKey(name: 'firstPublishedAt') String? createdAt});
 }
 
 /// @nodoc
-class _$ContentMetadataCopyWithImpl<$Res, $Val extends ContentMetadata>
+class _$ContentMetadataCopyWithImpl<$Res>
     implements $ContentMetadataCopyWith<$Res> {
   _$ContentMetadataCopyWithImpl(this._value, this._then);
 
+  final ContentMetadata _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ContentMetadata) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? publicLink = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
-      publicLink: freezed == publicLink
+      publicLink: publicLink == freezed
           ? _value.publicLink
           : publicLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: freezed == createdAt
+      createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -78,7 +75,6 @@ abstract class _$$_ContentMetadataCopyWith<$Res>
           _$_ContentMetadata value, $Res Function(_$_ContentMetadata) then) =
       __$$_ContentMetadataCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'contentHTMLURL') String? publicLink,
       @JsonKey(name: 'firstPublishedAt') String? createdAt});
@@ -86,24 +82,26 @@ abstract class _$$_ContentMetadataCopyWith<$Res>
 
 /// @nodoc
 class __$$_ContentMetadataCopyWithImpl<$Res>
-    extends _$ContentMetadataCopyWithImpl<$Res, _$_ContentMetadata>
+    extends _$ContentMetadataCopyWithImpl<$Res>
     implements _$$_ContentMetadataCopyWith<$Res> {
   __$$_ContentMetadataCopyWithImpl(
       _$_ContentMetadata _value, $Res Function(_$_ContentMetadata) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ContentMetadata));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ContentMetadata get _value => super._value as _$_ContentMetadata;
+
   @override
   $Res call({
     Object? publicLink = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_$_ContentMetadata(
-      publicLink: freezed == publicLink
+      publicLink: publicLink == freezed
           ? _value.publicLink
           : publicLink // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: freezed == createdAt
+      createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -138,19 +136,20 @@ class _$_ContentMetadata implements _ContentMetadata {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ContentMetadata &&
-            (identical(other.publicLink, publicLink) ||
-                other.publicLink == publicLink) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            const DeepCollectionEquality()
+                .equals(other.publicLink, publicLink) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, publicLink, createdAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(publicLink),
+      const DeepCollectionEquality().hash(createdAt));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ContentMetadataCopyWith<_$_ContentMetadata> get copyWith =>
       __$$_ContentMetadataCopyWithImpl<_$_ContentMetadata>(this, _$identity);
 

@@ -31,32 +31,28 @@ mixin _$Payload {
 /// @nodoc
 abstract class $PayloadCopyWith<$Res> {
   factory $PayloadCopyWith(Payload value, $Res Function(Payload) then) =
-      _$PayloadCopyWithImpl<$Res, Payload>;
-  @useResult
+      _$PayloadCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'pattern') String? pattern});
 }
 
 /// @nodoc
-class _$PayloadCopyWithImpl<$Res, $Val extends Payload>
-    implements $PayloadCopyWith<$Res> {
+class _$PayloadCopyWithImpl<$Res> implements $PayloadCopyWith<$Res> {
   _$PayloadCopyWithImpl(this._value, this._then);
 
+  final Payload _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Payload) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? pattern = freezed,
   }) {
     return _then(_value.copyWith(
-      pattern: freezed == pattern
+      pattern: pattern == freezed
           ? _value.pattern
           : pattern // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -66,24 +62,24 @@ abstract class _$$_PayloadCopyWith<$Res> implements $PayloadCopyWith<$Res> {
           _$_Payload value, $Res Function(_$_Payload) then) =
       __$$_PayloadCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'pattern') String? pattern});
 }
 
 /// @nodoc
-class __$$_PayloadCopyWithImpl<$Res>
-    extends _$PayloadCopyWithImpl<$Res, _$_Payload>
+class __$$_PayloadCopyWithImpl<$Res> extends _$PayloadCopyWithImpl<$Res>
     implements _$$_PayloadCopyWith<$Res> {
   __$$_PayloadCopyWithImpl(_$_Payload _value, $Res Function(_$_Payload) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Payload));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Payload get _value => super._value as _$_Payload;
+
   @override
   $Res call({
     Object? pattern = freezed,
   }) {
     return _then(_$_Payload(
-      pattern: freezed == pattern
+      pattern: pattern == freezed
           ? _value.pattern
           : pattern // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -113,16 +109,16 @@ class _$_Payload implements _Payload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Payload &&
-            (identical(other.pattern, pattern) || other.pattern == pattern));
+            const DeepCollectionEquality().equals(other.pattern, pattern));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, pattern);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(pattern));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_PayloadCopyWith<_$_Payload> get copyWith =>
       __$$_PayloadCopyWithImpl<_$_Payload>(this, _$identity);
 

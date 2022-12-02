@@ -33,32 +33,28 @@ mixin _$OtpResponse {
 abstract class $OtpResponseCopyWith<$Res> {
   factory $OtpResponseCopyWith(
           OtpResponse value, $Res Function(OtpResponse) then) =
-      _$OtpResponseCopyWithImpl<$Res, OtpResponse>;
-  @useResult
+      _$OtpResponseCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'otp') String? otp});
 }
 
 /// @nodoc
-class _$OtpResponseCopyWithImpl<$Res, $Val extends OtpResponse>
-    implements $OtpResponseCopyWith<$Res> {
+class _$OtpResponseCopyWithImpl<$Res> implements $OtpResponseCopyWith<$Res> {
   _$OtpResponseCopyWithImpl(this._value, this._then);
 
+  final OtpResponse _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(OtpResponse) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? otp = freezed,
   }) {
     return _then(_value.copyWith(
-      otp: freezed == otp
+      otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -69,25 +65,25 @@ abstract class _$$_OtpResponseCopyWith<$Res>
           _$_OtpResponse value, $Res Function(_$_OtpResponse) then) =
       __$$_OtpResponseCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'otp') String? otp});
 }
 
 /// @nodoc
-class __$$_OtpResponseCopyWithImpl<$Res>
-    extends _$OtpResponseCopyWithImpl<$Res, _$_OtpResponse>
+class __$$_OtpResponseCopyWithImpl<$Res> extends _$OtpResponseCopyWithImpl<$Res>
     implements _$$_OtpResponseCopyWith<$Res> {
   __$$_OtpResponseCopyWithImpl(
       _$_OtpResponse _value, $Res Function(_$_OtpResponse) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_OtpResponse));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_OtpResponse get _value => super._value as _$_OtpResponse;
+
   @override
   $Res call({
     Object? otp = freezed,
   }) {
     return _then(_$_OtpResponse(
-      otp: freezed == otp
+      otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -117,16 +113,16 @@ class _$_OtpResponse implements _OtpResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OtpResponse &&
-            (identical(other.otp, otp) || other.otp == otp));
+            const DeepCollectionEquality().equals(other.otp, otp));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, otp);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(otp));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_OtpResponseCopyWith<_$_OtpResponse> get copyWith =>
       __$$_OtpResponseCopyWithImpl<_$_OtpResponse>(this, _$identity);
 

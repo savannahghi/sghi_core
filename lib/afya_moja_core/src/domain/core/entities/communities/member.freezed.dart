@@ -41,8 +41,7 @@ mixin _$Member {
 /// @nodoc
 abstract class $MemberCopyWith<$Res> {
   factory $MemberCopyWith(Member value, $Res Function(Member) then) =
-      _$MemberCopyWithImpl<$Res, Member>;
-  @useResult
+      _$MemberCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -61,16 +60,13 @@ abstract class $MemberCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MemberCopyWithImpl<$Res, $Val extends Member>
-    implements $MemberCopyWith<$Res> {
+class _$MemberCopyWithImpl<$Res> implements $MemberCopyWith<$Res> {
   _$MemberCopyWithImpl(this._value, this._then);
 
+  final Member _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Member) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -81,42 +77,41 @@ class _$MemberCopyWithImpl<$Res, $Val extends Member>
     Object? extraData = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      userID: freezed == userID
+      userID: userID == freezed
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String?,
-      role: freezed == role
+      role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: freezed == username
+      username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: freezed == gender
+      gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
-      extraData: freezed == extraData
+      extraData: extraData == freezed
           ? _value.extraData
           : extraData // ignore: cast_nullable_to_non_nullable
               as ExtraData?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $ExtraDataCopyWith<$Res>? get extraData {
     if (_value.extraData == null) {
       return null;
     }
 
     return $ExtraDataCopyWith<$Res>(_value.extraData!, (value) {
-      return _then(_value.copyWith(extraData: value) as $Val);
+      return _then(_value.copyWith(extraData: value));
     });
   }
 }
@@ -126,7 +121,6 @@ abstract class _$$_MemberCopyWith<$Res> implements $MemberCopyWith<$Res> {
   factory _$$_MemberCopyWith(_$_Member value, $Res Function(_$_Member) then) =
       __$$_MemberCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id')
           String? id,
@@ -146,13 +140,14 @@ abstract class _$$_MemberCopyWith<$Res> implements $MemberCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MemberCopyWithImpl<$Res>
-    extends _$MemberCopyWithImpl<$Res, _$_Member>
+class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
     implements _$$_MemberCopyWith<$Res> {
   __$$_MemberCopyWithImpl(_$_Member _value, $Res Function(_$_Member) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Member));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Member get _value => super._value as _$_Member;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -163,27 +158,27 @@ class __$$_MemberCopyWithImpl<$Res>
     Object? extraData = freezed,
   }) {
     return _then(_$_Member(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      userID: freezed == userID
+      userID: userID == freezed
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String?,
-      role: freezed == role
+      role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String?,
-      username: freezed == username
+      username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      gender: freezed == gender
+      gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender?,
-      extraData: freezed == extraData
+      extraData: extraData == freezed
           ? _value.extraData
           : extraData // ignore: cast_nullable_to_non_nullable
               as ExtraData?,
@@ -240,24 +235,27 @@ class _$_Member implements _Member {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Member &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.userID, userID) || other.userID == userID) &&
-            (identical(other.role, role) || other.role == role) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.extraData, extraData) ||
-                other.extraData == extraData));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.userID, userID) &&
+            const DeepCollectionEquality().equals(other.role, role) &&
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality().equals(other.gender, gender) &&
+            const DeepCollectionEquality().equals(other.extraData, extraData));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, userID, role, username, gender, extraData);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(userID),
+      const DeepCollectionEquality().hash(role),
+      const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(gender),
+      const DeepCollectionEquality().hash(extraData));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_MemberCopyWith<_$_Member> get copyWith =>
       __$$_MemberCopyWithImpl<_$_Member>(this, _$identity);
 

@@ -37,8 +37,7 @@ mixin _$ContentCategory {
 abstract class $ContentCategoryCopyWith<$Res> {
   factory $ContentCategoryCopyWith(
           ContentCategory value, $Res Function(ContentCategory) then) =
-      _$ContentCategoryCopyWithImpl<$Res, ContentCategory>;
-  @useResult
+      _$ContentCategoryCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') int? id,
       @JsonKey(name: 'name') String? name,
@@ -46,16 +45,14 @@ abstract class $ContentCategoryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ContentCategoryCopyWithImpl<$Res, $Val extends ContentCategory>
+class _$ContentCategoryCopyWithImpl<$Res>
     implements $ContentCategoryCopyWith<$Res> {
   _$ContentCategoryCopyWithImpl(this._value, this._then);
 
+  final ContentCategory _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ContentCategory) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -63,19 +60,19 @@ class _$ContentCategoryCopyWithImpl<$Res, $Val extends ContentCategory>
     Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: freezed == icon
+      icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -86,7 +83,6 @@ abstract class _$$_ContentCategoryCopyWith<$Res>
           _$_ContentCategory value, $Res Function(_$_ContentCategory) then) =
       __$$_ContentCategoryCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id') int? id,
       @JsonKey(name: 'name') String? name,
@@ -95,13 +91,15 @@ abstract class _$$_ContentCategoryCopyWith<$Res>
 
 /// @nodoc
 class __$$_ContentCategoryCopyWithImpl<$Res>
-    extends _$ContentCategoryCopyWithImpl<$Res, _$_ContentCategory>
+    extends _$ContentCategoryCopyWithImpl<$Res>
     implements _$$_ContentCategoryCopyWith<$Res> {
   __$$_ContentCategoryCopyWithImpl(
       _$_ContentCategory _value, $Res Function(_$_ContentCategory) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ContentCategory));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ContentCategory get _value => super._value as _$_ContentCategory;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -109,15 +107,15 @@ class __$$_ContentCategoryCopyWithImpl<$Res>
     Object? icon = freezed,
   }) {
     return _then(_$_ContentCategory(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: freezed == icon
+      icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -156,18 +154,21 @@ class _$_ContentCategory implements _ContentCategory {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ContentCategory &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.icon, icon) || other.icon == icon));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.icon, icon));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, icon);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(icon));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ContentCategoryCopyWith<_$_ContentCategory> get copyWith =>
       __$$_ContentCategoryCopyWithImpl<_$_ContentCategory>(this, _$identity);
 

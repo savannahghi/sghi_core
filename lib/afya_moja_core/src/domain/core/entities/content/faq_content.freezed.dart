@@ -33,45 +33,40 @@ mixin _$FAQContent {
 abstract class $FAQContentCopyWith<$Res> {
   factory $FAQContentCopyWith(
           FAQContent value, $Res Function(FAQContent) then) =
-      _$FAQContentCopyWithImpl<$Res, FAQContent>;
-  @useResult
+      _$FAQContentCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'getFAQs') FeedItems? feedContent});
 
   $FeedItemsCopyWith<$Res>? get feedContent;
 }
 
 /// @nodoc
-class _$FAQContentCopyWithImpl<$Res, $Val extends FAQContent>
-    implements $FAQContentCopyWith<$Res> {
+class _$FAQContentCopyWithImpl<$Res> implements $FAQContentCopyWith<$Res> {
   _$FAQContentCopyWithImpl(this._value, this._then);
 
+  final FAQContent _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(FAQContent) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? feedContent = freezed,
   }) {
     return _then(_value.copyWith(
-      feedContent: freezed == feedContent
+      feedContent: feedContent == freezed
           ? _value.feedContent
           : feedContent // ignore: cast_nullable_to_non_nullable
               as FeedItems?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $FeedItemsCopyWith<$Res>? get feedContent {
     if (_value.feedContent == null) {
       return null;
     }
 
     return $FeedItemsCopyWith<$Res>(_value.feedContent!, (value) {
-      return _then(_value.copyWith(feedContent: value) as $Val);
+      return _then(_value.copyWith(feedContent: value));
     });
   }
 }
@@ -83,7 +78,6 @@ abstract class _$$_FAQContentCopyWith<$Res>
           _$_FAQContent value, $Res Function(_$_FAQContent) then) =
       __$$_FAQContentCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({@JsonKey(name: 'getFAQs') FeedItems? feedContent});
 
   @override
@@ -91,20 +85,21 @@ abstract class _$$_FAQContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FAQContentCopyWithImpl<$Res>
-    extends _$FAQContentCopyWithImpl<$Res, _$_FAQContent>
+class __$$_FAQContentCopyWithImpl<$Res> extends _$FAQContentCopyWithImpl<$Res>
     implements _$$_FAQContentCopyWith<$Res> {
   __$$_FAQContentCopyWithImpl(
       _$_FAQContent _value, $Res Function(_$_FAQContent) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_FAQContent));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_FAQContent get _value => super._value as _$_FAQContent;
+
   @override
   $Res call({
     Object? feedContent = freezed,
   }) {
     return _then(_$_FAQContent(
-      feedContent: freezed == feedContent
+      feedContent: feedContent == freezed
           ? _value.feedContent
           : feedContent // ignore: cast_nullable_to_non_nullable
               as FeedItems?,
@@ -134,17 +129,17 @@ class _$_FAQContent implements _FAQContent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FAQContent &&
-            (identical(other.feedContent, feedContent) ||
-                other.feedContent == feedContent));
+            const DeepCollectionEquality()
+                .equals(other.feedContent, feedContent));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, feedContent);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(feedContent));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_FAQContentCopyWith<_$_FAQContent> get copyWith =>
       __$$_FAQContentCopyWithImpl<_$_FAQContent>(this, _$identity);
 

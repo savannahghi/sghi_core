@@ -39,8 +39,7 @@ mixin _$NavigationIcon {
 abstract class $NavigationIconCopyWith<$Res> {
   factory $NavigationIconCopyWith(
           NavigationIcon value, $Res Function(NavigationIcon) then) =
-      _$NavigationIconCopyWithImpl<$Res, NavigationIcon>;
-  @useResult
+      _$NavigationIconCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'url') String? iconUrl,
@@ -49,16 +48,14 @@ abstract class $NavigationIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NavigationIconCopyWithImpl<$Res, $Val extends NavigationIcon>
+class _$NavigationIconCopyWithImpl<$Res>
     implements $NavigationIconCopyWith<$Res> {
   _$NavigationIconCopyWithImpl(this._value, this._then);
 
+  final NavigationIcon _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(NavigationIcon) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -67,23 +64,23 @@ class _$NavigationIconCopyWithImpl<$Res, $Val extends NavigationIcon>
     Object? iconDescription = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconUrl: freezed == iconUrl
+      iconUrl: iconUrl == freezed
           ? _value.iconUrl
           : iconUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconTitle: freezed == iconTitle
+      iconTitle: iconTitle == freezed
           ? _value.iconTitle
           : iconTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconDescription: freezed == iconDescription
+      iconDescription: iconDescription == freezed
           ? _value.iconDescription
           : iconDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -94,7 +91,6 @@ abstract class _$$_NavigationIconCopyWith<$Res>
           _$_NavigationIcon value, $Res Function(_$_NavigationIcon) then) =
       __$$_NavigationIconCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'url') String? iconUrl,
@@ -104,13 +100,15 @@ abstract class _$$_NavigationIconCopyWith<$Res>
 
 /// @nodoc
 class __$$_NavigationIconCopyWithImpl<$Res>
-    extends _$NavigationIconCopyWithImpl<$Res, _$_NavigationIcon>
+    extends _$NavigationIconCopyWithImpl<$Res>
     implements _$$_NavigationIconCopyWith<$Res> {
   __$$_NavigationIconCopyWithImpl(
       _$_NavigationIcon _value, $Res Function(_$_NavigationIcon) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_NavigationIcon));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_NavigationIcon get _value => super._value as _$_NavigationIcon;
+
   @override
   $Res call({
     Object? id = freezed,
@@ -119,19 +117,19 @@ class __$$_NavigationIconCopyWithImpl<$Res>
     Object? iconDescription = freezed,
   }) {
     return _then(_$_NavigationIcon(
-      id: freezed == id
+      id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconUrl: freezed == iconUrl
+      iconUrl: iconUrl == freezed
           ? _value.iconUrl
           : iconUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconTitle: freezed == iconTitle
+      iconTitle: iconTitle == freezed
           ? _value.iconTitle
           : iconTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconDescription: freezed == iconDescription
+      iconDescription: iconDescription == freezed
           ? _value.iconDescription
           : iconDescription // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -174,22 +172,24 @@ class _$_NavigationIcon implements _NavigationIcon {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NavigationIcon &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl) &&
-            (identical(other.iconTitle, iconTitle) ||
-                other.iconTitle == iconTitle) &&
-            (identical(other.iconDescription, iconDescription) ||
-                other.iconDescription == iconDescription));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.iconUrl, iconUrl) &&
+            const DeepCollectionEquality().equals(other.iconTitle, iconTitle) &&
+            const DeepCollectionEquality()
+                .equals(other.iconDescription, iconDescription));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, iconUrl, iconTitle, iconDescription);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(iconUrl),
+      const DeepCollectionEquality().hash(iconTitle),
+      const DeepCollectionEquality().hash(iconDescription));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_NavigationIconCopyWith<_$_NavigationIcon> get copyWith =>
       __$$_NavigationIconCopyWithImpl<_$_NavigationIcon>(this, _$identity);
 

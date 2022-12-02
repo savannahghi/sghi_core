@@ -41,8 +41,7 @@ mixin _$Address {
 /// @nodoc
 abstract class $AddressCopyWith<$Res> {
   factory $AddressCopyWith(Address value, $Res Function(Address) then) =
-      _$AddressCopyWithImpl<$Res, Address>;
-  @useResult
+      _$AddressCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'latitude') String? latitude,
       @JsonKey(name: 'longitude') String? longitude,
@@ -53,16 +52,13 @@ abstract class $AddressCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AddressCopyWithImpl<$Res, $Val extends Address>
-    implements $AddressCopyWith<$Res> {
+class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   _$AddressCopyWithImpl(this._value, this._then);
 
+  final Address _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(Address) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? latitude = freezed,
@@ -73,31 +69,31 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
     Object? formattedAddress = freezed,
   }) {
     return _then(_value.copyWith(
-      latitude: freezed == latitude
+      latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      longitude: freezed == longitude
+      longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      locality: freezed == locality
+      locality: locality == freezed
           ? _value.locality
           : locality // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      placeID: freezed == placeID
+      placeID: placeID == freezed
           ? _value.placeID
           : placeID // ignore: cast_nullable_to_non_nullable
               as String?,
-      formattedAddress: freezed == formattedAddress
+      formattedAddress: formattedAddress == freezed
           ? _value.formattedAddress
           : formattedAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
@@ -107,7 +103,6 @@ abstract class _$$_AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
           _$_Address value, $Res Function(_$_Address) then) =
       __$$_AddressCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {@JsonKey(name: 'latitude') String? latitude,
       @JsonKey(name: 'longitude') String? longitude,
@@ -118,13 +113,14 @@ abstract class _$$_AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AddressCopyWithImpl<$Res>
-    extends _$AddressCopyWithImpl<$Res, _$_Address>
+class __$$_AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
     implements _$$_AddressCopyWith<$Res> {
   __$$_AddressCopyWithImpl(_$_Address _value, $Res Function(_$_Address) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_Address));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_Address get _value => super._value as _$_Address;
+
   @override
   $Res call({
     Object? latitude = freezed,
@@ -135,27 +131,27 @@ class __$$_AddressCopyWithImpl<$Res>
     Object? formattedAddress = freezed,
   }) {
     return _then(_$_Address(
-      latitude: freezed == latitude
+      latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      longitude: freezed == longitude
+      longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as String?,
-      locality: freezed == locality
+      locality: locality == freezed
           ? _value.locality
           : locality // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      placeID: freezed == placeID
+      placeID: placeID == freezed
           ? _value.placeID
           : placeID // ignore: cast_nullable_to_non_nullable
               as String?,
-      formattedAddress: freezed == formattedAddress
+      formattedAddress: formattedAddress == freezed
           ? _value.formattedAddress
           : formattedAddress // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -206,26 +202,28 @@ class _$_Address implements _Address {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Address &&
-            (identical(other.latitude, latitude) ||
-                other.latitude == latitude) &&
-            (identical(other.longitude, longitude) ||
-                other.longitude == longitude) &&
-            (identical(other.locality, locality) ||
-                other.locality == locality) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.placeID, placeID) || other.placeID == placeID) &&
-            (identical(other.formattedAddress, formattedAddress) ||
-                other.formattedAddress == formattedAddress));
+            const DeepCollectionEquality().equals(other.latitude, latitude) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality().equals(other.locality, locality) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.placeID, placeID) &&
+            const DeepCollectionEquality()
+                .equals(other.formattedAddress, formattedAddress));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, latitude, longitude, locality,
-      name, placeID, formattedAddress);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(latitude),
+      const DeepCollectionEquality().hash(longitude),
+      const DeepCollectionEquality().hash(locality),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(placeID),
+      const DeepCollectionEquality().hash(formattedAddress));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_AddressCopyWith<_$_Address> get copyWith =>
       __$$_AddressCopyWithImpl<_$_Address>(this, _$identity);
 
