@@ -114,6 +114,7 @@ void main() {
         graphClient: mockGraphQlClient,
         endpoint: 'http://192.168.1.202/index.php',
         method: 'GET',
+        variables: <String, dynamic>{'test': 'test'},
       );
 
       expect(response, isA<Map<String, dynamic>>());
