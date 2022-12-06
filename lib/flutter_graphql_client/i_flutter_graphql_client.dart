@@ -91,7 +91,9 @@ abstract class IGraphQlClient extends BaseClient {
   }) async {
     final Request request = Request(method, this.fromUriOrString(endpoint));
 
-    request.body = json.encode(variables);
+    if (variables != null) {
+      request.body = json.encode(variables);
+    }
     return Response.fromStream(
       await this.send(request).timeout(
         const Duration(seconds: kRequestTimeoutSeconds),
