@@ -22,6 +22,7 @@ class BaseContext {
     required this.switchFlaggedFeaturesEndpoint,
     required this.pinResetServiceRequestEndpoint,
     required this.optInClientEndpoint,
+    required this.listOrganisationsEndpoint,
   });
 
   final String graphqlEndpoint;
@@ -46,4 +47,5 @@ class BaseContext {
   final String switchFlaggedFeaturesEndpoint;
   final String pinResetServiceRequestEndpoint;
   final String optInClientEndpoint;
+  final String listOrganisationsEndpoint;
 }

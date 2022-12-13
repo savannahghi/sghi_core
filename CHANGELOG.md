@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+- chore: add listOrganisationsEndpoint to BaseContext
+
 ## 0.2.3
 
 - fix: i_flutter_graphql_client variables

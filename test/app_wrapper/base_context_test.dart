@@ -29,6 +29,7 @@ void main() {
         refreshStreamTokenEndpoint: 'refreshStreamTokenEndpoint',
         pinResetServiceRequestEndpoint: 'pinResetServiceRequestEndpoint',
         optInClientEndpoint: 'optInClientEndpoint',
+        listOrganisationsEndpoint: 'listOrganisationsEndpoint'
       );
 
       expect(baseContext.graphqlEndpoint, 'graphqlEndpoint');
